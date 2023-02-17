@@ -3,7 +3,7 @@ import BREAKPOINTS_DEVICES from "../../../../../global/breakpoints";
 
 export const OptionsContainer = styled.section`
   display: none;
-  @media ${BREAKPOINTS_DEVICES.laptopL} {
+  @media ${BREAKPOINTS_DEVICES.laptop} {
     display: flex;
     gap: 1.75rem;
     margin-left: auto;

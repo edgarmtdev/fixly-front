@@ -1,11 +1,11 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 
-const useDispatchEffect = (features) => {
+const useDispatchEffect = (feature) => {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
-    features.map((feature) => dispatch(feature()));
+    dispatch(feature());
   }, []);
 };
 

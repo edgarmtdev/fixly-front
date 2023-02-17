@@ -3,6 +3,7 @@ module.exports = {
     "./pages/**/*.{js,jsx,}",
     "./components/**/*.{js,jsx}",
     "./layouts/**/*.{js,jsx}",
+    "./modules/**/*.{js,jsx}",
   ],
   theme: {
     screens: {

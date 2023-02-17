@@ -10,7 +10,7 @@ export const NavbarMenu = styled.div`
 export const IconMenu = styled.div`
   margin-left: auto;
   cursor: pointer;
-  @media ${BREAKPOINTS_DEVICES.laptopL} {
+  @media ${BREAKPOINTS_DEVICES.laptop} {
     display: none;
   }
 `;
@@ -29,7 +29,7 @@ export const NavbarTitle = styled.div`
 
 export const NavbarList = styled.ul`
   display: none;
-  @media ${BREAKPOINTS_DEVICES.laptopL} {
+  @media ${BREAKPOINTS_DEVICES.laptop} {
     display: flex;
     gap: 2rem;
 
