@@ -9,10 +9,7 @@ export const NavbarMenu = styled.div`
 
 export const IconMenu = styled.div`
   margin-left: auto;
-
-  svg {
-    cursor: pointer;
-  }
+  cursor: pointer;
   @media ${BREAKPOINTS_DEVICES.laptopL} {
     display: none;
   }
@@ -21,6 +18,7 @@ export const IconMenu = styled.div`
 export const NavbarTitle = styled.div`
   display: flex;
   gap: 1rem;
+  cursor: pointer;
 
   h1 {
     font-weight: 800;
@@ -39,6 +37,8 @@ export const NavbarList = styled.ul`
       font-weight: 500;
       font-size: 18px;
       color: rgb(62 80 103);
+      cursor: pointer;
+
       &:hover {
         text-decoration: underline;
       }

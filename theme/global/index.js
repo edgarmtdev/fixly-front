@@ -1,10 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
-    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Nunito:wght@300&family=Poppins:wght@200&display=swap");
     *,
     ::before,
     ::after {
@@ -13,9 +9,7 @@ const GlobalStyles = createGlobalStyle`
     }
     body {
         margin: 0;
-        font-family: "Montserrat", sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        font-family: "Montserrat";
         background-color: #e6ecef;
     }
 
