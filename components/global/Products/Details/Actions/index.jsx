@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { addToCart } from "../../../../features/cart";
+import { useRouter } from "next/router";
+import { addToCart } from "../../../../../features/cart";
 import {
   ActionsCont,
   GetNowButton,
@@ -12,11 +12,11 @@ import {
 
 export default function ActionsButtons({ product: { _id } }) {
   const dispatch = useDispatch();
-  const router = useNavigate();
+  const router = useRouter();
 
   const addToCar = () => {
     dispatch(addToCart({ idProduct: _id }));
-    router("/shopcar");
+    router.replace("/shopcar");
   };
 
   return (

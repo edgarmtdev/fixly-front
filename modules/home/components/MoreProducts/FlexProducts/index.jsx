@@ -1,13 +1,14 @@
 import Link from "next/link";
+import React from "react";
 import ProductCard from "./Card";
 import { FlexCont } from "./styled";
 
 function FlexProducts({ products }) {
   return (
     <FlexCont>
-      {products.map((product) => (
-        <Link key={product._id} href={`/product/details/${product._id}`}>
-          <ProductCard product={product} />
+      {products.map((product, index) => (
+        <Link href={`/products/${product._id}`}>
+          <ProductCard key={index} product={product} />
         </Link>
       ))}
     </FlexCont>
