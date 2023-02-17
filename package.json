@@ -1,0 +1,57 @@
+{
+  "name": "ecommerce",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "prepare": "husky install",
+    "format": "prettier --write ."
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.2",
+    "@stripe/react-stripe-js": "^1.7.0",
+    "@stripe/stripe-js": "^1.26.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.26.1",
+    "firebase": "^9.6.11",
+    "formik": "^2.2.9",
+    "framer-motion": "^6.2.8",
+    "next": "^12.1.6",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-icons": "^4.3.1",
+    "react-redux": "^7.2.9",
+    "reactstrap": "^9.0.1",
+    "styled-components": "^5.3.5",
+    "swiper": "^8.3.2"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^17.4.2",
+    "autoprefixer": "^10.4.4",
+    "babel-plugin-styled-components": "^2.0.7",
+    "cypress": "^9.5.4",
+    "husky": "^8.0.3",
+    "postcss": "^8.4.12",
+    "prettier": "^2.8.3",
+    "tailwindcss": "^3.0.23"
+  }
+}
