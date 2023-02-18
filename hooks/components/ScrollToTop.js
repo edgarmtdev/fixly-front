@@ -7,6 +7,8 @@ const ScrollToTop = () => {
   useEffect(() => {
     window.scrollTo(0, 1);
   }, [router.route]);
+
+  return;
 };
 
 export default ScrollToTop;
