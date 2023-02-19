@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Navbar from "../../../components/global/Navigation";
-import Footer from "../../../components/global/Footer";
+import Footer from "../../global/footer";
 import useDispatchEffect from "../../../hooks/useDispatchEffect";
 import { getProducts } from "../../../features/product";
 import Banner from "../../../modules/home/components/Banner";
