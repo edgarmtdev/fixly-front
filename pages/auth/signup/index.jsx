@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { useDispatch } from "react-redux";
-import InputForm from "../../../components/global/Forms/InputForm";
+import InputForm from "../../../components/global/forms/InputForm";
 
 export default function Signup() {
   const dispatch = useDispatch();

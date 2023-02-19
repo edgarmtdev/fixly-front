@@ -8,11 +8,11 @@ import Slider from "./components/SliderOfferts";
 const HomeModule = () => {
   const { products } = useSelector((state) => state.product);
   return (
-    <>
+    <React.Fragment>
       <Slider />
       <Categories />
       <MoreProducts products={products} />
-    </>
+    </React.Fragment>
   );
 };
 
