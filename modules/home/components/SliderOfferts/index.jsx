@@ -1,11 +1,14 @@
 import React from "react";
-import { Navigation, Pagination } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
+import { Autoplay, Pagination, EffectCoverflow } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import data from "../../../../data/products.json";
 import Product from "./Product";
 import { SlideCont, Title } from "./styled";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 
 function Slider() {
   const [products] = React.useState(data[1].products);
@@ -14,19 +17,26 @@ function Slider() {
     <SlideCont>
       <Title>Offerts</Title>
       <Swiper
-        slidesPerView={1}
-        spaceBetween={10}
-        navigation={true}
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={3}
+        coverflowEffect={{
+          rotate: 40,
+          stretch: 0,
+          depth: 200,
+          modifier: 1,
+          slideShadows: false,
+        }}
+        spaceBetween={80}
         pagination={{
-          clickable: true,
+          type: "bullets",
         }}
-        breakpoints={{
-          "@0.00": {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
+        modules={[EffectCoverflow, Pagination, Autoplay]}
+        autoplay={{
+          delay: 1500
         }}
-        modules={[Pagination, Navigation]}
+        className="mySwiper"
       >
         {products.map((item) => (
           <SwiperSlide key={item.id}>
