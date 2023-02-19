@@ -1,5 +1,5 @@
 import React from "react";
-import GridCategories from "./Grid";
+import GridCategories from "./grid";
 import { CategoriesCont, Tilte } from "./styled";
 
 export default function Categories() {

@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import Price from "../../../Utilities/Price";
+import Price from "../../../utilities/price";
 import { Card, Name } from "./styled";
 import Link from "next/link";
 

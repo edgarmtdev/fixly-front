@@ -1,5 +1,5 @@
 import React from "react";
-import CardCategory from "./Card";
+import CardCategory from "./card";
 import {
   BsTools,
   BsFillKeyboardFill,

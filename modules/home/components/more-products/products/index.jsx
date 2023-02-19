@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "./Card";
+import ProductCard from "./card";
 import { FlexCont } from "./styled";
 
 function FlexProducts({ products }) {

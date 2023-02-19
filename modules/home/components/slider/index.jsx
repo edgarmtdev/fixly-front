@@ -2,7 +2,7 @@ import React from "react";
 import { Autoplay, Pagination, EffectCoverflow } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import data from "../../../../data/products.json";
-import Product from "./Product";
+import Product from "./product";
 import { SlideCont, Title } from "./styled";
 
 // Import Swiper styles

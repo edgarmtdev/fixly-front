@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import FlexProducts from "./FlexProducts";
+import FlexProducts from "./products";
 import { MoreProductsCont, Title } from "./styled";
 
 export default function MoreProducts({ products }) {
