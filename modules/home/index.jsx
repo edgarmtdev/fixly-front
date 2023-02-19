@@ -9,7 +9,6 @@ const HomeModule = () => {
   const { products } = useSelector((state) => state.product);
   return (
     <>
-      <Banner />
       <Slider />
       <Categories />
       <MoreProducts products={products} />
