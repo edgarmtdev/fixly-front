@@ -1,10 +1,12 @@
+import React from "react";
+import { useDispatch } from "react-redux";
 import CardProduct from "./components/details";
 import ScrollToTop from "../../hooks/components/ScrollToTop";
 import useGetItem from "../../hooks/useGetItem";
 import { Container } from "./styled";
+import { getProduct } from "../../features/product";
 
-function DeatilsMod({ id }) {
-  const { item: product } = useGetItem(id);
+function DeatilsMod({ product }) {
   return (
     <Container>
       <ScrollToTop />

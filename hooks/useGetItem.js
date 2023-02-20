@@ -2,18 +2,17 @@ import React from "react";
 import { get } from "../api";
 
 const useGetItem = (id) => {
-  const [item, setItem] = React.useState();
+  const [item, setItem] = React.useState({});
 
-  const getProduct = async () => {
-    const resp = await get(`/api/products/${id}`);
-    setItem(resp.data.product);
-  };
+  React.useEffect(() => {
+    if (id) {
+      get(`/api/products/${id}`).then((res) => {
+        setItem(res.data?.product);
+      });
+    }
+  }, [id]);
 
-  React.useEffect(getProduct(), [id]);
-
-  console.log(item);
-
-  return { item, setItem };
+  return [item, setItem];
 };
 
 export default useGetItem;

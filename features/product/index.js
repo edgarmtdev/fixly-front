@@ -21,7 +21,9 @@ export const getProducts = createAsyncThunk(
 export const getProduct = createAsyncThunk(
   "get/product",
   async (params, thunkAPI) => {
+    console.log(params);
     const product = await get(`/api/products/${params.id}`);
+    console.log(product);
     return product.data;
   }
 );
