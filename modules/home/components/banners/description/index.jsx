@@ -1,15 +1,12 @@
 import { Container, TextContent, Button } from "./styled";
 
-const ProductDescription = () => {
+const ProductDescription = ({ name, description }) => {
   return (
     <Container>
       <TextContent>
         <h4>New products</h4>
-        <h3>Arduino UNO</h3>
-        <p>
-          Arduino board is te best for begin with programming and electronic if
-          is your first experience with electronic enviroment
-        </p>
+        <h3>{name}</h3>
+        <p>{description}</p>
       </TextContent>
       <Button>BUY</Button>
     </Container>

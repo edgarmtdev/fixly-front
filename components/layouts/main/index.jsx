@@ -7,7 +7,7 @@ import { getProducts } from "../../../features/product";
 import Banner from "../../../modules/home/components/banners";
 
 const Principal = styled.div`
-  max-width: 1536px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0.5rem;
 `;
