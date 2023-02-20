@@ -2,12 +2,12 @@ import React from "react";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import data from "../../../../data/products.json";
+import useSetState from "../../../../hooks/useSetState";
 import Product from "./product";
 import { SlideCont, Title } from "./styled";
 
 function Slider() {
-  const [products] = React.useState(data[1].products);
-
+  const [products] = useSetState(data[1].products);
   return (
     <SlideCont>
       <Title>Offerts</Title>
@@ -17,7 +17,7 @@ function Slider() {
         centeredSlides={true}
         slidesPerView={"auto"}
         coverflowEffect={{
-          rotate: 40,
+          rotate: 35,
           stretch: 0,
           depth: 0,
           modifier: 1,
