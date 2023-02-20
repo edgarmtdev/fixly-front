@@ -5,9 +5,7 @@ import DeatilsMod from "../../modules/products";
 
 const ProductDetails = () => {
   const idProduct = useRouterQuery();
-
   const [product] = useGetItem(idProduct);
-
   return <DeatilsMod product={product} />;
 };
 

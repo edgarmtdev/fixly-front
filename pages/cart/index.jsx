@@ -6,7 +6,7 @@ import useDispatchEffect from "../../hooks/useDispatchEffect";
 
 export default function ShopCar() {
   const { items } = useSelector((state) => state.cart);
-  useDispatchEffect([getCart]);
+  useDispatchEffect(getCart);
   return (
     <section className="h-screen">
       <MyCart products={items} />

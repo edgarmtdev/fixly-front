@@ -9,7 +9,6 @@ const useStatusLogged = (route) => {
     if (userData.logged) {
       router.replace(route);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData]);
 
   return userData;
