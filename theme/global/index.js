@@ -81,8 +81,8 @@ const GlobalStyles = createGlobalStyle`
     .swiper-slide { 
         background-position: center;
         background-size: cover;
-        width: 300px;
-        height: 300px;
+        width: auto;
+        height: auto;
     }
 
     .swiper-slide img {

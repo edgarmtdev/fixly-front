@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Navbar from "../../../components/global/Navigation";
-import Footer from "../../global/footer";
+import Navbar from "../../../components/global/navigation";
+import Footer from "../../../components/global/footer";
 import useDispatchEffect from "../../../hooks/useDispatchEffect";
 import { getProducts } from "../../../features/product";
-import Banner from "../../../modules/home/components/Banner";
+import Banner from "../../../modules/home/components/banners";
 
 const Principal = styled.div`
   max-width: 1536px;
@@ -24,7 +24,7 @@ function MainLayout({ children }) {
     <React.Fragment>
       <Navbar />
       <Principal>
-        <Banner />
+        {/* <Banner /> */}
         <Layout>{children}</Layout>
       </Principal>
       <Footer />

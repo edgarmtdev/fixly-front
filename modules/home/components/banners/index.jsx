@@ -1,6 +1,6 @@
 import React from "react";
-import Image from "./Image";
-import ProductDescription from "./Description";
+import Image from "./image";
+import ProductDescription from "./description";
 import { Header } from "./styled";
 
 export default function Banner() {

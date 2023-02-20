@@ -3,7 +3,7 @@ import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
 import Link from "next/link";
 import { logOut } from "../../../../../features/user";
 import useNavigateDispatch from "../../../../../hooks/useDispatchNavigate";
-import { OptionsContainer } from "./styled";
+import { OptionsContainer } from "../no-logged/styled";
 
 const LoggedOptions = ({ userName }) => {
   const { action } = useNavigateDispatch(logOut, "/");
