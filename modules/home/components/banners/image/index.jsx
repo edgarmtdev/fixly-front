@@ -1,13 +1,18 @@
 import React from "react";
+import Image from "next/image";
+import { Container } from "./styled";
 
-export default function Image() {
+const BannerImage = () => {
   return (
-    <div>
-      <img
+    <Container>
+      <Image
         src="/images/arduinoUNO.png"
-        alt=""
-        className="opacity-0 md:opacity-100 w-[550px] mt-0 md:mt-28"
+        alt="banner"
+        width={600}
+        height={471}
       />
-    </div>
+    </Container>
   );
-}
+};
+
+export default BannerImage;
