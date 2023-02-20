@@ -1,17 +1,18 @@
-import { Description, Feature, TextContent, Title, Button } from "./styled";
+import { Container, TextContent, Button } from "./styled";
 
-export default function ProductDescription() {
+const ProductDescription = () => {
   return (
-    <div className="mt-20 flex flex-col items-center">
+    <Container>
       <TextContent>
-        <Feature>New products</Feature>
-        <Title>Arduino UNO</Title>
-        <Description>
+        <h4>New products</h4>
+        <h3>Arduino UNO</h3>
+        <p>
           Arduino board is te best for begin with programming and electronic if
           is your first experience with electronic enviroment
-        </Description>
+        </p>
       </TextContent>
       <Button>BUY</Button>
-    </div>
+    </Container>
   );
-}
+};
+export default ProductDescription;
