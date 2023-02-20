@@ -5,7 +5,7 @@ import { CardContainer, Card, Title, Price, Details } from "./styled";
 
 function CardProduct({ product }) {
   const user = useSelector((selector) => selector.user);
-  
+
   return (
     <CardContainer>
       <div>

@@ -1,6 +1,6 @@
 import React from "react";
 import useStatusLogged from "../../../hooks/useStatusLogged";
-import AuthLayout from "../../../layouts/auth";
+import AuthLayout from "../../../components/layouts/auth";
 import LoginMod from "../../../modules/auth/login";
 
 export default function Login() {

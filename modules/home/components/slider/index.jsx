@@ -1,14 +1,9 @@
 import React from "react";
-import { Autoplay, Pagination, EffectCoverflow } from "swiper";
+import { Autoplay, EffectCoverflow, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import data from "../../../../data/products.json";
 import Product from "./product";
 import { SlideCont, Title } from "./styled";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
 
 function Slider() {
   const [products] = React.useState(data[1].products);
@@ -20,11 +15,11 @@ function Slider() {
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={3}
+        slidesPerView={"auto"}
         coverflowEffect={{
           rotate: 40,
           stretch: 0,
-          depth: 200,
+          depth: 0,
           modifier: 1,
           slideShadows: false,
         }}
@@ -34,12 +29,12 @@ function Slider() {
         }}
         modules={[EffectCoverflow, Pagination, Autoplay]}
         autoplay={{
-          delay: 1500
+          delay: 1500,
         }}
         className="mySwiper"
       >
-        {products.map((item) => (
-          <SwiperSlide key={item.id}>
+        {products.map((item, index) => (
+          <SwiperSlide key={index}>
             <Product data={item} />
           </SwiperSlide>
         ))}
