@@ -1,16 +1,16 @@
 import React from "react";
-import { Title, List } from "../styled";
+import { Title, List, Container } from "../styled";
 
 const Resources = () => {
   return (
-    <div>
+    <Container>
       <Title>Resources</Title>
       <List>
         <li>Tutorials</li>
         <li>Resources center</li>
         <li>Blog</li>
       </List>
-    </div>
+    </Container>
   );
 };
 

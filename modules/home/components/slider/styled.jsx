@@ -6,11 +6,9 @@ export const SlideCont = styled.section`
 `;
 
 export const Title = styled.h2`
-  padding: 2.5rem 0;
+  padding: 40px;
   text-align: center;
   font-size: 36px;
   font-weight: 600;
-  @media (min-width: 800px) {
-    margin-top: 5rem;
-  }
+  margin-top: 5rem;
 `;

@@ -1,15 +1,15 @@
 import React from "react";
-import { Title, List } from "../styled";
+import { Title, List, Container } from "../styled";
 
 const Enterprise = () => {
   return (
-    <div>
+    <Container>
       <Title>Enterprise</Title>
-      <List className="text-white font-light flex flex-col gap-5">
+      <List>
         <li>About us</li>
         <li>History</li>
       </List>
-    </div>
+    </Container>
   );
 };
 
