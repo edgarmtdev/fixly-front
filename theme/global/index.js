@@ -57,20 +57,6 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
     }
-    .grid-footer {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1fr;
-    }
-
-    @media (max-width: 800px) {
-        .grid-footer {
-            display: grid;
-            grid-template-columns: 1fr;
-    }
-        .navbar {
-            color: aqua;
-        }
-    }
 
     .swiper {
         width: 100%;
