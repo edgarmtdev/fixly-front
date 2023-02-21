@@ -1,9 +1,9 @@
 import React from "react";
-import { Title, List } from "../styled";
+import { Title, List, Container } from "../styled";
 
 const Pages = () => {
   return (
-    <div>
+    <Container>
       <Title>Pages</Title>
       <List>
         <li>Home</li>
@@ -11,7 +11,7 @@ const Pages = () => {
         <li>Signup</li>
         <li>Help</li>
       </List>
-    </div>
+    </Container>
   );
 };
 
