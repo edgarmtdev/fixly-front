@@ -7,12 +7,7 @@ export const Container = styled.div`
   margin: 3rem 1.25rem;
   background-color: #f6f6f6;
   pad: 0.5rem;
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-    0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
-    0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   @media (min-width: 800px) {
     height: 500px;
     margin-left: 5rem;

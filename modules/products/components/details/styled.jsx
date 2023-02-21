@@ -10,7 +10,7 @@ export const CardContainer = styled.div`
   width: 80%;
   height: 600px;
   border-radius: 4px;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 20px #0000003f;
   padding: 0 5rem;
 
   div {
@@ -27,7 +27,7 @@ export const Card = styled.div`
   .line {
     width: 100%;
     height: 1px;
-    background-color: rgb(230 236 239);
+    background-color: #e6ecef;
     margin: 2.5rem;
   }
 `;
@@ -41,7 +41,7 @@ export const Title = styled.h1`
 export const Price = styled.div`
   display: grid;
   place-items: center;
-  background-color: rgb(255 195 100);
+  background-color: #ffc364;
   width: 10rem;
   height: 3rem;
   border-radius: 0.25rem;
@@ -53,7 +53,7 @@ export const Price = styled.div`
 `;
 
 export const Details = styled.div`
-  color: rgb(62 80 103);
+  color: #3e5067;
   padding: 3rem 0;
 
   span {
