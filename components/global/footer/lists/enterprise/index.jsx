@@ -5,7 +5,7 @@ const Enterprise = () => {
   return (
     <div>
       <Title>Enterprise</Title>
-      <List className="text-white font-light flex flex-col gap-5">
+      <List>
         <li>About us</li>
         <li>History</li>
       </List>
