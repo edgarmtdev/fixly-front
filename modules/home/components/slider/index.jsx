@@ -29,7 +29,7 @@ function Slider() {
         }}
         modules={[EffectCoverflow, Pagination, Autoplay]}
         autoplay={{
-          delay: 1500,
+          delay: 3000,
         }}
         className="mySwiper"
       >

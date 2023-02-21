@@ -8,9 +8,6 @@ export default function MoreProducts({ products }) {
     <MoreProductsCont>
       <Title>More products</Title>
       <FlexProducts products={products} />
-      {/* <Link href={`/products/${products[0]._id}`}>
-        <button>Click</button>
-      </Link> */}
     </MoreProductsCont>
   );
 }

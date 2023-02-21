@@ -6,8 +6,9 @@ export const MoreProductsCont = styled.section`
 `;
 
 export const Title = styled.h2`
-  padding: 2rem 0;
+  padding: 40px;
   font-size: 2.25rem;
   font-weight: 600;
   text-align: center;
+  margin-top: 80px;
 `;

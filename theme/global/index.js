@@ -60,7 +60,6 @@ const GlobalStyles = createGlobalStyle`
 
     .swiper {
         width: 100%;
-        padding-top: 50px;
         padding-bottom: 50px;
     }
 

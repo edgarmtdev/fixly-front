@@ -8,7 +8,7 @@ const Pages = () => {
       <List>
         <li>Home</li>
         <li>Login</li>
-        <li>SignUp</li>
+        <li>Signup</li>
         <li>Help</li>
       </List>
     </div>
