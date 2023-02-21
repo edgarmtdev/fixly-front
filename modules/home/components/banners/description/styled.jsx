@@ -34,11 +34,10 @@ export const TextContent = styled.div`
   p {
     text-align: center;
     color: rgb(115 138 170);
+    max-width: 80%;
     @media ${BREAKPOINTS_DEVICES.laptop} {
       text-align: left;
-    }
-    @media ${BREAKPOINTS_DEVICES.laptop} {
-      width: 80%;
+      max-width: 90%;
     }
   }
 `;
