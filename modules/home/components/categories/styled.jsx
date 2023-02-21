@@ -9,7 +9,7 @@ export const CategoriesCont = styled.section`
 export const Tilte = styled.h2`
   font-weight: 600;
   font-size: 2.25rem;
-  padding: 32px;
+  padding: 40px;
   @media (min-width: 800px) {
     margin-top: 5rem;
   }

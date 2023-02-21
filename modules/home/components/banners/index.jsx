@@ -1,11 +1,11 @@
 import React from "react";
+import { Autoplay, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import data from "../../../../data/products.json";
+import useSetState from "../../../../hooks/useSetState";
 import ProductDescription from "./description";
 import BannerImage from "./image";
-import { Container, Header } from "./styled";
-import data from "../../../../data/products.json";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper";
-import useSetState from "../../../../hooks/useSetState";
+import { Container } from "./styled";
 
 export default function Banner() {
   const [newProducts] = useSetState(data[0].products);
