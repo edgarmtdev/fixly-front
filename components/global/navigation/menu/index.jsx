@@ -1,6 +1,6 @@
 import React from "react";
 import { RiFlashlightLine } from "react-icons/ri";
-import LINKS_CATEGORIES from "./links";
+import LINKS_CATEGORIES from "./model/links";
 import { IconMenu, NavbarList, NavbarMenu, NavbarTitle } from "./styled";
 import { BiMenu } from "react-icons/bi";
 import Link from "next/link";

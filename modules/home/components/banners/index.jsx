@@ -13,6 +13,7 @@ export default function Banner() {
     <header>
       <Swiper
         pagination={false}
+        spaceBetween={100}
         modules={[Pagination, Autoplay]}
         autoplay={{
           delay: 4500,

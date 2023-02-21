@@ -22,7 +22,7 @@ export const TextContent = styled.div`
 
   h4 {
     font-size: 1.25rem;
-    color: rgb(62 80 103);
+    color: #3e5067;
   }
 
   h3 {
@@ -33,7 +33,7 @@ export const TextContent = styled.div`
 
   p {
     text-align: center;
-    color: rgb(115 138 170);
+    color: #738aaa;
     max-width: 80%;
     @media ${BREAKPOINTS_DEVICES.laptop} {
       text-align: left;
@@ -43,8 +43,8 @@ export const TextContent = styled.div`
 `;
 
 export const Button = styled.button`
-  background-color: rgb(205 138 32);
-  color: rgb(255 255 255);
+  background-color: #cd8a20;
+  color: #fff;
   width: 12rem;
   margin-top: 2.5rem;
   text-align: center;
@@ -53,6 +53,6 @@ export const Button = styled.button`
   font-weight: 600;
   font-size: 13px;
   &:hover {
-    background-color: rgb(255 195 100);
+    background-color: #ffc364;
   }
 `;

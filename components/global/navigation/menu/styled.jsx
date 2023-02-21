@@ -23,7 +23,7 @@ export const NavbarTitle = styled.div`
   h1 {
     font-weight: 800;
     font-size: 28px;
-    color: rgb(62 80 103);
+    color: #3e5067;
   }
 `;
 
@@ -36,7 +36,7 @@ export const NavbarList = styled.ul`
     li {
       font-weight: 500;
       font-size: 18px;
-      color: rgb(62 80 103);
+      color: #3e5067;
       cursor: pointer;
 
       &:hover {

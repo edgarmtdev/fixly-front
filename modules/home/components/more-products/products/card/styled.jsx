@@ -23,6 +23,6 @@ export const Card = styled.div`
 export const Name = styled.p`
   text-align: center;
   font-weight: 600;
-  color: rgb(62 80 103);
+  color: #3e5067;
   margin-top: 0.5rem;
 `;
