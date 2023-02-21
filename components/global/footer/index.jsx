@@ -1,14 +1,14 @@
 import React from "react";
-import Enterprise from "./enterprise";
+import Enterprise from "./lists/enterprise";
 import FormUser from "./form";
-import Pages from "./pages";
-import Resources from "./resources";
+import Pages from "./lists/pages";
+import Resources from "./lists/resources";
 import { Container, FooterContainer } from "./styled";
 
 const Footer = () => {
   return (
     <Container>
-      <FooterContainer className=" max-w-screen-laptop mx-auto p-20 px-32 grid-footer ">
+      <FooterContainer>
         <FormUser />
         <Pages />
         <Enterprise />
