@@ -13,7 +13,7 @@ export const Container = styled.div`
     color: #3e5067;
   }
 
-  .container {
+  section {
     display: flex;
     flex-direction: column;
     gap: 1rem;
