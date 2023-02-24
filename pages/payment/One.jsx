@@ -18,7 +18,7 @@ export default function One() {
   }, []);
 
   return (
-    <div className=" my-20">
+    <div className="my-20">
       {clientSecret && (
         <Elements
           stripe={stripe}
