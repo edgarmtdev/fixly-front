@@ -1,71 +1,74 @@
+import { Field, Formik } from "formik";
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
+import { CgSpinner } from "react-icons/cg";
 import { useDispatch } from "react-redux";
 import { login } from "../../../features/user";
-import { CgSpinner } from "react-icons/cg";
+import FormCustom from "./components/form";
+import SignupSchema from "./helpers/validationSchema";
 import { Container } from "./styled";
-import Link from "next/link";
 
-export default function LoginMod({ user }) {
+export default function LoginModule({ user }) {
   const dispatch = useDispatch();
-  const signIn = (event) => {
-    event.preventDefault();
-    const {
-      email: { value: email },
-      password: { value: password },
-    } = event.target;
-
-    dispatch(login({ email, password }));
+  const signIn = (values) => {
+    console.log(values);
+    dispatch(login(values));
   };
 
   return (
     <Container>
-      {user.loading && (
-        <CgSpinner className="animate-spin h-7 w-7 mr-16 ml-auto absolute top-16 left-[40%]" />
-      )}
-
-      <form
-        action=""
-        className=" w-full tablet:w-1/2 p-5 tablet:p-12"
+      <Formik
+        initialValues={{
+          email: "",
+          password: "",
+        }}
+        validationSchema={SignupSchema}
         onSubmit={signIn}
       >
-        <h1 className=" text-[24px] desktop:text-[40px] font-semibold mb-5 tablet:mb-10">
-          Login
-        </h1>
-        <div className=" border-b border-primary_variant-200 py-1 mb-8 tablet:mb-12">
-          <input
-            name="email"
-            type="text"
-            className=" appearance-none bg-transparent border-none w-full text-primary_variant-400 mr-3 py-1 px-2 leading-tight focus:outline-none"
-            placeholder="Email"
-          />
-        </div>
-        <div className=" border-b border-primary_variant-200 py-1 mb-8 tablet:mb-12">
-          <input
-            name="password"
-            type="text"
-            className=" appearance-none bg-transparent border-none w-full text-primary_variant-400 mr-3 tablet:py-1 px-2 leading-tight focus:outline-none"
-            placeholder="Password"
-          />
-        </div>
-        <button className=" bg-secondary_green-500 w-full p-2 rounded-sm text-white font-medium mt-5 hover:bg-secondary_green-400">
-          Sign In
-        </button>
-        <p className=" text-center mt-10">
-          No account?,{" "}
-          <Link
-            href={"/auth/signup"}
-            className=" text-secondary_green-500 font-semibold hover:underline"
-          >
-            Sign Up
-          </Link>
-        </p>
-      </form>
-      <div className=" opacity-0 tablet:opacity-100">
-        <img
-          src="/images/loginImg.svg"
-          alt=""
-          className="tablet:w-[350px] tablet:ml-10"
-        />
+        {({ errors, touched }) => (
+          <FormCustom>
+            <h1>Login</h1>
+            <section className="container">
+              <div>
+                <div className="input">
+                  <Field name="email" type="text" placeholder="Email" />
+                </div>
+                {errors.email && touched.email ? (
+                  <span>{errors.email}</span>
+                ) : null}
+              </div>
+              <div>
+                <div className="input">
+                  <Field
+                    name="password"
+                    type="password"
+                    placeholder="Password"
+                  />
+                </div>
+                {errors.password && touched.password ? (
+                  <span>{errors.password}</span>
+                ) : null}
+              </div>
+            </section>
+            <button type="submit">
+              {user.loading ? (
+                <CgSpinner size={28} className="animate-spin" />
+              ) : (
+                <span>Submit</span>
+              )}
+            </button>
+            <p className="label">
+              No account?,{" "}
+              <Link href={"/auth/signup"}>
+                <span>Sign Up</span>
+              </Link>
+            </p>
+          </FormCustom>
+        )}
+      </Formik>
+      <div className="grid place-items-center">
+        <Image src="/images/loginImg.svg" alt="" width={350} height={250} />
       </div>
     </Container>
   );

@@ -32,7 +32,8 @@
     "react-redux": "^7.2.9",
     "reactstrap": "^9.0.1",
     "styled-components": "^5.3.5",
-    "swiper": "^8.3.2"
+    "swiper": "^8.3.2",
+    "yup": "^1.0.0"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.4.4",

@@ -12,8 +12,9 @@ export const Container = styled.div`
     height: 500px;
     margin-left: 5rem;
     margin-right: 5rem;
-    display: flex;
+    display: grid;
     align-items: center;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: 800px) {
