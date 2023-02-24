@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { useDispatch } from "react-redux";
-import InputForm from "../../../components/global/forms/InputForm";
+// import InputForm from "../../../components/global/forms/InputForm";
 import { HeadComponent } from "../../../components/utils/head";
 
 export default function Signup() {
@@ -26,7 +26,7 @@ export default function Signup() {
               Sign Up
             </h1>
             <section className=" tablet:grid  tablet:grid-cols-2 tablet:gap-12">
-              <InputForm
+              {/* <InputForm
                 name={"username"}
                 placeholder={"Username"}
                 type={"text"}
@@ -41,7 +41,7 @@ export default function Signup() {
                 name={"password"}
                 placeholder={"Password"}
                 type={"password"}
-              />
+              /> */}
               <div>
                 <article className=" flex items-center gap-5">
                   <input type="checkbox" />{" "}
