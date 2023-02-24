@@ -1,15 +1,16 @@
 import React from "react";
 import { Field, useField } from "formik";
+import { InputContainer } from "./styled";
 
 const Input = ({ label, ...props }) => {
   const [field, meta, helpers] = useField(props);
   return (
-    <div>
-      <div className="input">
+    <InputContainer>
+      <div>
         <Field {...field} {...props} />
       </div>
       {meta.touched && meta.error ? <span>{meta.error}</span> : null}
-    </div>
+    </InputContainer>
   );
 };
 

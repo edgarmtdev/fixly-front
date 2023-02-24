@@ -2,12 +2,12 @@ import { Formik } from "formik";
 import Link from "next/link";
 import React from "react";
 import { CgSpinner } from "react-icons/cg";
+import Input from "../../../components/global/form/input";
 import { login } from "../../../features/user";
 import useAuthDispatch from "../hooks/useAuthDispatch";
 import FormCustom from "./components/form";
 import ImageLogin from "./components/image";
-import Input from "./components/input";
-import SignupSchema from "./helpers/validationSchema";
+import SignInSchema from "./helpers/validationSchema";
 import { Container } from "./styled";
 
 export default function LoginModule({ user }) {
@@ -20,7 +20,7 @@ export default function LoginModule({ user }) {
           email: "",
           password: "",
         }}
-        validationSchema={SignupSchema}
+        validationSchema={SignInSchema}
         onSubmit={signIn}
       >
         <FormCustom>
