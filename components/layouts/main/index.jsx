@@ -9,12 +9,7 @@ import Banner from "../../../modules/home/components/banners";
 const Principal = styled.div`
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0.5rem;
-`;
-
-const Layout = styled.main`
-  padding: 0.5rem;
-  margin: 0 auto;
+  padding: 1rem;
 `;
 
 function MainLayout({ children }) {
@@ -23,10 +18,7 @@ function MainLayout({ children }) {
   return (
     <React.Fragment>
       <Navbar />
-      <Principal>
-        {/* <Banner /> */}
-        <Layout>{children}</Layout>
-      </Principal>
+      <Principal>{children}</Principal>
       <Footer />
     </React.Fragment>
   );
