@@ -1,14 +1,14 @@
 import { Formik } from "formik";
-import Link from "next/link";
 import React from "react";
-import { CgSpinner } from "react-icons/cg";
 import Input from "../../../components/global/form/input";
 import { login } from "../../../features/user";
 import useAuthDispatch from "../hooks/useAuthDispatch";
+import Button from "../../../components/global/form/button";
 import FormCustom from "./components/form";
 import ImageLogin from "./components/image";
 import SignInSchema from "./helpers/validationSchema";
 import { Container } from "./styled";
+import LabelComponent from "./components/label";
 
 export default function LoginModule({ user }) {
   const [signIn] = useAuthDispatch(login);
@@ -29,19 +29,8 @@ export default function LoginModule({ user }) {
             <Input name="email" type="text" placeholder="Email" />
             <Input name="password" type="password" placeholder="Password" />
           </section>
-          <button type="submit">
-            {user.loading ? (
-              <CgSpinner size={28} className="animate-spin" />
-            ) : (
-              <span>Submit</span>
-            )}
-          </button>
-          <p className="label">
-            No account?,{" "}
-            <Link href={"/auth/signup"}>
-              <span>Sign Up</span>
-            </Link>
-          </p>
+          <Button user={user} title={"Sing In"} />
+          <LabelComponent />
         </FormCustom>
       </Formik>
       <ImageLogin />
