@@ -1,13 +1,22 @@
 import React from "react";
 import styled from "styled-components";
+import NavbarAuth from "../../auth/navigation";
 
 export const AuthCont = styled.main`
-  max-width: 1280px;
-  margin: 0 auto;
+  height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  background-image: url("/bg/background.png");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
 `;
 
 export default function AuthLayout({ children }) {
-  return <AuthCont>{children}</AuthCont>;
+  return (
+    <React.Fragment>
+      <NavbarAuth />
+      <AuthCont>{children}</AuthCont>
+    </React.Fragment>
+  );
 }
