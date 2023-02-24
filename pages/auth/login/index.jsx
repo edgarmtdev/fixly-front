@@ -7,9 +7,11 @@ import LoginModule from "../../../modules/auth/login";
 export default function Login() {
   const user = useStatusLogged();
   return (
-    <AuthLayout>
+    <React.Fragment>
       <HeadComponent title={"Login | Felcy"} />
       <LoginModule user={user} />
-    </AuthLayout>
+    </React.Fragment>
   );
 }
+
+Login.Layout = AuthLayout;

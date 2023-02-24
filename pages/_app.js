@@ -8,12 +8,13 @@ import "swiper/css/pagination";
 import "../styles/index.css";
 
 function MyApp({ Component, pageProps }) {
+  const Layout = Component.Layout || MainLayout;
   return (
     <Provider store={store}>
       <GlobalStyles />
-      <MainLayout>
+      <Layout>
         <Component {...pageProps} />
-      </MainLayout>
+      </Layout>
     </Provider>
   );
 }
