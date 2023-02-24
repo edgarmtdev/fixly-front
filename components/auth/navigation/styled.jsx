@@ -10,6 +10,7 @@ export const Container = styled.nav`
 
 export const NavbarCont = styled.div`
   max-width: 1536px;
+  padding: 1rem;
   @media ${BREAKPOINTS_DEVICES.laptop} {
     display: flex;
     margin-left: auto;

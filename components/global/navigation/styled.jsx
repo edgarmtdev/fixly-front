@@ -13,6 +13,6 @@ export const NavbarCont = styled.div`
     margin-right: auto;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
+    padding: 1rem;
   }
 `;

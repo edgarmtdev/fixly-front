@@ -7,9 +7,11 @@ import useStatusLogged from "../../../hooks/useStatusLogged";
 export default function Signup() {
   const user = useStatusLogged();
   return (
-    <AuthLayout>
+    <React.Fragment>
       <HeadComponent title={"Register | Felcy"} />
       <SignUpModule user={user} />
-    </AuthLayout>
+    </React.Fragment>
   );
 }
+
+Signup.Layout = AuthLayout;
