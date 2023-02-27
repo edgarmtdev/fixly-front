@@ -6,15 +6,15 @@ export const Container = styled.div`
   height: 380px;
   margin: 3rem 1.25rem;
   background-color: #f6f6f6;
-  pad: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 2px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   @media (min-width: 800px) {
-    height: 500px;
+    height: 550px;
     margin-left: 5rem;
     margin-right: 5rem;
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: 800px) {

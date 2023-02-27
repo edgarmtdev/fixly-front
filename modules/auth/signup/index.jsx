@@ -5,6 +5,8 @@ import { Container } from "./styled";
 import { Formik, Form } from "formik";
 import Input from "../../../components/global/form/input";
 import SignUpSchema from "./helpers/validationSchema";
+import FormCustom from "./components/form";
+import Button from "../../../components/global/form/button";
 
 const SignUpModule = ({ user }) => {
   const [register] = useAuthDispatch(signUp);
@@ -13,32 +15,35 @@ const SignUpModule = ({ user }) => {
     <Container>
       <Formik
         initialValues={{
+          name: "",
+          lastName: "",
           email: "",
           password: "",
+          passwordRepeat: "",
         }}
-        validationSchema={SignUpSchema}
+        // validationSchema={SignUpSchema}
         onSubmit={register}
       >
-        <Form>
+        <FormCustom>
           <h1>Register</h1>
           <section>
-            <Input name="email" type="text" placeholder="Email" />
-            <Input name="password" type="password" placeholder="Password" />
+            <div>
+              <Input name="name" type="text" placeholder="Name" />
+              <Input name="email" type="text" placeholder="Email" />
+              <Input name="password" type="password" placeholder="Password" />
+              <Input
+                name="passwordRepeat"
+                type="password"
+                placeholder="Repeat Password"
+              />
+            </div>
+            <div>
+              <Input name="lastName" type="text" placeholder="Last Name" />
+              <Input name="country" type="text" placeholder="Country" />
+            </div>
           </section>
-          <button type="submit">
-            {user.loading ? (
-              <CgSpinner size={28} className="animate-spin" />
-            ) : (
-              <span>Submit</span>
-            )}
-          </button>
-          <p className="label">
-            No account?,{" "}
-            <Link href={"/auth/signup"}>
-              <span>Sign Up</span>
-            </Link>
-          </p>
-        </Form>
+          <Button user={user} title={"Signup"} />
+        </FormCustom>
       </Formik>
     </Container>
   );

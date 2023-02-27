@@ -16,7 +16,9 @@ export const ButtonComponent = styled.button`
   transition: 600ms;
   display: grid;
   place-items: center;
-
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
   svg {
     animation: ${spin} 1s linear infinite;
   }
