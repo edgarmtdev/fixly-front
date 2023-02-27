@@ -5,7 +5,7 @@ import useStatusLogged from "../../../hooks/useStatusLogged";
 import LoginModule from "../../../modules/auth/login";
 
 export default function Login() {
-  const user = useStatusLogged();
+  const user = useStatusLogged("/");
   return (
     <React.Fragment>
       <HeadComponent title={"Login | Felcy"} />

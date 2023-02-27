@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Navbar from "../../../components/global/navigation";
 import Footer from "../../../components/global/footer";
-import useDispatchEffect from "../../../hooks/useDispatchEffect";
+import Navbar from "../../../components/global/navigation";
 import { getProducts } from "../../../features/product";
-import Banner from "../../../modules/home/components/banners";
+import useAuthValidate from "../../../hooks/useAuthValidate";
+import useDispatchEffect from "../../../hooks/useDispatchEffect";
 
 const Principal = styled.div`
   max-width: 1280px;
@@ -13,6 +13,7 @@ const Principal = styled.div`
 `;
 
 function MainLayout({ children }) {
+  useAuthValidate();
   useDispatchEffect(getProducts);
 
   return (
