@@ -24,7 +24,7 @@ export default function LoginModule({ user }) {
         onSubmit={signIn}
       >
         <FormCustom>
-          <h1>Login</h1>
+          <h1>LOGIN</h1>
           <section>
             <Input name="email" type="text" placeholder="Email" />
             <Input name="password" type="password" placeholder="Password" />

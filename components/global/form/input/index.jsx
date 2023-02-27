@@ -5,7 +5,7 @@ import { InputContainer } from "./styled";
 const Input = ({ label, ...props }) => {
   const [field, meta, helpers] = useField(props);
   return (
-    <InputContainer>
+    <InputContainer error={meta.error}>
       <div>
         <Field {...field} {...props} />
       </div>

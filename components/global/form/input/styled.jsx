@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const InputContainer = styled.div`
   div {
     border-bottom-width: 1px;
-    border-color: #959cb2;
+    border-color: ${({ error }) => (error ? "#FD4F59" : "#959cb2")};
     padding: 3px;
     margin: 1rem 1rem 0 1rem;
     input {
@@ -20,11 +20,14 @@ export const InputContainer = styled.div`
         outline: 2px solid transparent;
         outline-offset: 2px;
       }
+      &::placeholder {
+        color: ${({ error }) => (error ? "#FD4F59" : "#959cb2")};
+      }
     }
   }
   span {
     margin: 0 1.4rem;
     font-size: 11px;
-    color: red;
+    color: #fd4f59;
   }
 `;
