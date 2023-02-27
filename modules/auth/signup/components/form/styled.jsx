@@ -15,10 +15,10 @@ export const Container = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    div {
+    .grid-item {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 1rem;
     }
   }
 `;
