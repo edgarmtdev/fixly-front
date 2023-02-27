@@ -10,11 +10,10 @@ export const Container = styled.div`
   border-radius: 2px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   @media (min-width: 800px) {
-    height: 550px;
+    height: 650px;
     margin-left: 5rem;
     margin-right: 5rem;
     display: grid;
-    align-items: center;
   }
 
   @media (min-width: 800px) {
