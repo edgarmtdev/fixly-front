@@ -1,19 +1,32 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import {
+  createAsyncThunk,
+  createSlice,
+  rejectWithValue,
+} from "@reduxjs/toolkit";
 import { get, post } from "../../api";
 
 export const login = createAsyncThunk(
   "user/login",
   async (credentials, thunkAPI) => {
-    const response = await post("/api/auth/login", credentials);
-    return response.data;
+    try {
+      const response = await post("/api/auth/login", credentials);
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.response.data);
+    }
   }
 );
 
 export const signUp = createAsyncThunk(
   "user/signup",
   async (data, thunkAPI) => {
-    const response = await post("/api/auth/register", data);
-    return response.data;
+    try {
+      const response = await post("/api/auth/register", data);
+      return response.data;
+    } catch (error) {
+      console.log("Error", { ...error });
+      return thunkAPI.rejectWithValue(error.response.data);
+    }
   }
 );
 
@@ -37,9 +50,11 @@ const initialState = {
   logged: false,
   name: "",
   loading: false,
-  error: true,
-  message: "",
   id: "",
+  error: {
+    hasError: false,
+    message: "",
+  },
 };
 
 const userSlice = createSlice({
@@ -49,32 +64,50 @@ const userSlice = createSlice({
     builder
       .addCase(login.fulfilled, (state, action) => {
         state.logged = true;
-        state.error = false;
+        state.loading = false;
+        state.name = action.payload.name;
+        state.id = action.payload.id;
+        (state.error.hasError = false), (state.error.message = "");
+      })
+      .addCase(login.pending, (state, action) => {
+        state.logged = false;
+        state.loading = true;
+        state.message = "";
+        state.name = "";
+      })
+      .addCase(login.rejected, (state, action) => {
+        console.log(action);
+        state.logged = false;
+        state.loading = false;
+        state.name = null;
+        (state.error.hasError = true),
+          (state.error.message = action.payload.message);
+      });
+    builder
+      .addCase(signUp.fulfilled, (state, action) => {
+        state.logged = true;
         state.loading = false;
         state.name = action.payload.name;
         state.id = action.payload.id;
       })
-      .addCase(login.pending, (state, action) => {
+      .addCase(signUp.pending, (state, action) => {
         state.logged = false;
         state.loading = true;
         state.error = false;
         state.message = "";
         state.name = "";
       })
-      .addCase(login.rejected, (state, action) => {
+      .addCase(signUp.rejected, (state, action) => {
+        console.log("data:", action);
         state.logged = false;
         state.error = true;
         state.loading = false;
-        // state.message = action.payload.message;
+        state.message = action.payload.errors[0].message;
         state.name = null;
       });
     builder
       .addCase(validation.fulfilled, (state, action) => {
-        if (!action.payload) {
-          throw new Error("Failed validation");
-        }
         state.logged = true;
-        state.error = false;
         state.loading = false;
         state.name = action.payload.user?.name;
         state.id = action.payload.user?.id;
@@ -84,7 +117,6 @@ const userSlice = createSlice({
       })
       .addCase(validation.rejected, (state, action) => {
         state.logged = false;
-        state.error = true;
         state.loading = false;
         state.message = action.error?.message;
         state.name = "";
