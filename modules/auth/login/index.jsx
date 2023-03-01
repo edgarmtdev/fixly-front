@@ -9,9 +9,14 @@ import ImageLogin from "./components/image";
 import SignInSchema from "./helpers/validationSchema";
 import { Container } from "./styled";
 import LabelComponent from "./components/label";
+import { useSelector } from "react-redux";
 
 export default function LoginModule({ user }) {
   const [signIn] = useAuthDispatch(login);
+
+  const {
+    error: { message },
+  } = useSelector((state) => state.user);
 
   return (
     <Container>
@@ -29,6 +34,7 @@ export default function LoginModule({ user }) {
             <Input name="email" type="text" placeholder="Email" />
             <Input name="password" type="password" placeholder="Password" />
           </section>
+          <p>{message && message}</p>
           <Button user={user} title={"Sing In"} />
           <LabelComponent />
         </FormCustom>

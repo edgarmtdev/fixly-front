@@ -7,9 +7,14 @@ import Input from "../../../components/global/form/input";
 import SignUpSchema from "./helpers/validationSchema";
 import FormCustom from "./components/form";
 import Button from "../../../components/global/form/button";
+import { useSelector } from "react-redux";
 
 const SignUpModule = ({ user }) => {
   const [register] = useAuthDispatch(signUp);
+
+  const {
+    error: { message },
+  } = useSelector((state) => state.user);
 
   return (
     <Container>
@@ -42,6 +47,7 @@ const SignUpModule = ({ user }) => {
               <Input name="country" type="text" placeholder="Country" />
             </div>
           </section>
+          <p>{message && message}</p>
           <Button user={user} title={"Signup"} />
         </FormCustom>
       </Formik>
