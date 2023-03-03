@@ -1,15 +1,12 @@
-import {
-  createAsyncThunk,
-  createSlice,
-  rejectWithValue,
-} from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { get, post } from "../../api";
+import AUTH_CONSTANTS from "../../config/constants/auth";
 
 export const login = createAsyncThunk(
   "user/login",
   async (credentials, thunkAPI) => {
     try {
-      const response = await post("/api/auth/login", credentials);
+      const response = await post(AUTH_CONSTANTS.login, credentials);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);
@@ -51,9 +48,14 @@ const initialState = {
   name: "",
   loading: false,
   id: "",
-  error: {
-    hasError: false,
-    message: "",
+  auth: {
+    hasError: true,
+    login: {
+      message: "",
+    },
+    signup: {
+      message: "",
+    },
   },
 };
 
@@ -67,7 +69,7 @@ const userSlice = createSlice({
         state.loading = false;
         state.name = action.payload.name;
         state.id = action.payload.id;
-        (state.error.hasError = false), (state.error.message = "");
+        (state.auth.hasError = false), (state.auth.login.message = "");
       })
       .addCase(login.pending, (state, action) => {
         state.logged = false;
@@ -79,9 +81,9 @@ const userSlice = createSlice({
         console.log(action);
         state.logged = false;
         state.loading = false;
-        state.name = null;
-        (state.error.hasError = true),
-          (state.error.message = action.payload.message);
+        state.name = "";
+        (state.auth.hasError = true),
+          (state.auth.login.message = action.payload.message[0]);
       });
     builder
       .addCase(signUp.fulfilled, (state, action) => {
@@ -93,16 +95,15 @@ const userSlice = createSlice({
       .addCase(signUp.pending, (state, action) => {
         state.logged = false;
         state.loading = true;
-        state.error = false;
         state.message = "";
         state.name = "";
       })
       .addCase(signUp.rejected, (state, action) => {
         console.log("data:", action);
         state.logged = false;
-        state.error = true;
         state.loading = false;
-        state.message = action.payload.errors[0].message;
+        (state.auth.hasError = true),
+          (state.auth.signup.message = action.payload.message);
         state.name = null;
       });
     builder
@@ -124,7 +125,7 @@ const userSlice = createSlice({
     builder
       .addCase(logOut.fulfilled, (state, action) => {
         state.logged = false;
-        state.error = false;
+        state.auth.hasError = false;
         state.loading = false;
         state.message = action.payload?.message;
         state.name = "";
@@ -133,7 +134,7 @@ const userSlice = createSlice({
         state.loading = true;
       })
       .addCase(logOut.rejected, (state, action) => {
-        state.error = true;
+        state.auth.hasError = true;
         state.loading = false;
       });
   },

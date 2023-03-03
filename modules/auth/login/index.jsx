@@ -15,7 +15,9 @@ export default function LoginModule({ user }) {
   const [signIn] = useAuthDispatch(login);
 
   const {
-    error: { message },
+    auth: {
+      login: { message },
+    },
   } = useSelector((state) => state.user);
 
   return (
@@ -34,7 +36,7 @@ export default function LoginModule({ user }) {
             <Input name="email" type="text" placeholder="Email" />
             <Input name="password" type="password" placeholder="Password" />
           </section>
-          <p>{message && message}</p>
+          <p>{message}</p>
           <Button user={user} title={"Sing In"} />
           <LabelComponent />
         </FormCustom>
