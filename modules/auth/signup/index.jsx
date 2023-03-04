@@ -13,7 +13,9 @@ const SignUpModule = ({ user }) => {
   const [register] = useAuthDispatch(signUp);
 
   const {
-    error: { message },
+    auth: {
+      signup: { message },
+    },
   } = useSelector((state) => state.user);
 
   return (
@@ -25,6 +27,7 @@ const SignUpModule = ({ user }) => {
           email: "",
           password: "",
           passwordRepeat: "",
+          country: "",
         }}
         validationSchema={SignUpSchema}
         onSubmit={register}

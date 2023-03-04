@@ -1,18 +1,21 @@
-import {
-  createAsyncThunk,
-  createSlice,
-  rejectWithValue,
-} from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { get, post } from "../../api";
+import AUTH_CONSTANTS from "../../config/constants/auth";
 
 export const login = createAsyncThunk(
   "user/login",
   async (credentials, thunkAPI) => {
     try {
-      const response = await post("/api/auth/login", credentials);
+      const response = await post(AUTH_CONSTANTS.login, credentials);
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data);
+      let message;
+      if (typeof error.response.data.message === "string") {
+        message = error.response.data.message;
+      } else {
+        message = error.response.data.message[0];
+      }
+      return thunkAPI.rejectWithValue(message);
     }
   }
 );
@@ -21,7 +24,7 @@ export const signUp = createAsyncThunk(
   "user/signup",
   async (data, thunkAPI) => {
     try {
-      const response = await post("/api/auth/register", data);
+      const response = await post(AUTH_CONSTANTS.signup, data);
       return response.data;
     } catch (error) {
       console.log("Error", { ...error });
@@ -33,7 +36,7 @@ export const signUp = createAsyncThunk(
 export const validation = createAsyncThunk(
   "user/validate",
   async (data, thunkAPI) => {
-    const res = await get("/api/auth/validate");
+    const res = await get(AUTH_CONSTANTS.validation);
     return res.data;
   }
 );
@@ -41,7 +44,7 @@ export const validation = createAsyncThunk(
 export const logOut = createAsyncThunk(
   "user/logout",
   async (data, thunkAPI) => {
-    const res = await get("api/auth/logout");
+    const res = await get(AUTH_CONSTANTS.validation);
     return res.data;
   }
 );
@@ -51,9 +54,14 @@ const initialState = {
   name: "",
   loading: false,
   id: "",
-  error: {
-    hasError: false,
-    message: "",
+  auth: {
+    hasError: true,
+    login: {
+      message: "",
+    },
+    signup: {
+      message: "",
+    },
   },
 };
 
@@ -67,7 +75,7 @@ const userSlice = createSlice({
         state.loading = false;
         state.name = action.payload.name;
         state.id = action.payload.id;
-        (state.error.hasError = false), (state.error.message = "");
+        (state.auth.hasError = false), (state.auth.login.message = "");
       })
       .addCase(login.pending, (state, action) => {
         state.logged = false;
@@ -79,9 +87,9 @@ const userSlice = createSlice({
         console.log(action);
         state.logged = false;
         state.loading = false;
-        state.name = null;
-        (state.error.hasError = true),
-          (state.error.message = action.payload.message);
+        state.name = "";
+        (state.auth.hasError = true),
+          (state.auth.login.message = action.payload);
       });
     builder
       .addCase(signUp.fulfilled, (state, action) => {
@@ -93,16 +101,15 @@ const userSlice = createSlice({
       .addCase(signUp.pending, (state, action) => {
         state.logged = false;
         state.loading = true;
-        state.error = false;
         state.message = "";
         state.name = "";
       })
       .addCase(signUp.rejected, (state, action) => {
         console.log("data:", action);
         state.logged = false;
-        state.error = true;
         state.loading = false;
-        state.message = action.payload.errors[0].message;
+        (state.auth.hasError = true),
+          (state.auth.signup.message = action.payload.message);
         state.name = null;
       });
     builder
@@ -124,7 +131,7 @@ const userSlice = createSlice({
     builder
       .addCase(logOut.fulfilled, (state, action) => {
         state.logged = false;
-        state.error = false;
+        state.auth.hasError = false;
         state.loading = false;
         state.message = action.payload?.message;
         state.name = "";
@@ -133,7 +140,7 @@ const userSlice = createSlice({
         state.loading = true;
       })
       .addCase(logOut.rejected, (state, action) => {
-        state.error = true;
+        state.auth.hasError = true;
         state.loading = false;
       });
   },
