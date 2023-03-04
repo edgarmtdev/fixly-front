@@ -27,6 +27,7 @@ const SignUpModule = ({ user }) => {
           email: "",
           password: "",
           passwordRepeat: "",
+          country: "",
         }}
         validationSchema={SignUpSchema}
         onSubmit={register}

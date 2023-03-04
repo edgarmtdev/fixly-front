@@ -5,7 +5,7 @@ import SignUpModule from "../../../modules/auth/signup";
 import useStatusLogged from "../../../hooks/useStatusLogged";
 
 export default function Signup() {
-  const user = useStatusLogged();
+  const user = useStatusLogged("/");
   return (
     <React.Fragment>
       <HeadComponent title={"Register | Felcy"} />
