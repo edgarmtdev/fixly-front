@@ -9,7 +9,13 @@ export const login = createAsyncThunk(
       const response = await post(AUTH_CONSTANTS.login, credentials);
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data);
+      let message;
+      if (typeof error.response.data.message === "string") {
+        message = error.response.data.message;
+      } else {
+        message = error.response.data.message[0];
+      }
+      return thunkAPI.rejectWithValue(message);
     }
   }
 );
@@ -18,7 +24,7 @@ export const signUp = createAsyncThunk(
   "user/signup",
   async (data, thunkAPI) => {
     try {
-      const response = await post("/api/auth/register", data);
+      const response = await post(AUTH_CONSTANTS.signup, data);
       return response.data;
     } catch (error) {
       console.log("Error", { ...error });
@@ -30,7 +36,7 @@ export const signUp = createAsyncThunk(
 export const validation = createAsyncThunk(
   "user/validate",
   async (data, thunkAPI) => {
-    const res = await get("/api/auth/validate");
+    const res = await get(AUTH_CONSTANTS.validation);
     return res.data;
   }
 );
@@ -38,7 +44,7 @@ export const validation = createAsyncThunk(
 export const logOut = createAsyncThunk(
   "user/logout",
   async (data, thunkAPI) => {
-    const res = await get("api/auth/logout");
+    const res = await get(AUTH_CONSTANTS.validation);
     return res.data;
   }
 );
@@ -83,7 +89,7 @@ const userSlice = createSlice({
         state.loading = false;
         state.name = "";
         (state.auth.hasError = true),
-          (state.auth.login.message = action.payload.message[0]);
+          (state.auth.login.message = action.payload);
       });
     builder
       .addCase(signUp.fulfilled, (state, action) => {
