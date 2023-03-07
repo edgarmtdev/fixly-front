@@ -22,3 +22,7 @@ export const Container = styled.div`
     margin-right: auto;
   }
 `;
+
+export const ErrorMessage = styled.span`
+  padding: 0.5rem;
+`;

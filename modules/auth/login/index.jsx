@@ -7,14 +7,17 @@ import Button from "../../../components/global/form/button";
 import FormCustom from "./components/form";
 import ImageLogin from "./components/image";
 import SignInSchema from "./helpers/validationSchema";
-import { Container } from "./styled";
+import { Container, ErrorMessage, Message } from "./styled";
 import LabelComponent from "./components/label";
 import { useSelector } from "react-redux";
+import { IoMdAlert } from "react-icons/io";
+import { AiFillCheckCircle } from "react-icons/ai";
 
 export default function LoginModule({ user }) {
   const [signIn] = useAuthDispatch(login);
 
   const {
+    message: authValue,
     auth: {
       login: { message },
     },
@@ -32,11 +35,22 @@ export default function LoginModule({ user }) {
       >
         <FormCustom>
           <h1>LOGIN</h1>
+          {message && (
+            <ErrorMessage>
+              <IoMdAlert size={18} />
+              {message}
+            </ErrorMessage>
+          )}
+          {authValue && (
+            <Message>
+              <AiFillCheckCircle size={18} />
+              {authValue}
+            </Message>
+          )}
           <section>
             <Input name="email" type="text" placeholder="Email" />
             <Input name="password" type="password" placeholder="Password" />
           </section>
-          <p>{message}</p>
           <Button user={user} title={"Sing In"} />
           <LabelComponent />
         </FormCustom>

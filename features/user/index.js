@@ -53,6 +53,7 @@ const initialState = {
   name: "",
   loading: false,
   id: "",
+  message: "",
   auth: {
     hasError: true,
     login: {
@@ -74,19 +75,20 @@ const userSlice = createSlice({
         state.loading = false;
         state.name = action.payload.name;
         state.id = action.payload.id;
-        (state.auth.hasError = false), (state.auth.login.message = "");
+        state.auth.login.message = "";
+        (state.auth.hasError = false),
+          (state.message = `Hello ${action.payload.name}`);
       })
       .addCase(login.pending, (state, action) => {
         state.logged = false;
         state.loading = true;
-        state.message = "";
-        state.name = "";
       })
       .addCase(login.rejected, (state, action) => {
         console.log(action);
         state.logged = false;
         state.loading = false;
         state.name = "";
+        state.message = "";
         (state.auth.hasError = true),
           (state.auth.login.message = action.payload);
       });
@@ -129,10 +131,12 @@ const userSlice = createSlice({
     builder
       .addCase(logOut.fulfilled, (state, action) => {
         state.logged = false;
-        state.auth.hasError = false;
-        state.loading = false;
-        state.message = action.payload?.message;
         state.name = "";
+        state.loading = false;
+        state.message = "";
+        state.auth.signup.message = "";
+        state.auth.login.message = "";
+        state.auth.hasError = false;
       })
       .addCase(logOut.pending, (state, action) => {
         state.loading = true;
