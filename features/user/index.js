@@ -27,8 +27,7 @@ export const signUp = createAsyncThunk(
       const response = await post(AUTH_CONSTANTS.signup, data);
       return response.data;
     } catch (error) {
-      console.log("Error", { ...error });
-      return thunkAPI.rejectWithValue(error.response.data);
+      return thunkAPI.rejectWithValue(error.response.data.errors[0]);
     }
   }
 );
@@ -105,7 +104,6 @@ const userSlice = createSlice({
         state.name = "";
       })
       .addCase(signUp.rejected, (state, action) => {
-        console.log("data:", action);
         state.logged = false;
         state.loading = false;
         (state.auth.hasError = true),
