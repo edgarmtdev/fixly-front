@@ -22,3 +22,31 @@ export const Container = styled.div`
     margin-right: auto;
   }
 `;
+
+export const ErrorMessage = styled.p`
+  padding: 3px;
+  margin: 0rem 1rem 1rem 1rem;
+  text-align: center;
+  background-color: #fd4f588a;
+  color: #fff;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 14px;
+`;
+
+export const Message = styled.p`
+  padding: 3px;
+  margin: 0rem 1rem 1rem 1rem;
+  text-align: center;
+  background-color: #4fbb8ac0;
+  color: #fff;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 14px;
+`;

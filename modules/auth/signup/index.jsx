@@ -1,8 +1,7 @@
 import useAuthDispatch from "../hooks/useAuthDispatch";
 import { signUp } from "../../../features/user/";
-import Link from "next/link";
-import { Container } from "./styled";
-import { Formik, Form } from "formik";
+import { Container, ErrorMessage } from "./styled";
+import { Formik } from "formik";
 import Input from "../../../components/global/form/input";
 import SignUpSchema from "./helpers/validationSchema";
 import FormCustom from "./components/form";
@@ -50,7 +49,7 @@ const SignUpModule = ({ user }) => {
               <Input name="country" type="text" placeholder="Country" />
             </div>
           </section>
-          <p>{message && message}</p>
+          <ErrorMessage>{message && message}</ErrorMessage>
           <Button user={user} title={"Signup"} />
         </FormCustom>
       </Formik>
