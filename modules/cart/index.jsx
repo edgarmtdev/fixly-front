@@ -25,7 +25,7 @@ export default function MyCart({ products }) {
         </>
       ) : (
         <div className="h-full flex justify-center items-center">
-          Sin productos
+          Not porducts
         </div>
       )}
     </Container>

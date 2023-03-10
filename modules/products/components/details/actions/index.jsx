@@ -16,7 +16,7 @@ export default function ActionsButtons({ product: { _id } }) {
 
   const addToCar = () => {
     dispatch(addToCart({ idProduct: _id }));
-    router.replace("/shopcar");
+    // router.replace("/cart");
   };
 
   return (
