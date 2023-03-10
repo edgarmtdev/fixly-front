@@ -21,7 +21,7 @@ export default function ActionsButtons({ product: { _id } }) {
 
   return (
     <ActionsCont>
-      <GetNowButton onClick={() => router("/payment")}>
+      <GetNowButton onClick={() => router.replace("/payment")}>
         <Title>GET NOW</Title>
       </GetNowButton>
       <AddCartButton onClick={() => addToCar()}>

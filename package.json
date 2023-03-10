@@ -7,9 +7,6 @@
     "build": "next build",
     "start": "cross-env NODE_ENV=production next start",
     "lint": "next lint",
-    "prebuild": "prisma generate",
-    "db_push": "dotenv -e .env.local -- npx prisma db push",
-    "prismaDev": "dotenv -e .env.local prisma migrate dev",
     "format": "prettier --write ."
   },
   "dependencies": {

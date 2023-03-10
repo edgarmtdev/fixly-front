@@ -9,7 +9,7 @@ const LoggedOptions = forwardRef(({ userName }, ref) => {
   const { action } = useNavigateDispatch(logOut, "/");
   return (
     <OptionsContainer>
-      <Link href={"/shopcar"}>
+      <Link href={"/cart"}>
         <span>
           <AiOutlineShoppingCart size={24} color={"#3E5067"} />
         </span>

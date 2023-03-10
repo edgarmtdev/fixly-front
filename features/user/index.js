@@ -43,7 +43,7 @@ export const validation = createAsyncThunk(
 export const logOut = createAsyncThunk(
   "user/logout",
   async (data, thunkAPI) => {
-    const res = await get(AUTH_CONSTANTS.validation);
+    const res = await get(AUTH_CONSTANTS.logout);
     return res.data;
   }
 );
@@ -125,7 +125,7 @@ const userSlice = createSlice({
       .addCase(validation.rejected, (state, action) => {
         state.logged = false;
         state.loading = false;
-        state.message = action.error?.message;
+        state.message = "";
         state.name = "";
       });
     builder

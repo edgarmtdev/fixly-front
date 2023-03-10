@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import { get } from "../../api";
-import FormPayment from "../../components/Forms/FormPayment";
+import FormPayment from "../../components/global/payment";
 
 const stripe = loadStripe(
   "pk_test_51L0GJWI7XrZmL34QV1hhu8UQnOnfiBSxiwiiigub3MNaHyLavVm7zArehbbLIbYeUltzjplDCHbmsWgfbvaa4pfS004k5IctBg"
