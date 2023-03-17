@@ -35,8 +35,12 @@ export const signUp = createAsyncThunk(
 export const validation = createAsyncThunk(
   "user/validate",
   async (data, thunkAPI) => {
-    const res = await get(AUTH_CONSTANTS.validation);
-    return res.data;
+    try {
+      const res = await get(AUTH_CONSTANTS.validation);
+      return res.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.response.data);
+    }
   }
 );
 
@@ -123,9 +127,10 @@ const userSlice = createSlice({
         state.loading = true;
       })
       .addCase(validation.rejected, (state, action) => {
+        console.log(action.payload);
         state.logged = false;
         state.loading = false;
-        state.message = "";
+        state.message = action.payload.message;
         state.name = "";
       });
     builder
