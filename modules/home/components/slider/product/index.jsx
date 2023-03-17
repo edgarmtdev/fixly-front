@@ -7,7 +7,7 @@ function Product({ data }) {
     <React.Fragment>
       <Card>
         <Price price={data?.price} />
-        <img src={data?.img[0]} alt="" />
+        <img src={`${data.img[0]}`} alt={data.name} width={288} height={288} />
       </Card>
       <Name>{data?.name}</Name>
     </React.Fragment>

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
 import Footer from "../../../components/global/footer";
 import Navbar from "../../../components/global/navigation";
@@ -13,8 +14,8 @@ const Principal = styled.div`
 `;
 
 function MainLayout({ children }) {
-  useAuthValidate();
   useDispatchEffect(getProducts);
+  useAuthValidate();
 
   return (
     <React.Fragment>
