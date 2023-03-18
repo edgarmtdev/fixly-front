@@ -1,8 +1,7 @@
-import Link from "next/link";
 import React from "react";
 import { useSelector } from "react-redux";
 import Card from "./card";
-import { Container, Title } from "./styles";
+import { BuyButton, Container, NotProducts, Title } from "./styles";
 
 export default function MyCart({ products }) {
   const { total } = useSelector((state) => state.cart);
@@ -16,17 +15,10 @@ export default function MyCart({ products }) {
             <Card key={item.product._id} data={item} />
           ))}
           <p>total: ${total} </p>
-          <Link
-            href={"/payment"}
-            className=" ml-auto mt-auto w-1/3 bg-moztaza-500 text-center p-3 rounded-sm font-semibold  hover:bg-moztaza-400 text-white"
-          >
-            BUY
-          </Link>
+          <BuyButton>BUY</BuyButton>
         </>
       ) : (
-        <div className="h-full flex justify-center items-center">
-          Not porducts
-        </div>
+        <NotProducts>Not products</NotProducts>
       )}
     </Container>
   );

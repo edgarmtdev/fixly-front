@@ -5,8 +5,8 @@ const ProductDescription = ({ name, description }) => {
     <Container>
       <TextContent>
         <h4>New products</h4>
-        <h3>{name}</h3>
-        <p>{description}</p>
+        <p className="name">{name}</p>
+        <p className="description">{description}</p>
       </TextContent>
       <Button>BUY</Button>
     </Container>

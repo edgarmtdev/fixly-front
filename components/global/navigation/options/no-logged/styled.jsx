@@ -3,6 +3,9 @@ import BREAKPOINTS_DEVICES from "../../../../../theme/global/breakpoints";
 
 export const OptionsContainer = styled.section`
   display: none;
+  span {
+    cursor: pointer;
+  }
   @media ${BREAKPOINTS_DEVICES.laptop} {
     display: flex;
     gap: 1.75rem;
