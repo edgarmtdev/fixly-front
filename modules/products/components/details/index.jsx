@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import ActionsButtons from "./Actions";
+import ActionsButtons from "./actions";
 import { CardContainer, Card, Title, Price, Details } from "./styled";
 
 function CardProduct({ product }) {
