@@ -23,7 +23,7 @@ export const Container = styled.div`
 
   button {
     width: 6rem;
-    background-color: #442c05;
+    background-color: #cd8a20;
     text-align: center;
     border-radius: 2px;
     font-weight: 600;
