@@ -88,7 +88,6 @@ const userSlice = createSlice({
         state.loading = true;
       })
       .addCase(login.rejected, (state, action) => {
-        console.log(action);
         state.logged = false;
         state.loading = false;
         state.name = "";
@@ -127,10 +126,9 @@ const userSlice = createSlice({
         state.loading = true;
       })
       .addCase(validation.rejected, (state, action) => {
-        console.log(action.payload);
         state.logged = false;
         state.loading = false;
-        state.message = action.payload.message;
+        // state.message = action.payload.message;
         state.name = "";
       });
     builder

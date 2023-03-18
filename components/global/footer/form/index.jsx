@@ -3,7 +3,7 @@ import { Container } from "./styled";
 const FormUser = () => {
   return (
     <Container>
-      <h6>Send a comment</h6>
+      <h4>Send a comment</h4>
       <input type="text" placeholder="Write your email" />
       <button>Send</button>
     </Container>

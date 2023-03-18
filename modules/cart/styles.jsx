@@ -17,3 +17,24 @@ export const Title = styled.h1`
   color: #37374a;
   margin-bottom: 5rem;
 `;
+
+export const BuyButton = styled.button`
+  margin-left: auto;
+  margin-top: auto;
+  width: 30%;
+  background-color: #cd8a20;
+  text-align: center;
+  padding: 12px;
+  border-radius: 2px;
+  font-weight: 6000;
+  color: #fff;
+  &:hover {
+    background-color: #ffc364;
+  }
+`;
+
+export const NotProducts = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

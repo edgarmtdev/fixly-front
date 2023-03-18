@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 1rem;
 
-  h6 {
+  h4 {
     color: #fff;
     font-weight: 600;
     font-size: 20px;
@@ -23,7 +23,7 @@ export const Container = styled.div`
 
   button {
     width: 6rem;
-    background-color: #cd8a20;
+    background-color: #442c05;
     text-align: center;
     border-radius: 2px;
     font-weight: 600;

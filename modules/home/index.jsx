@@ -9,7 +9,7 @@ const HomeModule = () => {
   const { products } = useSelector((state) => state.product);
   return (
     <React.Fragment>
-      <Banner />
+      {/* <Banner /> */}
       <Slider />
       <Categories />
       <MoreProducts products={products} />
