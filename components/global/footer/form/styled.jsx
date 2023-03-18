@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 1rem;
 
-  h6 {
+  h4 {
     color: #fff;
     font-weight: 600;
     font-size: 20px;

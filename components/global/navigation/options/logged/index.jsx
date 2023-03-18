@@ -15,7 +15,7 @@ const LoggedOptions = forwardRef(({ userName }, ref) => {
         </span>
       </Link>
       <AiOutlineUser size={24} color={"#3E5067"} />
-      <h6 onClick={action}>Logout</h6>
+      <p onClick={action}>Logout</p>
       {userName}
     </OptionsContainer>
   );

@@ -25,13 +25,13 @@ export const TextContent = styled.div`
     color: #3e5067;
   }
 
-  h3 {
+  .name {
     font-size: 3rem;
     font-weight: 600;
     text-align: center;
   }
 
-  p {
+  .description {
     text-align: center;
     color: #738aaa;
     max-width: 80%;
