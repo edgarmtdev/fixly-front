@@ -3,6 +3,7 @@ import CardProduct from "./components/details";
 import ScrollToTop from "../../hooks/components/ScrollToTop";
 import { Container } from "./styled";
 import PaymentsMethods from "./components/methods";
+import Reviews from "./components/reviews";
 
 const DeatilsMod = ({ product }) => {
   return (
@@ -10,6 +11,7 @@ const DeatilsMod = ({ product }) => {
       <ScrollToTop />
       <CardProduct product={product} />
       <PaymentsMethods />
+      <Reviews number={20} />
     </Container>
   );
 };

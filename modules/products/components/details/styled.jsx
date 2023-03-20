@@ -28,11 +28,19 @@ export const Card = styled.div`
   }
 `;
 
-export const Title = styled.h3`
-  font-weight: 600;
-  font-size: 24px;
-  text-align: center;
+export const Title = styled.div`
   padding: 1rem;
+  p {
+    display: flex;
+    gap: 0.5rem;
+    color: #738aaa;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  h5 {
+    font-weight: 600;
+    font-size: 24px;
+  }
 `;
 
 export const Price = styled.p`
@@ -45,6 +53,7 @@ export const Price = styled.p`
 export const Details = styled.div`
   color: #3e5067;
   margin: 2.5rem 1rem;
+  font-size: 14px;
   span {
     font-weight: 600;
   }
