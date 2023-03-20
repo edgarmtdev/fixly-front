@@ -15,12 +15,12 @@ function CardProduct({ product }) {
         <Title>{product.name}</Title>
         <div className="line"></div>
         <Price>
-          <p>${product.price}</p>
+          <span>$ </span>
+          {product.price}.00
         </Price>
         <Details>
           <span>Description:</span> {product.description}
         </Details>
-
         {user.logged ? (
           <ActionsButtons product={product} />
         ) : (

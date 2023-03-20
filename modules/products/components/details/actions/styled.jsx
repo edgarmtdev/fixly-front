@@ -3,7 +3,9 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 
 export const ActionsCont = styled.section`
   display: flex;
+  flex-direction: column;
   gap: 1.25rem;
+  margin: 20% 1rem 2.5rem 1rem;
 `;
 
 const Button = styled.button`
@@ -19,21 +21,21 @@ const Button = styled.button`
 `;
 
 export const GetNowButton = styled(Button)`
-  background-color: rgb(79 187 139);
-  width: 75%;
+  background-color: #4fbb8b;
+  p {
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+  }
 `;
 
 export const AddCartButton = styled(Button)`
-  font-weight: 600;
-  font-size: 18px;
-  background-color: rgb(148 227 192);
-  width: 25%;
-`;
-
-export const Title = styled.p`
-  color: white;
-  font-weight: 600;
-  font-size: 18px;
+  background-color: #cee4da;
+  p {
+    color: #4fbb8b;
+    font-weight: 600;
+    font-size: 18px;
+  }
 `;
 
 export const ShoppingCart = styled(AiOutlineShoppingCart)``;

@@ -6,7 +6,6 @@ import {
   ActionsCont,
   GetNowButton,
   AddCartButton,
-  Title,
   ShoppingCart,
 } from "./styled";
 
@@ -22,10 +21,10 @@ export default function ActionsButtons({ product: { _id } }) {
   return (
     <ActionsCont>
       <GetNowButton onClick={() => router.replace("/payment")}>
-        <Title>GET NOW</Title>
+        <p>Buy</p>
       </GetNowButton>
       <AddCartButton onClick={() => addToCar()}>
-        <ShoppingCart />
+        <p>Add to Cart</p>
       </AddCartButton>
     </ActionsCont>
   );
