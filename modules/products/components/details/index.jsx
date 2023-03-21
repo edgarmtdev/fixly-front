@@ -7,7 +7,6 @@ import { Card, CardContainer, Details, Price, Title } from "./styled";
 
 function CardProduct({ product }) {
   const user = useSelector((selector) => selector.user);
-
   return (
     <CardContainer>
       <ImageSlider imgURL={product.imgURL} />
@@ -22,7 +21,7 @@ function CardProduct({ product }) {
         <div className="line"></div>
         <Price>
           <span>$ </span>
-          {product.price}
+          {product.price?.$numberDecimal}
         </Price>
         <Details>
           <p>
