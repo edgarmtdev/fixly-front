@@ -1,10 +1,10 @@
 import React from "react";
 import { Title } from "./styled";
 
-const Reviews = ({ number }) => {
+const Reviews = ({ numberOfReviews }) => {
   return (
     <div>
-      <Title>Reviews ({number})</Title>
+      <Title>Reviews ({numberOfReviews})</Title>
       <div>
         <form>
           <textarea></textarea>

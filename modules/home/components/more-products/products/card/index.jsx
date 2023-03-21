@@ -7,7 +7,7 @@ const ProductCard = forwardRef(({ product }, ref) => {
   return (
     <Link href={`/products/${product._id}`}>
       <Card>
-        <Price price={product.price} />
+        <Price price={product.price.$numberDecimal} />
         <img
           src={`${product.imgURL[0]}`}
           alt={product.name}

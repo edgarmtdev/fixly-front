@@ -1,20 +1,19 @@
 import React from "react";
+import { SiSpringsecurity } from "react-icons/si";
 import { useSelector } from "react-redux";
 import ActionsButtons from "./actions";
-import { CardContainer, Card, Title, Price, Details } from "./styled";
-import { SiSpringsecurity } from "react-icons/si";
 import ImageSlider from "./images";
+import { Card, CardContainer, Details, Price, Title } from "./styled";
 
 function CardProduct({ product }) {
   const user = useSelector((selector) => selector.user);
-
   return (
     <CardContainer>
       <ImageSlider imgURL={product.imgURL} />
       <Card>
         <Title>
           <p>
-            <SiSpringsecurity />
+            <SiSpringsecurity size={"20px"} />
             <span>Protected purchase</span>
           </p>
           <h5>{product.name}</h5>
@@ -22,7 +21,7 @@ function CardProduct({ product }) {
         <div className="line"></div>
         <Price>
           <span>$ </span>
-          {product.price}.00
+          {product.price?.$numberDecimal}
         </Price>
         <Details>
           <p>
