@@ -1,17 +1,14 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  max-width: 1536px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  margin: 3rem auto;
   background-color: white;
-  width: 80%;
-  height: 600px;
+  min-height: 600px;
   border-radius: 4px;
   box-shadow: 0px 5px 20px #0000003f;
-  padding: 0 5rem;
+  padding: 2rem;
 
   div {
     img {
@@ -22,40 +19,41 @@ export const CardContainer = styled.div`
 
 export const Card = styled.div`
   height: 100%;
-  padding-top: 2rem;
-
+  padding: 2rem;
   .line {
     width: 100%;
     height: 1px;
     background-color: #e6ecef;
-    margin: 2.5rem;
+    margin: 1rem 0;
   }
 `;
 
-export const Title = styled.h1`
-  font-weight: 600;
-  font-size: 24px;
-  text-align: justify;
-`;
-
-export const Price = styled.div`
-  display: grid;
-  place-items: center;
-  background-color: #ffc364;
-  width: 10rem;
-  height: 3rem;
-  border-radius: 0.25rem;
+export const Title = styled.div`
+  padding: 1rem;
   p {
-    color: #fff;
-    font-weight: 600;
-    font-size: 18px;
+    display: flex;
+    gap: 0.5rem;
+    color: #738aaa;
+    align-items: center;
+    margin-bottom: 1.5rem;
   }
+  h5 {
+    font-weight: 600;
+    font-size: 24px;
+  }
+`;
+
+export const Price = styled.p`
+  width: auto;
+  margin: 2.5rem 1rem;
+  font-weight: 600;
+  font-size: 22px;
 `;
 
 export const Details = styled.div`
   color: #3e5067;
-  padding: 3rem 0;
-
+  margin: 2.5rem 1rem;
+  font-size: 14px;
   span {
     font-weight: 600;
   }

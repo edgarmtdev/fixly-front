@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  height: 100vh;
+  margin: 3rem 2rem;
 `;
