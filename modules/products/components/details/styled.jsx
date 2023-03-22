@@ -1,4 +1,23 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const spin = keyframes`
+    to {
+        transform: rotate(360deg);
+    }
+`;
+export const CardLoading = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  min-height: 600px;
+  border-radius: 4px;
+  box-shadow: 0px 5px 20px #0000003f;
+  padding: 2rem;
+  svg {
+    animation: ${spin} 1s linear infinite;
+  }
+`;
 
 export const CardContainer = styled.div`
   display: grid;

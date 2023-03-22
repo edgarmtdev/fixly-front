@@ -1,15 +1,12 @@
 import React from "react";
+import FormReview from "./form";
 import { Title } from "./styled";
 
-const Reviews = ({ numberOfReviews }) => {
+const Reviews = ({ reviews }) => {
   return (
     <div>
-      <Title>Reviews ({numberOfReviews})</Title>
-      <div>
-        <form>
-          <textarea></textarea>
-        </form>
-      </div>
+      <Title>Reviews ({reviews?.length})</Title>
+      <FormReview />
     </div>
   );
 };

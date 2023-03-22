@@ -2,19 +2,14 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/router";
 import { addToCart } from "../../../../../features/cart";
-import {
-  ActionsCont,
-  GetNowButton,
-  AddCartButton,
-  ShoppingCart,
-} from "./styled";
+import { ActionsCont, GetNowButton, AddCartButton } from "./styled";
 
-export default function ActionsButtons({ product: { _id } }) {
+export default function ActionsButtons({ product }) {
   const dispatch = useDispatch();
   const router = useRouter();
 
-  const addToCar = () => {
-    dispatch(addToCart({ idProduct: _id }));
+  const addToCar = (idProduct) => {
+    dispatch(addToCart({ idProduct }));
     // router.replace("/cart");
   };
 
@@ -23,7 +18,7 @@ export default function ActionsButtons({ product: { _id } }) {
       <GetNowButton onClick={() => router.replace("/payment")}>
         <p>Buy</p>
       </GetNowButton>
-      <AddCartButton onClick={() => addToCar()}>
+      <AddCartButton onClick={() => addToCar(product?._id)}>
         <p>Add to Cart</p>
       </AddCartButton>
     </ActionsCont>

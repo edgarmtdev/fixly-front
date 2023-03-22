@@ -5,13 +5,13 @@ import { Container } from "./styled";
 import PaymentsMethods from "./components/methods";
 import Reviews from "./components/reviews";
 
-const DeatilsMod = ({ product }) => {
+const DeatilsMod = ({ product, loading }) => {
   return (
     <Container>
       <ScrollToTop />
-      <CardProduct product={product} />
+      <CardProduct product={product} loading={loading} />
       <PaymentsMethods />
-      <Reviews numberOfReviews={20} />
+      <Reviews reviews={product?.reviews} />
     </Container>
   );
 };
