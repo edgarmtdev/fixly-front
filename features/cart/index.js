@@ -45,10 +45,12 @@ const cartSlice = createSlice({
         state.error = false;
         state.items = action.payload.items;
         state.loading = false;
-        state.total = state.items.reduce(
-          (res, item) => res + item.product.price * item.amount,
-          0
-        );
+        if (action.payload.items) {
+          state.total = state.items.reduce(
+            (res, item) => res + item.product.price * item.amount,
+            0
+          );
+        }
       })
       .addCase(getCart.pending, (state, action) => {
         state.error = false;

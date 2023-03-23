@@ -3,10 +3,27 @@ import { SiSpringsecurity } from "react-icons/si";
 import { useSelector } from "react-redux";
 import ActionsButtons from "./actions";
 import ImageSlider from "./images";
-import { Card, CardContainer, Details, Price, Title } from "./styled";
+import {
+  Card,
+  CardContainer,
+  CardLoading,
+  Details,
+  Price,
+  Title,
+} from "./styled";
+import { CgSpinnerTwoAlt } from "react-icons/cg";
 
-function CardProduct({ product }) {
+function CardProduct({ product, loading }) {
   const user = useSelector((selector) => selector.user);
+
+  if (loading) {
+    return (
+      <CardLoading>
+        <CgSpinnerTwoAlt size={50} color={"#3E5067"} />
+      </CardLoading>
+    );
+  }
+
   return (
     <CardContainer>
       <ImageSlider imgURL={product.imgURL} />

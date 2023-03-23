@@ -6,11 +6,11 @@ import DeatilsMod from "../../modules/products";
 
 const ProductDetails = () => {
   const idProduct = useRouterQuery();
-  const [product] = useGetItem(idProduct);
+  const [product, loading] = useGetItem(idProduct);
   return (
     <React.Fragment>
-      <HeadComponent title={`${product.name || "Details"} | Felcy`} />
-      <DeatilsMod product={product} />
+      <HeadComponent title={`${product?.name || "Details"} | Felcy`} />
+      <DeatilsMod product={product} loading={loading} />
     </React.Fragment>
   );
 };
