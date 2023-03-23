@@ -11,7 +11,7 @@ const DeatilsMod = ({ product, loading }) => {
       <ScrollToTop />
       <CardProduct product={product} loading={loading} />
       <PaymentsMethods />
-      <Reviews reviews={product?.reviews} />
+      <Reviews reviews={product?.reviews} loading={loading} />
     </Container>
   );
 };

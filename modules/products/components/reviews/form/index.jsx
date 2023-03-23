@@ -3,13 +3,17 @@ import { ButtonAddReview } from "./styled";
 
 const FormReview = () => {
   return (
-    <form>
-      <textarea></textarea>
-
-      <div>
-        <ButtonAddReview>Add review</ButtonAddReview>
-      </div>
-    </form>
+    <section className=" w-3/4">
+      <form>
+        <textarea
+          placeholder="Escribe tu reseña"
+          className="p-2 w-full"
+        ></textarea>
+        <div>
+          <ButtonAddReview>Add review</ButtonAddReview>
+        </div>
+      </form>
+    </section>
   );
 };
 
