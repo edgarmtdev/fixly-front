@@ -2,6 +2,7 @@ import React from "react";
 import CardReview from "./card";
 import FormReview from "./form";
 import { ReviewsContainer, Title } from "./styled";
+import moment from "moment";
 
 const Reviews = ({ reviews, loading }) => {
   return (
@@ -10,7 +11,7 @@ const Reviews = ({ reviews, loading }) => {
       <FormReview />
       <ReviewsContainer>
         {reviews?.map((review, index) => {
-          const date = new Date(review.date).toLocaleString();
+          const date = moment(review.date).fromNow();
           return <CardReview key={index} review={review} date={date} />;
         })}
       </ReviewsContainer>

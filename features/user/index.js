@@ -55,7 +55,7 @@ export const logOut = createAsyncThunk(
 const initialState = {
   logged: false,
   name: "",
-  loading: true,
+  loading: false,
   id: "",
   message: "",
   auth: {
