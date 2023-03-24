@@ -4,8 +4,8 @@ import { get, post } from "../../api";
 export const getCart = createAsyncThunk(
   "cart/getCart",
   async function (data, thunkAPI) {
-    const products = await get(`/api/cart`);
-    return products.data;
+    const response = await get(`/api/cart`);
+    return response.data;
   }
 );
 
@@ -23,7 +23,7 @@ export const addToCart = createAsyncThunk(
 
 const initialState = {
   items: [],
-  loading: false,
+  loading: true,
   error: false,
   total: 0,
 };
@@ -47,7 +47,8 @@ const cartSlice = createSlice({
         state.loading = false;
         if (action.payload.items) {
           state.total = state.items.reduce(
-            (res, item) => res + item.product.price * item.amount,
+            (res, item) =>
+              res + item.product.price.$numberDecimal * item.amount,
             0
           );
         }

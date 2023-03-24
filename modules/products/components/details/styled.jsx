@@ -1,23 +1,4 @@
-import styled, { keyframes } from "styled-components";
-
-const spin = keyframes`
-    to {
-        transform: rotate(360deg);
-    }
-`;
-export const CardLoading = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  min-height: 600px;
-  border-radius: 4px;
-  box-shadow: 0px 5px 20px #0000003f;
-  padding: 2rem;
-  svg {
-    animation: ${spin} 1s linear infinite;
-  }
-`;
+import styled from "styled-components";
 
 export const CardContainer = styled.div`
   display: grid;
@@ -25,7 +6,7 @@ export const CardContainer = styled.div`
   align-items: center;
   background-color: white;
   min-height: 600px;
-  border-radius: 4px;
+  border-radius: 10px;
   box-shadow: 0px 5px 20px #0000003f;
   padding: 2rem;
 
@@ -56,7 +37,8 @@ export const Title = styled.div`
     align-items: center;
     margin-bottom: 1.5rem;
   }
-  h5 {
+  p.name {
+    color: #3e5067;
     font-weight: 600;
     font-size: 24px;
   }

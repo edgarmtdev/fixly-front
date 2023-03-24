@@ -1,12 +1,27 @@
 import React from "react";
+import { Product } from "./styled";
 
 export default function Card({ data }) {
   return (
-    <article key={data.product._id} className="flex gap-10">
-      <img src={data.product.imgURL[0]} alt="" className=" w-16 " />
-      <p>{data.product.name}</p>
-      <span>${data.product.price}</span>
-      <span>{data.amount}</span>
-    </article>
+    <Product>
+      <div className="flex gap-4 items-center">
+        {" "}
+        <img
+          src={data.product.imgURL[0]}
+          alt="product"
+          width={80}
+          height={80}
+        />
+        <p className=" text-[#3e5067] font-semibold text-xl">
+          {data.product.name}
+        </p>
+      </div>
+      <div>
+        <p>{data.amount}</p>
+      </div>
+      <p className="text-[#3e5067] text-xl">
+        ${data.product.price.$numberDecimal}
+      </p>
+    </Product>
   );
 }

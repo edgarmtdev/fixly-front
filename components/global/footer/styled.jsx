@@ -7,7 +7,7 @@ export const Container = styled.footer`
 
 export const FooterContainer = styled.div`
   max-width: 1536px;
-  margin: 0 auto;
+  margin: 3rem auto 0;
   padding: 2rem 1rem;
 
   .lists {
