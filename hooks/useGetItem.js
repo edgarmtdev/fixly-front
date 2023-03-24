@@ -16,7 +16,7 @@ const useGetItem = (id) => {
         setTimeout(() => {
           setItem(res.data.product);
           setLoading(false);
-        }, 1000);
+        }, 2000);
       });
     }
   }, [id]);
