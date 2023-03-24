@@ -10,7 +10,7 @@ export default function ActionsButtons({ product }) {
 
   const addToCar = (idProduct) => {
     dispatch(addToCart({ idProduct }));
-    // router.replace("/cart");
+    router.replace("/cart");
   };
 
   return (
