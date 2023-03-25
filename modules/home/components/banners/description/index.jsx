@@ -4,11 +4,11 @@ const ProductDescription = ({ name, description }) => {
   return (
     <Container>
       <TextContent>
-        <h4>New products</h4>
+        <p className="label">New products</p>
         <p className="name">{name}</p>
         <p className="description">{description}</p>
       </TextContent>
-      <Button>BUY</Button>
+      <Button>Buy now</Button>
     </Container>
   );
 };
