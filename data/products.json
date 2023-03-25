@@ -6,23 +6,26 @@
       {
         "id": 1,
         "name": "Arduino UNO",
-        "img": "/images/arduinoUNO.png",
+        "imgURL": ["/images/arduinoUNO.png"],
         "description": "Arduino board is te best for begin with programming and electronic if is your first experience with electronic enviroment.",
-        "price": "580.00"
+        "price": "580.00",
+        "route": "/new-products/arduino-uno"
       },
       {
         "id": 2,
         "name": "SmartBot Kit",
-        "img": "/images/smartbot.png",
+        "imgURL": ["/images/smartbot.png"],
         "description": "Have fun and learn mechatronics basics by putting together this fantastic kit.",
-        "price": "900.00"
+        "price": "900.00",
+        "route": "/new-products/smartbot-kit"
       },
       {
         "id": 3,
         "name": " Arduino UNO",
-        "img": "/images/arduinoUNO.png",
+        "imgURL": ["/images/arduinoUNO.png"],
         "description": "Arduino board is te best for begin with programming and electronic if is your first experience with electronic enviroment",
-        "price": "580.00"
+        "price": "580.00",
+        "route": "/new-products/arduino-uno"
       }
     ]
   },

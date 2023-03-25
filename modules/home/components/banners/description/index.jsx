@@ -1,6 +1,7 @@
+import Link from "next/link";
 import { Container, TextContent, Button } from "./styled";
 
-const ProductDescription = ({ name, description }) => {
+const ProductDescription = ({ name, description, route }) => {
   return (
     <Container>
       <TextContent>
@@ -8,7 +9,9 @@ const ProductDescription = ({ name, description }) => {
         <p className="name">{name}</p>
         <p className="description">{description}</p>
       </TextContent>
-      <Button>Buy now</Button>
+      <Link href={`${route}`}>
+        <Button>Buy now</Button>
+      </Link>
     </Container>
   );
 };

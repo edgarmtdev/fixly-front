@@ -27,8 +27,9 @@ export default function Banner() {
                 <ProductDescription
                   name={product.name}
                   description={product.description}
+                  route={product.route}
                 />
-                <BannerImage imgURL={product.img} />
+                <BannerImage imgURL={product.imgURL[0]} />
               </Container>
             </SwiperSlide>
           );

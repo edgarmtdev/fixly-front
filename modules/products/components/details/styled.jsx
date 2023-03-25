@@ -35,7 +35,6 @@ export const Title = styled.div`
     gap: 0.5rem;
     color: #738aaa;
     align-items: center;
-    margin-bottom: 1.5rem;
   }
   p.name {
     color: #3e5067;

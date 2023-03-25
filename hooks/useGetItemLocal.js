@@ -1,8 +1,7 @@
 import React from "react";
-import data from "../data/products.json";
 
-const useGetItemLocal = (id) => {
-  const [products] = React.useState(data[1].products);
+const useGetItemLocal = (id, data) => {
+  const [products] = React.useState(data);
   const [product, setProduct] = React.useState(null);
   const [loading, setLoading] = React.useState(true);
 
