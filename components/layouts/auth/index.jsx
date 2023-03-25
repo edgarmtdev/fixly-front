@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import BREAKPOINTS_DEVICES from "../../../theme/global/breakpoints";
 import NavbarAuth from "../../auth/navigation";
 
 export const AuthCont = styled.main`
@@ -9,7 +10,7 @@ export const AuthCont = styled.main`
   justify-content: center;
   background-image: url("/bg/background.png");
   background-repeat: no-repeat;
-  background-position-x: 100%;
+  background-size: cover;
 `;
 
 export default function AuthLayout({ children }) {
