@@ -8,7 +8,7 @@ export default function Login() {
   const user = useStatusLogged("/");
   return (
     <React.Fragment>
-      <HeadComponent title={"Login | Felcy"} />
+      <HeadComponent title={"Login | Fixly"} />
       <LoginModule user={user} />
     </React.Fragment>
   );

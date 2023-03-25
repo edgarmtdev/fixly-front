@@ -5,7 +5,7 @@ import HomeModule from "../modules/home";
 export default function Home() {
   return (
     <React.Fragment>
-      <HeadComponent title={"Home | Felcy"} />
+      <HeadComponent title={"Home | Fixly"} />
       <HomeModule />
     </React.Fragment>
   );

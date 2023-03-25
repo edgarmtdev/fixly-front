@@ -10,7 +10,7 @@ export default function ShopCar() {
   const { items } = useSelector((state) => state.cart);
   return (
     <React.Fragment>
-      <HeadComponent title={"Cart | Felcy"} />
+      <HeadComponent title={"Cart | Fixly"} />
       <MyCart products={items} />
     </React.Fragment>
   );

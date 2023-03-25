@@ -10,7 +10,7 @@ const NavbarAuth = () => {
           <Link href={"/"}>
             <NavbarTitle>
               <RiFlashlightLine color="#CD8A20" widths={44} size={44} />
-              <h1>Felcy</h1>
+              <h1>Fixly</h1>
             </NavbarTitle>
           </Link>
         </NavbarMenu>

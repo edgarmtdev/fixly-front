@@ -9,7 +9,7 @@ const ProductOffert = () => {
   const { product, loading } = useGetItemLocal(id);
   return (
     <React.Fragment>
-      <HeadComponent title={`${product?.name || "Details"} | Felcy`} />
+      <HeadComponent title={`${product?.name || "Details"} | Fixly`} />
       <DeatilsMod product={product} loading={loading} />
     </React.Fragment>
   );

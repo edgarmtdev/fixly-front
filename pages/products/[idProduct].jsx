@@ -9,7 +9,7 @@ const ProductDetails = () => {
   const [product, loading] = useGetItem(idProduct);
   return (
     <React.Fragment>
-      <HeadComponent title={`${product?.name || "Details"} | Felcy`} />
+      <HeadComponent title={`${product?.name || "Details"} | Fixly`} />
       <DeatilsMod product={product} loading={loading} />
     </React.Fragment>
   );
