@@ -1,25 +1,26 @@
 import styled from "styled-components";
+import BREAKPOINTS_DEVICES from "../../../theme/global/breakpoints";
 
 export const Container = styled.div`
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 90%;
+  min-height: 600px;
   background-color: #f6f6f6;
   pad: 0.5rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  @media (min-width: 800px) {
+
+  @media ${BREAKPOINTS_DEVICES.tablet} {
+    width: 80%;
+  }
+
+  @media ${BREAKPOINTS_DEVICES.laptop} {
+    max-width: 1024px;
     height: 500px;
     margin-left: 5rem;
     margin-right: 5rem;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (min-width: 800px) {
-    width: 900px;
-    margin-left: auto;
-    margin-right: auto;
   }
 `;
 
