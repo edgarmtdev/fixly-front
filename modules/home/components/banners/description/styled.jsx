@@ -20,21 +20,22 @@ export const TextContent = styled.div`
     align-items: flex-start;
   }
 
-  h4 {
+  .label {
     font-size: 1.25rem;
     color: #3e5067;
+    padding: 1rem 0;
   }
-
   .name {
     font-size: 3rem;
     font-weight: 600;
     text-align: center;
   }
-
   .description {
     text-align: center;
-    color: #738aaa;
     max-width: 80%;
+    padding: 1rem 0;
+    color: #3e5067;
+
     @media ${BREAKPOINTS_DEVICES.laptop} {
       text-align: left;
       max-width: 90%;
@@ -53,6 +54,7 @@ export const Button = styled.button`
   font-weight: 600;
   font-size: 13px;
   &:hover {
-    background-color: #ffc364;
+    opacity: 0.9;
+    transform: scale(1.01);
   }
 `;

@@ -5,12 +5,7 @@ import { Container } from "./styled";
 const BannerImage = ({ imgURL }) => {
   return (
     <Container>
-      <Image
-        src={`${imgURL}`}
-        alt="banner"
-        layout={"fill"}
-        objectFit={"contain"}
-      />
+      <Image src={`${imgURL}`} alt="banner" layout={"fill"} objectFit="fill" />
     </Container>
   );
 };
