@@ -15,24 +15,24 @@ function CardProduct({ product, loading }) {
 
   return (
     <CardContainer>
-      <ImageSlider imgURL={product.imgURL} />
+      <ImageSlider imgURL={product?.imgURL[0]} />
       <Card>
         <Title>
           <p>
             <SiSpringsecurity size={"20px"} />
             <span>Protected purchase</span>
           </p>
-          <p className="name">{product.name}</p>
+          <p className="name">{product?.name}</p>
         </Title>
         <div className="line"></div>
         <Price>
           <span>$ </span>
-          {product.price?.$numberDecimal}
+          {product?.price?.$numberDecimal || product?.price}
         </Price>
         <Details>
           <p>
             <span>Description: </span>
-            {product.description}
+            {product?.description}
           </p>
         </Details>
         {user.logged ? (
