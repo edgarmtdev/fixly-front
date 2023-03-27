@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import BREAKPOINTS_DEVICES from "/theme/global/breakpoints";
 
 export const Card = styled.div`
   display: flex;
@@ -15,6 +16,9 @@ export const Card = styled.div`
     transform: scale(1.05);
     transition: 1s;
   }
+  img {
+    width: 80%;
+  }
 `;
 
 export const Name = styled.p`
@@ -22,4 +26,8 @@ export const Name = styled.p`
   font-weight: 600;
   color: #3e5067;
   margin-top: 8px;
+  font-size: 12px;
+  @media ${BREAKPOINTS_DEVICES.tabletL} {
+    font-size: 14px;
+  }
 `;

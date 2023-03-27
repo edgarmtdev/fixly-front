@@ -18,11 +18,14 @@ export const Card = styled.div`
     transform: scale(1.01);
     transition: 500ms;
   }
+  img {
+    width: 80%;
+  }
 `;
 
 export const Name = styled.p`
   text-align: center;
   font-weight: 600;
   color: #3e5067;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 `;

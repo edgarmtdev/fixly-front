@@ -57,22 +57,15 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
     }
-
     .swiper {
         width: 100%;
         padding-bottom: 50px;
     }
-
     .swiper-slide { 
         background-position: center;
         background-size: cover;
         width: auto;
         height: auto;
-    }
-
-    .swiper-slide img {
-        display: block;
-        width: 100%;
     }
 `;
 

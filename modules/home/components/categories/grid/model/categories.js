@@ -51,6 +51,11 @@ const CATEGORIES_LINKS = [
     title: "Ressitances",
     icon: <GiElectricalResistance />,
   },
+  {
+    id: 10,
+    title: "Ressitances",
+    icon: <GiElectricalResistance />,
+  },
 ];
 
 export default CATEGORIES_LINKS;
