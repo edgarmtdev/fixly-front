@@ -12,7 +12,7 @@ export const Title = styled.h2`
   font-weight: 600;
   text-align: center;
   margin-top: 80px;
-  @media ${BREAKPOINTS_DEVICES.tabletL} {
+  @media ${BREAKPOINTS_DEVICES.mobileL} {
     margin-top: 5rem;
     font-size: 32px;
   }
