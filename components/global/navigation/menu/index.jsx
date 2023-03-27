@@ -24,7 +24,7 @@ const Menu = () => {
             <li>{item.title}</li>
           </Link>
         ))}
-        <Link href={"/#"}>
+        <Link href={"/products?cat=all"}>
           <li>More...</li>
         </Link>
       </NavbarList>

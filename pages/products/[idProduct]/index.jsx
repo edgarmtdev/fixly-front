@@ -1,8 +1,8 @@
 import React from "react";
-import { HeadComponent } from "../../components/utils/head";
-import useGetItem from "../../hooks/useGetItem";
-import useRouterQuery from "../../hooks/useRouterQuery";
-import DeatilsMod from "../../modules/products";
+import { HeadComponent } from "../../../components/utils/head";
+import DeatilsMod from "../../../modules/products";
+import useRouterQuery from "../../../hooks/useRouterQuery";
+import useGetItem from "../../../hooks/useGetItem";
 
 const ProductDetails = () => {
   const idProduct = useRouterQuery();
