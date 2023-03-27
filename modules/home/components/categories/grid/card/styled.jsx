@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import BREAKPOINTS_DEVICES from "/theme/global/breakpoints";
 
 export const Card = styled.div`
   display: flex;
@@ -12,8 +13,19 @@ export const Card = styled.div`
   color: #3e5067;
   font-weight: 600;
   cursor: pointer;
+
+  span {
+    font-size: 12px;
+  }
+
   &:hover {
     background-color: #3e5067;
     color: #cd8a20;
+  }
+
+  @media ${BREAKPOINTS_DEVICES.tabletL} {
+    span {
+      font-size: 16px;
+    }
   }
 `;

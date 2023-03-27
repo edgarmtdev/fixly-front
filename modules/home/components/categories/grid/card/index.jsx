@@ -7,7 +7,7 @@ const CardCategory = ({ name, icon }) => {
     <Link href={`/products/categories?cat=${name}`}>
       <Card>
         {icon}
-        {name}
+        <span>{name}</span>
       </Card>
     </Link>
   );

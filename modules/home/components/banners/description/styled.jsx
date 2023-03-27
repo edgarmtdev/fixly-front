@@ -16,17 +16,14 @@ export const TextContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media ${BREAKPOINTS_DEVICES.laptop} {
-    align-items: flex-start;
-  }
 
   .label {
-    font-size: 1.25rem;
+    font-size: 18px;
     color: #3e5067;
     padding: 1rem 0;
   }
   .name {
-    font-size: 3rem;
+    font-size: 32px;
     font-weight: 600;
     text-align: center;
   }
@@ -35,10 +32,21 @@ export const TextContent = styled.div`
     max-width: 80%;
     padding: 1rem 0;
     color: #3e5067;
+    font-size: 12px;
+  }
 
-    @media ${BREAKPOINTS_DEVICES.laptop} {
+  @media ${BREAKPOINTS_DEVICES.laptop} {
+    align-items: flex-start;
+    .label {
+      font-size: 18px;
+    }
+    .name {
+      font-size: 48px;
+    }
+    .description {
       text-align: left;
       max-width: 90%;
+      font-size: 14px;
     }
   }
 `;
