@@ -5,9 +5,7 @@ import { HeadComponent } from "../../../components/utils/head";
 
 export async function getServerSideProps(context) {
   const cat = context?.query?.cat || "all";
-  console.log(cat);
   const response = await get(`/api/products/category?cat=${cat}`);
-  console.log(response);
   return {
     props: {
       cat,
