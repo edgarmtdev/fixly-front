@@ -15,6 +15,7 @@ export async function getServerSideProps(context) {
 }
 
 export default function Products(props) {
+  console.log(props);
   return (
     <React.Fragment>
       <HeadComponent title={"Products | Tools"} />

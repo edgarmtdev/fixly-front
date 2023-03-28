@@ -56,6 +56,16 @@ const CATEGORIES_LINKS = [
     title: "Ressitances",
     icon: <GiElectricalResistance />,
   },
+  {
+    id: 7,
+    title: "Adapters",
+    icon: <MdSettingsInputHdmi />,
+  },
+  {
+    id: 8,
+    title: "Network",
+    icon: <BsFillHddNetworkFill />,
+  },
 ];
 
 export default CATEGORIES_LINKS;
