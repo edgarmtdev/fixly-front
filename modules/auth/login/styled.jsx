@@ -2,15 +2,13 @@ import styled from "styled-components";
 import BREAKPOINTS_DEVICES from "../../../theme/global/breakpoints";
 
 export const Container = styled.div`
-  position: relative;
+  margin-top: 3rem;
   width: 90%;
-  min-height: 600px;
   background-color: #f6f6f6;
-  pad: 0.5rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
   @media ${BREAKPOINTS_DEVICES.tablet} {
     width: 80%;
+    min-height: 550px;
   }
 
   @media ${BREAKPOINTS_DEVICES.laptop} {
