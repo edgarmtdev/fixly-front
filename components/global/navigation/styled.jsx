@@ -1,8 +1,11 @@
 import styled from "styled-components";
-import BREAKPOINTS_DEVICES from "../../../theme/global/breakpoints";
+import BREAKPOINTS_DEVICES from "/theme/global/breakpoints";
 
 export const Container = styled.nav`
-  padding: 2.5rem;
+  padding: 2.5rem 1.5rem;
+  @media ${BREAKPOINTS_DEVICES.laptop} {
+    padding: 2.5rem;
+  }
 `;
 
 export const NavbarCont = styled.div`

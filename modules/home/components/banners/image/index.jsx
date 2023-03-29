@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import { Container } from "./styled";
+import { ImageContainer } from "./styled";
 
 const BannerImage = ({ imgURL }) => {
   return (
-    <Container>
-      <Image src={`${imgURL}`} alt="banner" layout={"fill"} objectFit="fill" />
-    </Container>
+    <ImageContainer>
+      <Image src={`${imgURL}`} alt="banner" width={400} height={350} />
+    </ImageContainer>
   );
 };
 

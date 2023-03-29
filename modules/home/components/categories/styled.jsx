@@ -5,6 +5,7 @@ export const CategoriesCont = styled.section`
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
+  margin: 5rem auto 1rem;
 `;
 
 export const Tilte = styled.h2`
@@ -12,7 +13,6 @@ export const Tilte = styled.h2`
   font-size: 24px;
   padding: 40px;
   @media ${BREAKPOINTS_DEVICES.tabletL} {
-    margin-top: 5rem;
     font-size: 32px;
   }
 `;

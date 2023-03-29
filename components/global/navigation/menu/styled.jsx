@@ -10,6 +10,10 @@ export const NavbarMenu = styled.div`
 export const IconMenu = styled.div`
   margin-left: auto;
   cursor: pointer;
+  svg {
+    width: 34px;
+    height: 34px;
+  }
   @media ${BREAKPOINTS_DEVICES.laptop} {
     display: none;
   }
@@ -17,13 +21,27 @@ export const IconMenu = styled.div`
 
 export const NavbarTitle = styled.div`
   display: flex;
-  gap: 1rem;
   cursor: pointer;
-
+  svg {
+    width: 34px;
+    height: 34px;
+  }
   h1 {
     font-weight: 800;
-    font-size: 28px;
+    font-size: 24px;
     color: #3e5067;
+  }
+  @media ${BREAKPOINTS_DEVICES.laptop} {
+    gap: 0.5rem;
+    svg {
+      width: 44px;
+      height: 44px;
+    }
+    h1 {
+      font-weight: 800;
+      font-size: 28px;
+      color: #3e5067;
+    }
   }
 `;
 

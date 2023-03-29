@@ -3,7 +3,7 @@ import BREAKPOINTS_DEVICES from "/theme/global/breakpoints";
 
 export const MoreProductsCont = styled.section`
   max-width: 1280px;
-  margin: 20px auto 6rem auto;
+  margin: 6rem auto 1rem;
 `;
 
 export const Title = styled.h2`
@@ -11,9 +11,7 @@ export const Title = styled.h2`
   font-size: 24px;
   font-weight: 600;
   text-align: center;
-  margin-top: 80px;
   @media ${BREAKPOINTS_DEVICES.mobileL} {
-    margin-top: 5rem;
     font-size: 32px;
   }
 `;
