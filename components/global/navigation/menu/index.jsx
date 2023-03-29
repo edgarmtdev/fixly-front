@@ -11,12 +11,12 @@ const Menu = () => {
     <NavbarMenu size={44}>
       <Link href={"/"}>
         <NavbarTitle>
-          <RiFlashlightLine color="#CD8A20" widths={44} size={44} />
+          <RiFlashlightLine color="#CD8A20" />
           <h1>Fixly</h1>
         </NavbarTitle>
       </Link>
       <IconMenu>
-        <BiMenu size={36} color={"#3E5067"} />
+        <BiMenu color={"#3E5067"} />
       </IconMenu>
       <NavbarList>
         {links.map((item) => (

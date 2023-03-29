@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { Container, TextContent, Button } from "./styled";
+import { ContainerDescription, TextContent, Button } from "./styled";
 
 const ProductDescription = ({ name, description, route }) => {
   return (
-    <Container>
+    <ContainerDescription>
       <TextContent>
         <p className="label">New products</p>
         <p className="name">{name}</p>
@@ -12,7 +12,7 @@ const ProductDescription = ({ name, description, route }) => {
       <Link href={`${route}`}>
         <Button>Buy now</Button>
       </Link>
-    </Container>
+    </ContainerDescription>
   );
 };
 export default ProductDescription;

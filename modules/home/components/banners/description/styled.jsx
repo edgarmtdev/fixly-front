@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import BREAKPOINTS_DEVICES from "../../../../../theme/global/breakpoints";
 
-export const Container = styled.section`
+export const ContainerDescription = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
