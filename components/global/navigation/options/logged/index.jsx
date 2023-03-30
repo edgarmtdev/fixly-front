@@ -1,22 +1,31 @@
+import { dropdownContext } from "context/dropdown";
 import Link from "next/link";
-import { forwardRef } from "react";
-import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
-import { logOut } from "../../../../../features/user";
-import useNavigateDispatch from "../../../../../hooks/useDispatchNavigate";
+import React from "react";
+import { HiUser, HiOutlineShoppingCart, HiChevronDown } from "react-icons/hi";
 import { OptionsContainer } from "../no-logged/styled";
 
-const LoggedOptions = forwardRef(({ userName }, ref) => {
-  const { action } = useNavigateDispatch(logOut, "/");
+const LoggedOptions = React.forwardRef(({ userName }, ref) => {
+  const { view, handleViewDropdown, handleNotViewDropdown } =
+    React.useContext(dropdownContext);
+
   return (
     <OptionsContainer>
       <Link href={"/cart"}>
         <span>
-          <AiOutlineShoppingCart size={24} color={"#3E5067"} />
+          <HiOutlineShoppingCart size={24} color={"#3E5067"} />
         </span>
       </Link>
-      <AiOutlineUser size={24} color={"#3E5067"} />
-      <p onClick={action}>Logout</p>
-      {userName}
+      <span
+        onClick={view ? handleNotViewDropdown : handleViewDropdown}
+        className="flex items-center"
+      >
+        <HiUser style={{ cursor: "pointer" }} size={24} color={"#3E5067"} />
+        <HiChevronDown
+          style={{ cursor: "pointer" }}
+          size={18}
+          color={"#3E5067"}
+        />
+      </span>
     </OptionsContainer>
   );
 });

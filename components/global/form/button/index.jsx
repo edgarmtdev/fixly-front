@@ -5,7 +5,6 @@ const Button = ({ user, title }) => {
   return (
     <ButtonComponent>
       <button>
-        {" "}
         {user.loading ? <CgSpinner size={28} /> : <span>{title}</span>}
       </button>
     </ButtonComponent>

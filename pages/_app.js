@@ -6,15 +6,18 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "../styles/index.css";
+import DropdownContext from "context/dropdown/Provider";
 
 function MyApp({ Component, pageProps }) {
   const Layout = Component.Layout || MainLayout;
   return (
     <Provider store={store}>
       <GlobalStyles />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <DropdownContext>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </DropdownContext>
     </Provider>
   );
 }

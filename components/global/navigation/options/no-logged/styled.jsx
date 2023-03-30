@@ -5,10 +5,14 @@ export const OptionsContainer = styled.section`
   display: none;
   span {
     cursor: pointer;
+    &:hover {
+      scale: 1.1;
+      opacity: 0.7;
+    }
   }
   @media ${BREAKPOINTS_DEVICES.laptop} {
     display: flex;
-    gap: 1.75rem;
+    gap: 3rem;
     margin-left: auto;
   }
 `;
