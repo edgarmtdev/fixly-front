@@ -4,8 +4,11 @@ import BREAKPOINTS_DEVICES from "theme/global/breakpoints";
 export const ContainerForm = styled.div`
   width: 100%;
   padding: 1rem;
-  h1 {
-    font-size: 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  p {
+    font-size: 28px;
     font-weight: 600;
     margin: 2rem 1rem;
     color: #3e5067;
@@ -18,6 +21,9 @@ export const ContainerForm = styled.div`
 
   @media ${BREAKPOINTS_DEVICES.laptop} {
     padding: 1.5rem;
+    p {
+      font-size: 32px;
+    }
     section {
       display: grid;
       grid-template-columns: repeat(2, 1fr);

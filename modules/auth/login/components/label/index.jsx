@@ -2,6 +2,7 @@ import Link from "next/link";
 import styled from "styled-components";
 
 const Label = styled.p`
+  font-size: 14px;
   margin: 1rem 0;
   text-align: center;
   span {

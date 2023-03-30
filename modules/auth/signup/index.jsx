@@ -32,7 +32,7 @@ const SignUpModule = ({ user }) => {
         onSubmit={register}
       >
         <FormCustom>
-          <h1>Register</h1>
+          <p>Register</p>
           <section>
             <Input name="name" type="text" placeholder="Name" />
             <Input name="lastName" type="text" placeholder="Last Name" />
