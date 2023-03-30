@@ -4,7 +4,7 @@ export const OptionsContainer = styled.section`
   display: none;
   @media ${BREAKPOINTS_DEVICES.laptop} {
     display: flex;
-    gap: 1.75rem;
+    gap: 3rem;
     margin-left: auto;
   }
 `;
