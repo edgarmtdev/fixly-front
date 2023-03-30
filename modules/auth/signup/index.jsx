@@ -34,20 +34,16 @@ const SignUpModule = ({ user }) => {
         <FormCustom>
           <h1>Register</h1>
           <section>
-            <div className="grid-item">
-              <Input name="name" type="text" placeholder="Name" />
-              <Input name="email" type="text" placeholder="Email" />
-              <Input name="password" type="password" placeholder="Password" />
-              <Input
-                name="passwordRepeat"
-                type="password"
-                placeholder="Repeat Password"
-              />
-            </div>
-            <div className="grid-item">
-              <Input name="lastName" type="text" placeholder="Last Name" />
-              <Input name="country" type="text" placeholder="Country" />
-            </div>
+            <Input name="name" type="text" placeholder="Name" />
+            <Input name="lastName" type="text" placeholder="Last Name" />
+            <Input name="country" type="text" placeholder="Country" />
+            <Input name="email" type="text" placeholder="Email" />
+            <Input name="password" type="password" placeholder="Password" />
+            <Input
+              name="passwordRepeat"
+              type="password"
+              placeholder="Repeat Password"
+            />
           </section>
           <ErrorMessage>{message && message}</ErrorMessage>
           <Button user={user} title={"Signup"} />

@@ -2,10 +2,13 @@ import styled from "styled-components";
 import BREAKPOINTS_DEVICES from "../../../theme/global/breakpoints";
 
 export const Container = styled.nav`
-  padding: 2.5rem;
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
+  padding: 1rem;
+  @media ${BREAKPOINTS_DEVICES.laptop} {
+    padding: 2.5rem;
+  }
 `;
 
 export const NavbarCont = styled.div`
@@ -27,10 +30,22 @@ export const NavbarTitle = styled.div`
   display: flex;
   gap: 1rem;
   cursor: pointer;
-
   h1 {
     font-weight: 800;
-    font-size: 28px;
+    font-size: 24px;
     color: #3e5067;
+  }
+  svg {
+    width: 34px;
+    height: 34px;
+  }
+  @media ${BREAKPOINTS_DEVICES.laptop} {
+    h1 {
+      font-size: 28px;
+    }
+    svg {
+      width: 44px;
+      height: 44px;
+    }
   }
 `;
