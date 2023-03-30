@@ -7,6 +7,9 @@ export const Container = styled.div`
   background-color: #f6f6f6;
   border-radius: 2px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  form {
+    height: 100%;
+  }
   @media ${BREAKPOINTS_DEVICES.tablet} {
     width: 80%;
     min-height: 600px;

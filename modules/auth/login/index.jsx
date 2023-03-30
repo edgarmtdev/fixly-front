@@ -34,7 +34,7 @@ export default function LoginModule({ user }) {
         onSubmit={signIn}
       >
         <FormCustom>
-          <h1>LOGIN</h1>
+          <p className="title">Login</p>
           {message && (
             <ErrorMessage>
               <IoMdAlert size={18} />
