@@ -5,11 +5,17 @@ export default function DropdownContext({ children }) {
   const [view, setView] = React.useState(false);
 
   const handleViewDropdown = () => {
-    setView(!view);
+    setView(true);
+  };
+
+  const handleNotViewDropdown = () => {
+    setView(false);
   };
 
   return (
-    <dropdownContext.Provider value={{ view, handleViewDropdown }}>
+    <dropdownContext.Provider
+      value={{ view, handleViewDropdown, handleNotViewDropdown }}
+    >
       {children}
     </dropdownContext.Provider>
   );

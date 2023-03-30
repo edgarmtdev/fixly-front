@@ -8,10 +8,9 @@ import { Container, NavbarCont } from "./styled";
 
 const Navbar = () => {
   const user = useSelector((state) => state.user);
-  const { handleViewDropdown } = React.useContext(dropdownContext);
 
   return (
-    <Container onClick={handleViewDropdown}>
+    <Container>
       <NavbarCont>
         <Menu />
         {user.logged ? (

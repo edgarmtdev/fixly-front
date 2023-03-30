@@ -1,3 +1,4 @@
+import DropdownUser from "components/global/navigation/options/logged/dropdown";
 import { dropdownContext } from "context/dropdown";
 import React from "react";
 import styled from "styled-components";
@@ -16,14 +17,17 @@ const Principal = styled.div`
 function MainLayout({ children }) {
   useDispatchEffect(getProducts);
   useAuthValidate();
-  const { handleViewDropdown } = React.useContext(dropdownContext);
+  const { view, handleNotViewDropdown } = React.useContext(dropdownContext);
 
   return (
-    <div onClick={handleViewDropdown}>
+    <>
+      {view && <DropdownUser />}
       <Navbar />
-      <Principal>{children}</Principal>
-      <Footer />
-    </div>
+      <div onClick={handleNotViewDropdown}>
+        <Principal>{children}</Principal>
+        <Footer />
+      </div>
+    </>
   );
 }
 
