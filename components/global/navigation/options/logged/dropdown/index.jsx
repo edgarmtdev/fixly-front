@@ -7,9 +7,7 @@ const DropdownUser = ({ userName }) => {
   const { action } = useNavigateDispatch(logOut, "/");
   return (
     <DropdownContainer>
-      <p onClick={action} className="p-2 bg-black text-white cursor-pointer">
-        Logout
-      </p>
+      <p onClick={action}>Logout</p>
       {userName}
     </DropdownContainer>
   );

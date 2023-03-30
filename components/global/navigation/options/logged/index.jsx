@@ -1,10 +1,13 @@
+import { dropdownContext } from "context/dropdown";
 import Link from "next/link";
-import { forwardRef } from "react";
-import { HiUser, HiOutlineShoppingCart } from "react-icons/hi";
+import React from "react";
+import { HiUser, HiOutlineShoppingCart, HiChevronDown } from "react-icons/hi";
 import { OptionsContainer } from "../no-logged/styled";
 import DropdownUser from "./dropdown";
 
-const LoggedOptions = forwardRef(({ userName }, ref) => {
+const LoggedOptions = React.forwardRef(({ userName }, ref) => {
+  const { view, handleViewDropdown } = React.useContext(dropdownContext);
+
   return (
     <OptionsContainer>
       <Link href={"/cart"}>
@@ -12,10 +15,15 @@ const LoggedOptions = forwardRef(({ userName }, ref) => {
           <HiOutlineShoppingCart size={24} color={"#3E5067"} />
         </span>
       </Link>
-      <span>
+      <span onClick={handleViewDropdown} className="flex items-center">
         <HiUser style={{ cursor: "pointer" }} size={24} color={"#3E5067"} />
+        <HiChevronDown
+          style={{ cursor: "pointer" }}
+          size={18}
+          color={"#3E5067"}
+        />
       </span>
-      <DropdownUser userName={userName} />
+      {view && <DropdownUser userName={userName} />}
     </OptionsContainer>
   );
 });
