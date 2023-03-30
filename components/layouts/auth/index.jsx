@@ -3,7 +3,7 @@ import styled from "styled-components";
 import NavbarAuth from "../../auth/navigation";
 
 export const AuthCont = styled.main`
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;

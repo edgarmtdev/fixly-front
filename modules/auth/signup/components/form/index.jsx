@@ -1,10 +1,10 @@
 import { Form } from "formik";
-import { Container } from "./styled";
+import { ContainerForm } from "./styled";
 
 const FormCustom = ({ children }) => {
   return (
     <Form>
-      <Container>{children}</Container>
+      <ContainerForm>{children}</ContainerForm>
     </Form>
   );
 };

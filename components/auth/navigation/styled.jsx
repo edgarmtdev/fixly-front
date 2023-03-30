@@ -2,7 +2,7 @@ import styled from "styled-components";
 import BREAKPOINTS_DEVICES from "../../../theme/global/breakpoints";
 
 export const Container = styled.nav`
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   padding: 1rem;
@@ -30,7 +30,6 @@ export const NavbarTitle = styled.div`
   display: flex;
   gap: 1rem;
   cursor: pointer;
-
   h1 {
     font-weight: 800;
     font-size: 24px;
