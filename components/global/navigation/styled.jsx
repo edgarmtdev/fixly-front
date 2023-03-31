@@ -21,6 +21,6 @@ export const NavbarCont = styled.div`
     align-items: center;
     justify-content: center;
     /* padding: 0.8rem 2rem; */
-    padding: 2rem;
+    padding: 1.2rem;
   }
 `;

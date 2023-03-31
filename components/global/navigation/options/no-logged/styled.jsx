@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BREAKPOINTS_DEVICES from "../../../../../theme/global/breakpoints";
+import BREAKPOINTS_DEVICES from "/theme/global/breakpoints";
 
 export const OptionsContainer = styled.section`
   display: none;
@@ -12,18 +12,18 @@ export const OptionsContainer = styled.section`
   }
   @media ${BREAKPOINTS_DEVICES.laptop} {
     display: flex;
-    gap: 3rem;
+    gap: 1.5rem;
     margin-left: auto;
   }
 `;
 
 export const ButtonAuth = styled.button`
-  width: 7rem;
+  width: 6rem;
   text-align: center;
   padding: 7px;
   border-radius: 2px;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 12px;
   background-color: ${(props) => props.theme.bg};
   color: ${(props) => props.theme.text};
   transition: 1s;

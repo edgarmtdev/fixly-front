@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const DropdownContainer = styled.div`
-  top: 10%;
+  top: 4.5rem;
   right: 5%;
-  /* height: 30vh; */
   position: fixed;
   z-index: 10;
   padding: 1.5rem 0;
@@ -11,4 +10,45 @@ export const DropdownContainer = styled.div`
   background-color: #fff;
   box-shadow: 0px 5px 20px #0000003f;
   border-radius: 4px;
+
+  .line {
+    border-bottom-width: 1px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+`;
+
+export const CardUser = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 0.5rem 1rem;
+  span {
+    background-color: #e6ecef;
+    padding: 0.75rem;
+    border-radius: 9999px;
+  }
+  p {
+    font-size: 12px;
+  }
+
+  &:hover {
+    background-color: #e6ecef;
+  }
+`;
+
+export const CardItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 0.75rem 1.5rem;
+  margin: 4px 0;
+  font-size: 12px;
+  &:hover {
+    background-color: #e6ecef;
+  }
 `;

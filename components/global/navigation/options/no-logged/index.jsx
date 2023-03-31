@@ -6,9 +6,7 @@ const NoLoggedOptions = () => {
   return (
     <OptionsContainer>
       <Link href={"/auth/signup"}>
-        <ButtonAuth theme={{ bg: "#546C8C", text: "#FFE3B5" }}>
-          Sign Up
-        </ButtonAuth>
+        <ButtonAuth theme={{ bg: "#546C8C", text: "#fff" }}>Sign Up</ButtonAuth>
       </Link>
       <Link href={"/auth/login"}>
         <ButtonAuth theme={{ bg: "#CD8A20", text: "#FFF" }}>Login</ButtonAuth>
