@@ -10,7 +10,7 @@ import { Container } from "./styled";
 export default function Banner() {
   const [newProducts] = useSetState(data[0].products);
   return (
-    <header>
+    <header className="mt-28">
       <Swiper
         pagination={false}
         spaceBetween={100}
