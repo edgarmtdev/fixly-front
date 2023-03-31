@@ -20,7 +20,7 @@ const DropdownUser = ({ userName }) => {
       <div className="line"></div>
       {DROPDOWN_ITEMS.map((item, index) => {
         return (
-          <CardItem>
+          <CardItem key={index}>
             <p>{item.title}</p>
           </CardItem>
         );
