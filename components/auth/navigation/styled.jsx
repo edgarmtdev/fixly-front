@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BREAKPOINTS_DEVICES from "../../../theme/global/breakpoints";
+import BREAKPOINTS_DEVICES from "/theme/global/breakpoints";
 
 export const Container = styled.nav`
   position: absolute;
