@@ -1,11 +1,11 @@
 const DROPDOWN_ITEMS = [
   {
-    title: "Profile",
+    title: "My profile",
     route: "/profile",
   },
   {
     title: "Reviews",
-    route: "/reviews",
+    route: "/profile/reviews",
   },
   {
     title: "Shops",

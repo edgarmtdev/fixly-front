@@ -5,13 +5,9 @@ import { FlexCont } from "./styled";
 function FlexProducts({ products }) {
   return (
     <FlexCont>
-      {products.map((product, index) => {
-        return (
-          <div key={index}>
-            <ProductCard key={index} product={product} />
-          </div>
-        );
-      })}
+      {products.map((product, index) => (
+        <ProductCard key={index} product={product} />
+      ))}
     </FlexCont>
   );
 }
