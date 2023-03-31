@@ -8,7 +8,7 @@ import Link from "next/link";
 const Menu = () => {
   const [links] = React.useState(LINKS_CATEGORIES);
   return (
-    <NavbarMenu size={44}>
+    <NavbarMenu>
       <Link href={"/"}>
         <NavbarTitle>
           <RiFlashlightLine color="#CD8A20" />

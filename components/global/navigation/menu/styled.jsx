@@ -28,18 +28,14 @@ export const NavbarTitle = styled.div`
   }
   h1 {
     font-weight: 800;
-    font-size: 24px;
+    font-size: 22px;
     color: #3e5067;
   }
   @media ${BREAKPOINTS_DEVICES.laptop} {
     gap: 0.5rem;
-    svg {
-      width: 44px;
-      height: 44px;
-    }
     h1 {
       font-weight: 800;
-      font-size: 28px;
+      font-size: 24px;
       color: #3e5067;
     }
   }
@@ -50,10 +46,9 @@ export const NavbarList = styled.ul`
   @media ${BREAKPOINTS_DEVICES.laptop} {
     display: flex;
     gap: 2rem;
-
     li {
       font-weight: 500;
-      font-size: 18px;
+      font-size: 14px;
       color: #3e5067;
       cursor: pointer;
 

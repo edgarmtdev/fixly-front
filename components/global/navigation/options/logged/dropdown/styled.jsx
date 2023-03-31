@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const DropdownContainer = styled.div`
-  top: 10%;
+  top: 4.5rem;
   right: 5%;
-  /* height: 30vh; */
   position: fixed;
   z-index: 10;
   padding: 1.5rem 0;
