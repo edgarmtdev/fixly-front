@@ -6,17 +6,16 @@ export const Card = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 18rem;
-  height: 24rem;
+  width: 224px;
+  height: 320px;
   background-color: white;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   cursor: pointer;
-  transition: 500ms;
+  transition: 100ms;
 
   &:hover {
-    opacity: 0.9;
-    transform: scale(1.01);
-    transition: 500ms;
+    transform: scale(1.02);
+    transition: 100ms;
   }
   img {
     width: 80%;
@@ -27,5 +26,5 @@ export const Name = styled.p`
   text-align: center;
   font-weight: 600;
   color: #3e5067;
-  margin-top: 1rem;
+  margin-top: 2rem;
 `;

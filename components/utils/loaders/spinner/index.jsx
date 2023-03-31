@@ -7,7 +7,7 @@ const spin = keyframes`
         transform: rotate(360deg);
     }
 `;
-export const CardLoading = styled.div`
+const CardLoading = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
