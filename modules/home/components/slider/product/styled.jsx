@@ -11,10 +11,11 @@ export const Card = styled.div`
   background-color: white;
   border-radius: 0.25rem;
   cursor: pointer;
+  transition: 300ms;
   &:hover {
     opacity: 0.9;
-    transform: scale(1.05);
-    transition: 1s;
+    transform: scale(1.02);
+    transition: 300ms;
   }
   img {
     width: 80%;

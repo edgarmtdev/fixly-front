@@ -7,13 +7,12 @@ export const Container = styled.nav`
   top: 0;
   padding: 1rem;
   @media ${BREAKPOINTS_DEVICES.laptop} {
-    padding: 2.5rem;
+    padding: 1.5rem;
   }
 `;
 
 export const NavbarCont = styled.div`
   max-width: 1536px;
-  padding: 1rem;
   @media ${BREAKPOINTS_DEVICES.laptop} {
     display: flex;
     margin-left: auto;
@@ -32,7 +31,7 @@ export const NavbarTitle = styled.div`
   cursor: pointer;
   h1 {
     font-weight: 800;
-    font-size: 24px;
+    font-size: 22px;
     color: #3e5067;
   }
   svg {
@@ -41,11 +40,7 @@ export const NavbarTitle = styled.div`
   }
   @media ${BREAKPOINTS_DEVICES.laptop} {
     h1 {
-      font-size: 28px;
-    }
-    svg {
-      width: 44px;
-      height: 44px;
+      font-size: 24px;
     }
   }
 `;

@@ -57,6 +57,9 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
     }
+    .mySwiper {
+        padding: 20px;
+    }
     .swiper {
         width: 100%;
         padding-bottom: 50px;
