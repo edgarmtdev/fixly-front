@@ -7,7 +7,7 @@ import { getProducts } from "/features/product";
 import useAuthValidate from "/hooks/useAuthValidate";
 import useDispatchEffect from "/hooks/useDispatchEffect";
 
-const Principal = styled.div`
+const Principal = styled.main`
   max-width: 1280px;
   margin: 0 auto;
   padding: 1rem;
@@ -21,10 +21,8 @@ function MainLayout({ children }) {
   return (
     <>
       <Navbar />
-      <div onClick={handleNotViewDropdown}>
-        <Principal>{children}</Principal>
-        <Footer />
-      </div>
+      <Principal onClick={handleNotViewDropdown}>{children}</Principal>
+      <Footer />
     </>
   );
 }
