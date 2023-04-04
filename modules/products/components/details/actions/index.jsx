@@ -16,10 +16,10 @@ export default function ActionsButtons({ product }) {
   return (
     <ActionsCont>
       <GetNowButton onClick={() => router.replace("/payment")}>
-        <p>Buy</p>
+        <span>Buy</span>
       </GetNowButton>
       <AddCartButton onClick={() => addToCar(product?._id)}>
-        <p>Add to Cart</p>
+        <span>Add to Cart</span>
       </AddCartButton>
     </ActionsCont>
   );
