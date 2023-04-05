@@ -64,7 +64,7 @@ export const Details = styled.div`
     font-weight: 600;
   }
   @media ${BREAKPOINTS_DEVICES.tablet} {
-    margin: 2.5rem 1rem;
+    margin: 2.5rem 0;
     font-size: 14px;
   }
 `;

@@ -1,4 +1,3 @@
-import { useSelector } from "react-redux";
 import ActionsButtons from "./actions";
 import ImageSlider from "./images";
 import { Card, CardContainer, Details, Price } from "./styled";
@@ -6,8 +5,6 @@ import TitleProduct from "./tittle";
 import SpinnerLoader from "/components/utils/loaders/spinner";
 
 function CardProduct({ product, loading }) {
-  const user = useSelector((selector) => selector.user);
-
   if (loading) {
     return <SpinnerLoader />;
   }
@@ -27,11 +24,7 @@ function CardProduct({ product, loading }) {
             {product?.description}
           </p>
         </Details>
-        {user.logged ? (
-          <ActionsButtons product={product} />
-        ) : (
-          <p>For shop, signin please</p>
-        )}
+        <ActionsButtons product={product} />
       </Card>
     </CardContainer>
   );

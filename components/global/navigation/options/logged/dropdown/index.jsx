@@ -1,8 +1,8 @@
 import React from "react";
 import { HiUser } from "react-icons/hi";
 import { CardItem, DropdownContainer } from "./styled";
-import { logOut } from "/features/user";
-import useNavigateDispatch from "/hooks/useDispatchNavigate";
+import { logOut } from "features/user";
+import useNavigateDispatch from "hooks/useDispatchNavigate";
 import { CardUser } from "./styled";
 import DROPDOWN_ITEMS from "./model";
 import Link from "next/link";

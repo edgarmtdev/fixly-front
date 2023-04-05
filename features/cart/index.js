@@ -21,6 +21,26 @@ export const addToCart = createAsyncThunk(
   }
 );
 
+export const shopProductNow = createAsyncThunk(
+  "cart/shopProduct",
+  async function (data, thunkAPI) {
+    const promise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve({
+          error: false,
+          message: "ready",
+        });
+      }, 1000);
+    });
+    try {
+      const resp = await promise;
+      return resp;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+);
+
 const initialState = {
   items: [],
   loading: true,
@@ -75,6 +95,10 @@ const cartSlice = createSlice({
         console.log(action);
         state.loading = false;
       });
+    builder.addCase(shopProductNow.fulfilled, (state, action) => {
+      console.log(action);
+      state.items = state.items;
+    });
   },
 });
 
