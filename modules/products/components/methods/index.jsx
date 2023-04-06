@@ -6,18 +6,16 @@ import PAYMENT_METHODS from "./models/methods";
 const PaymentsMethods = () => {
   const [methods] = React.useState(PAYMENT_METHODS);
   return (
-    <div>
+    <div style={{ marginTop: "3rem" }}>
       <Title>Payments methods</Title>
       <GridPayments>
-        {methods.map((method, index) => {
-          return (
-            <ContainerPaymentsMethods
-              title={method.title}
-              icons={method.icons}
-              key={index}
-            />
-          );
-        })}
+        {methods.map((method, index) => (
+          <ContainerPaymentsMethods
+            title={method.title}
+            icons={method.icons}
+            key={index}
+          />
+        ))}
       </GridPayments>
     </div>
   );

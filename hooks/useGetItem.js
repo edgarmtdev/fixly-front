@@ -1,7 +1,7 @@
 import React from "react";
 import { get } from "../api";
 
-const useGetItem = (id) => {
+const useGetItem = (id, delay = 1000) => {
   const [item, setItem] = React.useState({});
   const [loading, setLoading] = React.useState(true);
 
@@ -16,7 +16,7 @@ const useGetItem = (id) => {
         setTimeout(() => {
           setItem(res.data.product);
           setLoading(false);
-        }, 2000);
+        }, delay);
       });
     }
   }, [id]);

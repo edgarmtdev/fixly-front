@@ -7,7 +7,7 @@ import data from "../../data/products.json";
 
 const ProductOffert = () => {
   const id = useRouterQuery();
-  const { product, loading } = useGetItemLocal(id, data[1].products);
+  const { product, loading } = useGetItemLocal(id, data[1].products, 400);
   return (
     <React.Fragment>
       <HeadComponent title={`${product?.name || "Details"} | Fixly`} />

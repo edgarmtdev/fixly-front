@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Title = styled.h5`
   font-size: 24px;
   font-weight: 600;
+  margin: 1rem 0;
 `;
 
 export const ReviewsContainer = styled.section`

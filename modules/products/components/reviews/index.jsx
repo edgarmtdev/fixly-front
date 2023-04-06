@@ -7,8 +7,8 @@ import ReviewSkeleton from "../../../../components/utils/loaders/skeleton";
 
 const Reviews = ({ reviews, loading }) => {
   return (
-    <div className=" my-10">
-      <Title>Reviews ({reviews?.length})</Title>
+    <div style={{ marginTop: "2.5rem" }}>
+      <Title>Reviews ({reviews?.length || 0})</Title>
       <FormReview />
       <ReviewsContainer>
         {loading ? (

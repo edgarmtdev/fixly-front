@@ -1,6 +1,6 @@
 import React from "react";
 
-const useGetItemLocal = (id, data) => {
+const useGetItemLocal = (id, data, delay = 1000) => {
   const [products] = React.useState(data);
   const [product, setProduct] = React.useState(null);
   const [loading, setLoading] = React.useState(true);
@@ -16,7 +16,7 @@ const useGetItemLocal = (id, data) => {
       setTimeout(() => {
         setProduct(found);
         setLoading(false);
-      }, 1500);
+      }, delay);
     }
   }, [id]);
 

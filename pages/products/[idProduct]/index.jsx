@@ -6,7 +6,7 @@ import useGetItem from "../../../hooks/useGetItem";
 
 const ProductDetails = () => {
   const idProduct = useRouterQuery();
-  const [product, loading] = useGetItem(idProduct);
+  const [product, loading] = useGetItem(idProduct, 500);
   return (
     <React.Fragment>
       <HeadComponent title={`${product?.name || "Details"} | Fixly`} />
