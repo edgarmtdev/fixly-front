@@ -4,8 +4,7 @@ import styled from "styled-components";
 import Footer from "/components/global/footer";
 import Navbar from "/components/global/navigation";
 import { getProducts } from "/features/product";
-import useAuthValidate from "/hooks/useAuthValidate";
-import useDispatchEffect from "/hooks/useDispatchEffect";
+import useDispatchEffect from "hooks/useDispatchEffect";
 
 const Principal = styled.main`
   max-width: 1280px;
@@ -15,7 +14,6 @@ const Principal = styled.main`
 
 function MainLayout({ children }) {
   useDispatchEffect(getProducts);
-  useAuthValidate();
   const { handleNotViewDropdown } = React.useContext(dropdownContext);
 
   return (

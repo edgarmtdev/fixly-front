@@ -4,17 +4,23 @@ import React from "react";
 import { HiUser, HiOutlineShoppingCart, HiChevronDown } from "react-icons/hi";
 import { OptionsContainer } from "../no-logged/styled";
 import DropdownUser from "./dropdown";
+import { useSelector } from "react-redux";
 
 const LoggedOptions = React.forwardRef(({ userName }, ref) => {
   const { view, handleViewDropdown, handleNotViewDropdown } =
     React.useContext(dropdownContext);
 
+  const { items } = useSelector((state) => state.cart);
+
   return (
     <>
       <OptionsContainer>
         <Link href={"/cart"}>
-          <span>
+          <span className=" relative">
             <HiOutlineShoppingCart size={24} color={"#3E5067"} />
+            <p className="absolute top-[-5px] right-[-5px] text-[10px] text-white p-1 bg-red-600 flex items-center justify-center rounded-full w-4 h-4">
+              {items.length}
+            </p>
           </span>
         </Link>
         <span
