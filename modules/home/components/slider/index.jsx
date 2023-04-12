@@ -1,45 +1,31 @@
-import React from "react";
-import { Autoplay, EffectCoverflow, Pagination } from "swiper";
+import { useRef } from "react";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import data from "../../../../data/products.json";
-import useSetState from "../../../../hooks/useSetState";
+import Button from "./button";
+import useSliderCoverflow from "./hooks/useSlider";
 import Product from "./product";
-import { SlideCont, Title } from "./styled";
+import { SlideContainer, Title } from "./styled";
 
 function Slider() {
-  const [products] = useSetState(data[1].products);
+  const swiperRef = useRef();
+  const { swiperOptions, prev, next } = useSliderCoverflow(swiperRef);
+
   return (
-    <SlideCont>
+    <SlideContainer>
       <Title>Offerts</Title>
-      <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 35,
-          stretch: 0,
-          depth: 0,
-          modifier: 1,
-          slideShadows: false,
-        }}
-        spaceBetween={80}
-        pagination={{
-          type: "bullets",
-        }}
-        modules={[EffectCoverflow, Pagination, Autoplay]}
-        autoplay={{
-          delay: 3000,
-        }}
-        className="mySwiper"
-      >
-        {products.map((item, index) => (
+      <div className="absolute top-[45px] z-10 right-1 flex gap-3">
+        <Button event={prev} icon={<FiChevronLeft />} />
+        <Button event={next} icon={<FiChevronRight />} />
+      </div>
+      <Swiper {...swiperOptions} ref={swiperRef}>
+        {data[1].products.map((item, index) => (
           <SwiperSlide key={index}>
             <Product data={item} />
           </SwiperSlide>
         ))}
       </Swiper>
-    </SlideCont>
+    </SlideContainer>
   );
 }
 

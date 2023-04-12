@@ -81,6 +81,33 @@
         },
         "price": "99.00",
         "route": "/offers/mini-protoboard"
+      },
+      {
+        "id": 3,
+        "name": "Assemble Protoboard",
+        "imgURL": [
+          "https://www.steren.com.mx/media/catalog/product/cache/b69086f136192bea7a4d681a8eaf533d/image/15972cbef/mini-protoboard-de-1-bloque-y-2-tiras.jpg",
+          "https://www.steren.com.mx/media/catalog/product/cache/b69086f136192bea7a4d681a8eaf533d/image/15972d56a/mini-protoboard-de-1-bloque-y-2-tiras.jpg"
+        ],
+        "description": "6,4 cm de frente x 17,2 cm de alto",
+
+        "price": "149.00",
+        "route": "/offers/assemble-protoboard"
+      },
+      {
+        "id": 4,
+        "name": "Mini Protoboard",
+        "imgURL": [
+          "https://www.steren.com.mx/media/catalog/product/cache/b69086f136192bea7a4d681a8eaf533d/image/15972cbef/mini-protoboard-de-1-bloque-y-2-tiras.jpg",
+          "https://www.steren.com.mx/media/catalog/product/cache/b69086f136192bea7a4d681a8eaf533d/image/15972d56a/mini-protoboard-de-1-bloque-y-2-tiras.jpg"
+        ],
+        "description": {
+          "type": "Ensamble a presión",
+          "perforations": "400 perforaciones",
+          "dimentions": "6,4 cm de frente x 8,6 cm de alto"
+        },
+        "price": "99.00",
+        "route": "/offers/mini-protoboard"
       }
     ]
   },

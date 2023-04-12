@@ -6,7 +6,7 @@ import Navbar from "/components/global/navigation";
 import { getProducts } from "/features/product";
 import useDispatchEffect from "hooks/useDispatchEffect";
 
-const Principal = styled.main`
+const Principal = styled.section`
   max-width: 1280px;
   margin: 0 auto;
   padding: 1rem;
@@ -19,7 +19,9 @@ function MainLayout({ children }) {
   return (
     <>
       <Navbar />
-      <Principal onClick={handleNotViewDropdown}>{children}</Principal>
+      <main onClick={handleNotViewDropdown}>
+        <Principal>{children}</Principal>
+      </main>
       <Footer />
     </>
   );
