@@ -15,7 +15,13 @@ const Container = styled.div`
 const ImageLogin = () => {
   return (
     <Container>
-      <Image src="/images/loginImg.svg" alt="" width={350} height={250} />
+      <Image
+        src="/images/loginImg.svg"
+        alt=""
+        width={350}
+        height={250}
+        priority
+      />
     </Container>
   );
 };

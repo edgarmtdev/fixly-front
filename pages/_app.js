@@ -1,4 +1,3 @@
-import Page from "components/layouts/Page";
 import DropdownContext from "context/dropdown/Provider";
 import { Provider } from "react-redux";
 import store from "../app/store";
@@ -17,11 +16,9 @@ function MyApp({ Component, pageProps }) {
     <Provider store={store}>
       <GlobalStyles />
       <DropdownContext>
-        <Page>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </Page>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </DropdownContext>
     </Provider>
   );

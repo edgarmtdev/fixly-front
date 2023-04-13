@@ -1,6 +1,6 @@
+import { useRouter } from "next/router";
 import React from "react";
 import { useSelector } from "react-redux";
-import { useRouter } from "next/router";
 
 const useStatusLogged = (route) => {
   const router = useRouter();
