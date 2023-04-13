@@ -4,6 +4,7 @@ import store from "../app/store";
 import MainLayout from "../components/layouts/main";
 import GlobalStyles from "../theme/global";
 
+// Styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";

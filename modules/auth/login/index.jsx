@@ -1,5 +1,4 @@
 import { Formik } from "formik";
-import React from "react";
 import Input from "../../../components/global/form/input";
 import { login } from "../../../features/user";
 import useAuthDispatch from "../hooks/useAuthDispatch";
