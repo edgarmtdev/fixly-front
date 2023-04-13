@@ -14,7 +14,7 @@ import { IoMdAlert } from "react-icons/io";
 import { AiFillCheckCircle } from "react-icons/ai";
 
 export default function LoginModule({ user }) {
-  const [signIn] = useAuthDispatch(login);
+  const [signIn] = useAuthDispatch(login, "/");
 
   const {
     message: authValue,

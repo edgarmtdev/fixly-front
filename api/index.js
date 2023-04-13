@@ -17,5 +17,8 @@ const post = async (url, data) => {
   });
 };
 
-export default instance;
-export { get, post };
+const requestCookie = async (url, config) => {
+  return await instance.get(url, config);
+};
+
+export { get, post, requestCookie };

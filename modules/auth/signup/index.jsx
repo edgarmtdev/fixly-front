@@ -9,7 +9,7 @@ import Button from "../../../components/global/form/button";
 import { useSelector } from "react-redux";
 
 const SignUpModule = ({ user }) => {
-  const [register] = useAuthDispatch(signUp);
+  const [register] = useAuthDispatch(signUp, "/");
 
   const {
     auth: {
