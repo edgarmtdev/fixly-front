@@ -3,7 +3,11 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
   "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -19,6 +23,7 @@
     "semi": "warn",
     "react/jsx-key": "off",
     "no-unused-vars": "off"
+    // "prettier/prettier": "warn"
   },
   "settings": {
     "react": {

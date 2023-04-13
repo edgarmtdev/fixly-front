@@ -77,8 +77,8 @@ const userSlice = createSlice({
         state.name = action.payload.name;
         state.id = action.payload.id;
         state.auth.login.message = "";
-        (state.auth.hasError = false),
-        (state.message = `Hello ${action.payload.name}`);
+        state.auth.hasError = false;
+        state.message = `Hello ${action.payload.name}`;
       })
       .addCase(login.pending, (state) => {
         state.logged = false;
@@ -89,8 +89,8 @@ const userSlice = createSlice({
         state.loading = false;
         state.name = "";
         state.message = "";
-        (state.auth.hasError = true),
-        (state.auth.login.message = action.payload);
+        state.auth.hasError = true;
+        state.auth.login.message = action.payload;
       });
     builder
       .addCase(signUp.fulfilled, (state, action) => {
@@ -108,8 +108,8 @@ const userSlice = createSlice({
       .addCase(signUp.rejected, (state, action) => {
         state.logged = false;
         state.loading = false;
-        (state.auth.hasError = true),
-        (state.auth.signup.message = action.payload.message);
+        state.auth.hasError = true;
+        state.auth.signup.message = action.payload.message;
         state.name = null;
       });
     builder
