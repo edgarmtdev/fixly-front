@@ -6,6 +6,7 @@ import { OptionsContainer } from "../no-logged/styled";
 import DropdownUser from "./dropdown";
 import { useSelector } from "react-redux";
 
+// eslint-disable-next-line react/display-name
 const LoggedOptions = React.forwardRef(({ userName }, ref) => {
   const { view, handleViewDropdown, handleNotViewDropdown } =
     React.useContext(dropdownContext);

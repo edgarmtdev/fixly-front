@@ -1,5 +1,3 @@
-import React from "react";
-
 const ReviewSkeleton = () => {
   return (
     <div className="mt-10 flex flex-col gap-3 animate-pulse">

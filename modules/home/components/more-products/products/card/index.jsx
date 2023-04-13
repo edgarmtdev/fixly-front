@@ -3,6 +3,7 @@ import Price from "../../../utilities/price";
 import { Card, Name } from "./styled";
 import Link from "next/link";
 
+// eslint-disable-next-line react/display-name
 const ProductCard = forwardRef(({ product }, ref) => {
   return (
     <Link href={`/products/${product._id}`}>

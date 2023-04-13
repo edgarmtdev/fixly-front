@@ -1,4 +1,3 @@
-import React from "react";
 import CardReview from "./card";
 import FormReview from "./form";
 import { ReviewsContainer, ReviewsParent, Title } from "./styled";

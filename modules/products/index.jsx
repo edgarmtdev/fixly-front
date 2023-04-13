@@ -1,4 +1,3 @@
-import React from "react";
 import CardProduct from "./components/details";
 import ScrollToTop from "/hooks/components/ScrollToTop";
 import { ProductDetails } from "./styled";

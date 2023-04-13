@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import BREAKPOINTS_DEVICES from "theme/global/breakpoints";
 
 export const OptionsContainer = styled.section`
   display: none;
