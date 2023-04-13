@@ -17,7 +17,7 @@ export default function ShopCar() {
 
 export async function getServerSideProps(ctx) {
   const data = await validateSession(ctx);
-  if (data) {
+  if (!data) {
     return {
       redirect: {
         destination: "/",
