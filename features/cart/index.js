@@ -1,17 +1,14 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { get, post } from "../../api";
 
-export const getCart = createAsyncThunk(
-  "cart/getCart",
-  async function (data, thunkAPI) {
-    const response = await get(`/api/cart`);
-    return response.data;
-  }
-);
+export const getCart = createAsyncThunk("cart/getCart", async function () {
+  const response = await get("/api/cart");
+  return response.data;
+});
 
 export const addToCart = createAsyncThunk(
   "cart/addToCart",
-  async function (data, thunkAPI) {
+  async function (data) {
     try {
       const newItem = await post("/api/cart/add-item", data);
       return newItem.data;
@@ -23,8 +20,8 @@ export const addToCart = createAsyncThunk(
 
 export const shopProductNow = createAsyncThunk(
   "cart/shopProduct",
-  async function (data, thunkAPI) {
-    const promise = new Promise((resolve, reject) => {
+  async function () {
+    const promise = new Promise((resolve) => {
       setTimeout(() => {
         resolve({
           error: false,
@@ -52,7 +49,7 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    reducePrice(state, action) {
+    reducePrice(state) {
       state.items.reduce(
         (res, item) => res + item.product.price * item.amount,
         0
@@ -73,12 +70,12 @@ const cartSlice = createSlice({
           );
         }
       })
-      .addCase(getCart.pending, (state, action) => {
+      .addCase(getCart.pending, (state) => {
         state.error = false;
         state.items = [];
         state.loading = true;
       })
-      .addCase(getCart.rejected, (state, action) => {
+      .addCase(getCart.rejected, (state) => {
         state.error = true;
         state.items = [];
         state.loading = false;
@@ -88,7 +85,7 @@ const cartSlice = createSlice({
         state.loading = false;
         state.items = action.payload.result?.items;
       })
-      .addCase(addToCart.pending, (state, action) => {
+      .addCase(addToCart.pending, (state) => {
         state.loading = true;
       })
       .addCase(addToCart.rejected, (state, action) => {
@@ -97,7 +94,7 @@ const cartSlice = createSlice({
       });
     builder.addCase(shopProductNow.fulfilled, (state, action) => {
       console.log(action);
-      state.items = state.items;
+      // state.items = state.items;
     });
   },
 });

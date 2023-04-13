@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import { createContext, useState } from "react";
 import data from "../src/data/products.json";
 
 const productsMockup = data;

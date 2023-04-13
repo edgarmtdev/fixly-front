@@ -1,4 +1,3 @@
-import React from "react";
 import { authContext } from ".";
 
 export default function AuthContext({ children }) {

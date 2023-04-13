@@ -44,13 +44,10 @@ export const validation = createAsyncThunk(
   }
 );
 
-export const logOut = createAsyncThunk(
-  "user/logout",
-  async (data, thunkAPI) => {
-    const res = await get(AUTH_CONSTANTS.logout);
-    return res.data;
-  }
-);
+export const logOut = createAsyncThunk("user/logout", async () => {
+  const res = await get(AUTH_CONSTANTS.logout);
+  return res.data;
+});
 
 const initialState = {
   logged: false,
@@ -83,7 +80,7 @@ const userSlice = createSlice({
         (state.auth.hasError = false),
           (state.message = `Hello ${action.payload.name}`);
       })
-      .addCase(login.pending, (state, action) => {
+      .addCase(login.pending, (state) => {
         state.logged = false;
         state.loading = true;
       })
@@ -102,7 +99,7 @@ const userSlice = createSlice({
         state.name = action.payload.name;
         state.id = action.payload.id;
       })
-      .addCase(signUp.pending, (state, action) => {
+      .addCase(signUp.pending, (state) => {
         state.logged = false;
         state.loading = true;
         state.message = "";
@@ -122,17 +119,17 @@ const userSlice = createSlice({
         state.name = action.payload.user?.name;
         state.id = action.payload.user?.id;
       })
-      .addCase(validation.pending, (state, action) => {
+      .addCase(validation.pending, (state) => {
         state.loading = true;
       })
-      .addCase(validation.rejected, (state, action) => {
+      .addCase(validation.rejected, (state) => {
         state.logged = false;
         state.loading = false;
         // state.message = action.payload.message;
         state.name = "";
       });
     builder
-      .addCase(logOut.fulfilled, (state, action) => {
+      .addCase(logOut.fulfilled, (state) => {
         state.logged = false;
         state.name = "";
         state.loading = false;
@@ -141,10 +138,10 @@ const userSlice = createSlice({
         state.auth.login.message = "";
         state.auth.hasError = false;
       })
-      .addCase(logOut.pending, (state, action) => {
+      .addCase(logOut.pending, (state) => {
         state.loading = true;
       })
-      .addCase(logOut.rejected, (state, action) => {
+      .addCase(logOut.rejected, (state) => {
         state.auth.hasError = true;
         state.loading = false;
       });

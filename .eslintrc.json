@@ -11,13 +11,14 @@
   },
   "plugins": ["react"],
   "rules": {
-    "indent": ["error", "tab"],
+    "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "double"],
     "react/prop-types": "off",
     "react/react-in-jsx-scope": 0,
     "react/jsx-uses-react": 0,
-    "semi": "warn"
+    "semi": "warn",
+    "react/jsx-key": "off"
   },
   "settings": {
     "react": {

@@ -5,7 +5,7 @@ import LoginModule from "../../../modules/auth/login";
 import { validateSession } from "services/auth";
 import { useGetGlobalState } from "hooks/useGetGlobalState";
 
-export default function Login(props) {
+export default function Login() {
   const user = useGetGlobalState("user");
   return (
     <React.Fragment>

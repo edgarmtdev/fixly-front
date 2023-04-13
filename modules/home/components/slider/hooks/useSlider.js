@@ -1,4 +1,4 @@
-import { EffectCoverflow, Pagination, Navigation } from "swiper";
+import { EffectCoverflow, Pagination } from "swiper";
 
 const useSliderCoverflow = (ref) => {
   const swiperOptions = {

@@ -1,5 +1,4 @@
 import { HeadComponent } from "components/utils/head";
-import React from "react";
 
 const Profile = () => {
   return (

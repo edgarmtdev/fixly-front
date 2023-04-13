@@ -6,7 +6,7 @@ export default function Products() {
   return (
     <React.Fragment>
       <HeadComponent title={"Products | Tools"} />
-      <div className="mt-20">Hello</div>
+      <div>Hello</div>
     </React.Fragment>
   );
 }
