@@ -7,7 +7,8 @@ export const Container = styled.div`
   background-color: #f6f6f6;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 10px;
-  @media ${BREAKPOINTS_DEVICES.tablet} {
+  min-height: 450px;
+  @media ${BREAKPOINTS_DEVICES.laptop} {
     width: 80%;
     min-height: 550px;
   }

@@ -47,10 +47,20 @@ export default function LoginModule({ user }) {
             </Message>
           )}
           <section>
-            <Input name="email" type="text" placeholder="Email" />
-            <Input name="password" type="password" placeholder="Password" />
+            <Input
+              name="email"
+              type="text"
+              placeholder="Write your email..."
+              label={"Email"}
+            />
+            <Input
+              name="password"
+              type="password"
+              placeholder="Write yout password..."
+              label={"Password"}
+            />
           </section>
-          <Button user={user} title={"Sing In"} />
+          <Button user={user} title={"Sing In"} size={"xl"} />
           <LabelComponent />
         </FormCustom>
       </Formik>

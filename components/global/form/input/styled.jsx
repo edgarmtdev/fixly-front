@@ -5,9 +5,9 @@ export const InputContainer = styled.div`
     border-bottom-width: 1px;
     border-color: ${({ error }) => (error ? "#FD4F59" : "#959cb2")};
     padding: 3px;
-    margin: 1rem 1rem 0 1rem;
+    margin: 0 1rem;
     input {
-      font-size: 14px;
+      font-size: 13px;
       appearance: none;
       background-color: transparent;
       border: none;
@@ -15,7 +15,6 @@ export const InputContainer = styled.div`
       color: #717b98;
       padding: 2px 5px;
       line-height: 1.25;
-      letter-spacing: 0.2mm;
       &:focus {
         outline: 2px solid transparent;
         outline-offset: 2px;
@@ -30,4 +29,11 @@ export const InputContainer = styled.div`
     font-size: 11px;
     color: #fd4f59;
   }
+`;
+
+export const Label = styled.label`
+  font-size: 12px;
+  padding: 2px 6px;
+  margin: 0 1rem;
+  color: #3e5067;
 `;

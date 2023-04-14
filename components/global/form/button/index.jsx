@@ -1,9 +1,9 @@
 import { CgSpinner } from "react-icons/cg";
 import { ButtonComponent } from "./styled";
 
-const Button = ({ user, title }) => {
+const Button = ({ user, title, size }) => {
   return (
-    <ButtonComponent>
+    <ButtonComponent size={size}>
       <button>
         {user.loading ? <CgSpinner size={28} /> : <span>{title}</span>}
       </button>
