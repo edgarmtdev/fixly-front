@@ -6,7 +6,6 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   padding: 1rem;
-  height: 100%;
   p.title {
     font-size: 28px;
     font-weight: 600;
@@ -16,7 +15,7 @@ export const Container = styled.div`
   section {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
   }
   @media ${BREAKPOINTS_DEVICES.laptop} {
     padding: 1.5rem;

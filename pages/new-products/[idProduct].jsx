@@ -1,8 +1,8 @@
 import React from "react";
-import { HeadComponent } from "../../components/utils/head";
-import useGetItemLocal from "../../hooks/useGetItemLocal";
-import useRouterQuery from "../../hooks/useRouterQuery";
-import DeatilsMod from "../../modules/products";
+import { HeadComponent } from "components/utils/head";
+import useGetItemLocal from "hooks/useGetItemLocal";
+import useRouterQuery from "hooks/useRouterQuery";
+import DeatilsMod from "modules/products";
 import data from "../../data/products.json";
 
 const NewProductPage = () => {

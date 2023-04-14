@@ -6,9 +6,8 @@ export const HeadComponent = ({ title }) => (
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <meta
       name="description"
-      content="Mary's simple recipe for maple bacon donuts
-           makes a sticky, sweet treat with just a hint
-           of salt that you'll keep coming back for."
+      content="Ecommerce to Fixly Store shop products for
+           projects of electronic"
     />
     <title>{title}</title>
   </Head>

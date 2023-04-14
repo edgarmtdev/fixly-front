@@ -47,7 +47,7 @@ export const GetNowButton = styled(Button)`
 `;
 
 export const AddCartButton = styled(Button)`
-  border: 2px solid #4fbb8b;
+  border: 1px solid #4fbb8b;
   color: #4fbb8b;
   &:hover {
     background-color: #f3fcf8df;
