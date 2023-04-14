@@ -1,6 +1,6 @@
 import React from "react";
-import MyCart from "../../modules/cart";
-import { HeadComponent } from "../../components/utils/head";
+import MyCart from "modules/cart";
+import { HeadComponent } from "components/utils/head";
 import { useGetGlobalState } from "hooks/useGetGlobalState";
 import { validateSession } from "services/auth";
 

@@ -1,7 +1,7 @@
 import React from "react";
-import AuthLayout from "../../../components/layouts/auth";
-import { HeadComponent } from "../../../components/utils/head";
-import LoginModule from "../../../modules/auth/login";
+import AuthLayout from "components/layouts/auth";
+import { HeadComponent } from "components/utils/head";
+import LoginModule from "modules/auth/login";
 import { validateSession } from "services/auth";
 import { useGetGlobalState } from "hooks/useGetGlobalState";
 

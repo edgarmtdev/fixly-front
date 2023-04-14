@@ -1,10 +1,11 @@
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 
-const useAuthDispatch = (feature, route) => {
+const useFormDispatch = (feature, route) => {
   const router = useRouter();
   const dispatch = useDispatch();
-  const signIn = (values) => {
+
+  const event = (values) => {
     dispatch(feature(values)).then((res) => {
       if (!res.error) {
         setTimeout(() => router.push(route), 2000);
@@ -12,7 +13,7 @@ const useAuthDispatch = (feature, route) => {
     });
   };
 
-  return [signIn];
+  return { event };
 };
 
-export default useAuthDispatch;
+export default useFormDispatch;

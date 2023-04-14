@@ -1,18 +1,5 @@
-import CardProduct from "./components/details";
-import ScrollToTop from "/hooks/components/ScrollToTop";
-import { ProductDetails } from "./styled";
-import PaymentsMethods from "./components/methods";
-import Reviews from "./components/reviews";
-
-const DeatilsMod = ({ product, loading }) => {
-  return (
-    <ProductDetails>
-      <ScrollToTop />
-      <CardProduct product={product} loading={loading} />
-      <PaymentsMethods />
-      <Reviews reviews={product?.reviews} loading={loading} />
-    </ProductDetails>
-  );
+const ProductsModule = () => {
+  return <section className="mt-20">Hello</section>;
 };
 
-export default DeatilsMod;
+export default ProductsModule;

@@ -16,7 +16,7 @@ export const ContainerForm = styled.div`
   section {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   @media ${BREAKPOINTS_DEVICES.laptop} {

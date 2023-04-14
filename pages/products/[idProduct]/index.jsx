@@ -1,6 +1,6 @@
 import React from "react";
 import { HeadComponent } from "../../../components/utils/head";
-import DeatilsMod from "../../../modules/products";
+import DeatilsModule from "../../../modules/details";
 import useRouterQuery from "../../../hooks/useRouterQuery";
 import useGetItem from "../../../hooks/useGetItem";
 
@@ -10,7 +10,7 @@ const ProductDetails = () => {
   return (
     <React.Fragment>
       <HeadComponent title={`${product?.name || "Details"} | Fixly`} />
-      <DeatilsMod product={product} loading={loading} />
+      <DeatilsModule product={product} loading={loading} />
     </React.Fragment>
   );
 };

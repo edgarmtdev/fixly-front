@@ -1,8 +1,8 @@
 import { Formik } from "formik";
-import Input from "../../../components/global/form/input";
-import { login } from "../../../features/user";
+import Input from "components/global/form/input";
+import { login } from "features/user";
 import useAuthDispatch from "../hooks/useAuthDispatch";
-import Button from "../../../components/global/form/button";
+import Button from "components/global/form/button";
 import FormCustom from "./components/form";
 import ImageLogin from "./components/image";
 import SignInSchema from "./helpers/validationSchema";
@@ -13,7 +13,7 @@ import { IoMdAlert } from "react-icons/io";
 import { AiFillCheckCircle } from "react-icons/ai";
 
 export default function LoginModule({ user }) {
-  const [signIn] = useAuthDispatch(login, "/");
+  const { event: signIn } = useAuthDispatch(login, "/");
 
   const {
     message: authValue,
