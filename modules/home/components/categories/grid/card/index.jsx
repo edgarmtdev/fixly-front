@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import { Card } from "./styled";
 
 const CardCategory = ({ name, icon }) => {

@@ -1,4 +1,3 @@
-import React from "react";
 import { PriceProduct, Product, ProductInfo } from "./styled";
 
 export default function Card({ data }) {

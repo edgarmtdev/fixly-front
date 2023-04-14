@@ -3,11 +3,7 @@
     "browser": true,
     "es2021": true
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended"
-  ],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
   "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -21,9 +17,8 @@
     "react/react-in-jsx-scope": 0,
     "react/jsx-uses-react": 0,
     "semi": "warn",
-    "react/jsx-key": "off",
-    "no-unused-vars": "off",
-    "prettier/prettier": "warn"
+    "react/jsx-key": "error",
+    "no-unused-vars": "error"
   },
   "settings": {
     "react": {

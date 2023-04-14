@@ -2,21 +2,21 @@ import React from "react";
 import ProductsLayout from "../../../components/layouts/products";
 import { HeadComponent } from "../../../components/utils/head";
 
-export default function Products() {
+export default function Products({ categorie }) {
   return (
     <React.Fragment>
-      <HeadComponent title={"Products | Tools"} />
-      <div>Hello</div>
+      <HeadComponent title={`${categorie}`} />
+      <div className="mt-10 ">Hello</div>
     </React.Fragment>
   );
 }
 
 export async function getServerSideProps({ query }) {
-  const cat = query?.cat || "all";
-  // const response = await get(`/api/products/category?cat=${cat}`);
+  const categorie = query?.cat || "all";
+  // const response = await get(`/api/products/category?cat=${categorie}`);
   return {
     props: {
-      cat,
+      categorie,
     },
   };
 }

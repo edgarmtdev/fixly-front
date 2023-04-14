@@ -1,4 +1,3 @@
-import React from "react";
 import CardCategory from "./card";
 import { Container } from "./styled";
 import useSetState from "../../../../../hooks/useSetState";

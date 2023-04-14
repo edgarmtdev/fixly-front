@@ -1,5 +1,3 @@
-import React from "react";
-import { dropdownContext } from "context/dropdown";
 import { useSelector } from "react-redux";
 import Menu from "./menu";
 import LoggedOptions from "./options/logged";

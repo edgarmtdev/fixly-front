@@ -1,4 +1,3 @@
-import React from "react";
 import GridCategories from "./grid";
 import { CategoriesCont, Tilte } from "./styled";
 

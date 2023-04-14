@@ -12,7 +12,8 @@ export const ButtonAddReview = styled.button`
   font-size: 10px;
   margin-left: auto;
   &:hover {
-    background-color: #ffc364;
+    opacity: 0.9;
+    transform: scale(1.01);
   }
   @media ${BREAKPOINTS_DEVICES.tabletL} {
     font-size: 14px;

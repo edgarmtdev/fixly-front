@@ -1,5 +1,3 @@
-import Link from "next/link";
-import React from "react";
 import FlexProducts from "./products";
 import { MoreProductsCont, Title } from "./styled";
 

@@ -1,4 +1,3 @@
-import React from "react";
 import { Title, List, Container } from "../styled";
 
 const Pages = () => {

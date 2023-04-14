@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import SpinnerLoader from "../../components/utils/loaders/spinner";
 import ProductsComponent from "./products";

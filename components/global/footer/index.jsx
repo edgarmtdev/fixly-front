@@ -1,4 +1,3 @@
-import React from "react";
 import Enterprise from "./lists/enterprise";
 import FormUser from "./form";
 import Pages from "./lists/pages";

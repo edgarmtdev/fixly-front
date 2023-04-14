@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { CgSpinner } from "react-icons/cg";
 import { Form, PayButton, Title } from "./styles";
 import {

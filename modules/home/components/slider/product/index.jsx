@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import Price from "../../utilities/price";
 import { Card, Name } from "./styled";
 

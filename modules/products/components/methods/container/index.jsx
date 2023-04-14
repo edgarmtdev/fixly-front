@@ -1,4 +1,3 @@
-import React from "react";
 import { MethodsContainer } from "./styled";
 
 const ContainerPaymentsMethods = ({ title, icons }) => {

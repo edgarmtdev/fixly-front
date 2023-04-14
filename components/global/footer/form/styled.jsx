@@ -31,7 +31,8 @@ export const Container = styled.div`
     margin-left: auto;
     font-size: 12px;
     &:hover {
-      background-color: #ffc364;
+      opacity: 0.9;
+      transform: scale(1.01);
     }
   }
   @media ${BREAKPOINTS_DEVICES.tablet} {

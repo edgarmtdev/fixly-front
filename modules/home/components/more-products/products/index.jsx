@@ -1,4 +1,3 @@
-import React from "react";
 import ProductCard from "./card";
 import { FlexCont } from "./styled";
 

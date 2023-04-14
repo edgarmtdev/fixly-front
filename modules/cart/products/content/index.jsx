@@ -1,4 +1,3 @@
-import React from "react";
 import BuyNowComponent from "./button";
 import Card from "./card";
 import { ContainerContent, NotProducts } from "./styled";

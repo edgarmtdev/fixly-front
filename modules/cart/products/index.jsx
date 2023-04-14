@@ -1,5 +1,4 @@
-import React from "react";
-import { CardModule, NotProducts, Title, BuyButton } from "./styled";
+import { CardModule, Title } from "./styled";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import ContentComponent from "./content";
 

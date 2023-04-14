@@ -1,4 +1,3 @@
-import React from "react";
 import { Content, Reactions, TitleReview } from "./styled";
 
 const CardReview = ({ review, date }) => {
