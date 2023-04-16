@@ -1,19 +1,20 @@
 import AUTH_CONSTANTS from "config/constants/auth";
 import { requestCookie } from "api";
+import { parseCookies } from "nookies";
 
 export async function validateSession(ctx) {
   // Obtén las cookies del navegador
-  const cookies = ctx?.req.headers.cookie;
+  const cookies = parseCookies(ctx);
 
-  if (cookies) {
+  if (cookies.token) {
     const config = {
       withCredentials: true,
       headers: {
-        Cookie: cookies,
+        Cookie: ctx?.req.headers.cookie,
       },
     };
-    const { data } = await requestCookie(AUTH_CONSTANTS.validation, config);
-    return data;
+    const res = await requestCookie(AUTH_CONSTANTS.validation, config);
+    return res.data;
   }
-  return null;
+  return { success: false };
 }
