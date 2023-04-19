@@ -1,4 +1,4 @@
-import AUTH_CONSTANTS from "config/constants/auth";
+import { AUTH_CONSTANTS } from "config/constants/index";
 import { requestCookie } from "api";
 // import { parseCookies } from "nookies";
 

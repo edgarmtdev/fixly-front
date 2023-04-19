@@ -1,24 +1,23 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { get, post } from "../../api";
+import { PRODUCTS_CONSTANTS } from "config/constants";
 
 export const createProduct = createAsyncThunk(
   "product/create",
   async (params) => {
     console.log(params);
-    const response = await post("/api/products", params);
+    const response = await post(PRODUCTS_CONSTANTS.create, params);
     return response.data;
   }
 );
 
 export const getProducts = createAsyncThunk("get/products", async () => {
-  const response = await get("/api/products");
+  const response = await get(PRODUCTS_CONSTANTS.getAll);
   return response.data;
 });
 
 export const getProduct = createAsyncThunk("get/product", async (params) => {
-  console.log(params);
   const product = await get(`/api/products/${params.id}`);
-  console.log(product);
   return product.data;
 });
 
