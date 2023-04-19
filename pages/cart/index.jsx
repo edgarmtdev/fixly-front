@@ -6,7 +6,6 @@ import { validateSession } from "services/auth";
 
 export default function ShopCar() {
   const data = useGetGlobalState("cart");
-  console.log(data);
   return (
     <React.Fragment>
       <HeadComponent title={"Cart | Fixly"} />

@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { get, post } from "../../api";
+import { get, post } from "api";
 import { PRODUCTS_CONSTANTS } from "config/constants";
 
 export const createProduct = createAsyncThunk(
