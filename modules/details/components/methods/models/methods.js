@@ -6,24 +6,24 @@ const PAYMENT_METHODS = [
     id: 1,
     title: "Debit card",
     icons: [
-      <SiVisa color="#21246E" />,
-      <SiAmericanexpress color="#306FC5" />,
-      <SiMastercard color="#EE0005" />,
+      <SiVisa color="#21246E" key={1} />,
+      <SiAmericanexpress color="#306FC5" key={2} />,
+      <SiMastercard color="#EE0005" key={3} />,
     ],
   },
   {
     id: 2,
     title: "Credit card",
     icons: [
-      <SiVisa color="#21246E" />,
-      <SiAmericanexpress color="#306FC5" />,
-      <SiMastercard color="#EE0005" />,
+      <SiVisa color="#21246E" key={1} />,
+      <SiAmericanexpress color="#306FC5" key={2} />,
+      <SiMastercard color="#EE0005" key={3} />,
     ],
   },
   {
     id: 3,
     title: "Stores",
-    icons: [<FcMoneyTransfer />],
+    icons: [<FcMoneyTransfer key={1} />],
   },
 ];
 
