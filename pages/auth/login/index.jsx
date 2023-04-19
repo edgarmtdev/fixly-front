@@ -18,7 +18,6 @@ export default function Login({ data }) {
 
 export async function getServerSideProps(ctx) {
   const data = await validateSession(ctx);
-  console.log(data);
   if (data.success) {
     return {
       redirect: {
