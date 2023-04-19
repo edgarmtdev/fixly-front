@@ -1,5 +1,5 @@
 import { post } from "api";
-import AUTH_CONSTANTS from "config/constants/auth";
+import { AUTH_CONSTANTS } from "config/constants";
 import { setCookie } from "nookies";
 
 export default async function login(req, res) {
