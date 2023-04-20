@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import NavbarAuth from "../../auth/navigation";
 
@@ -14,9 +13,9 @@ export const AuthCont = styled.main`
 
 export default function AuthLayout({ children }) {
   return (
-    <React.Fragment>
+    <>
       <NavbarAuth />
       <AuthCont>{children}</AuthCont>
-    </React.Fragment>
+    </>
   );
 }
