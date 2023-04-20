@@ -8,6 +8,12 @@ const loggedRoutes = [
   "/profile/shops",
 ];
 
+/**
+ * The custom hook run a feature and navigate to some route
+ * @param {Function} func
+ * @param {string} route
+ * @returns
+ */
 const useNavigateDispatch = (func, route) => {
   const router = useRouter();
   const dispatch = useDispatch();

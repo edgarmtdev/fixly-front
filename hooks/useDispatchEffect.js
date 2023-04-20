@@ -1,11 +1,15 @@
-import React from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-const useDispatchEffect = (feature) => {
+/**
+ * Custom hook to run features from redux
+ * @param {Array} features
+ */
+const useDispatchEffect = (features) => {
   const dispatch = useDispatch();
 
-  React.useEffect(() => {
-    dispatch(feature());
+  useEffect(() => {
+    features.map((feature) => dispatch(feature()));
   }, []);
 };
 
