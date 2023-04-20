@@ -1,10 +1,7 @@
-import React from "react";
 import styled from "styled-components";
-import Footer from "../../global/footer";
-import Navbar from "../../global/navigation";
-import useAuthValidate from "hooks/useAuthValidate";
+import Page from "../Page";
 
-export const LayoutCont = styled.main`
+export const Layout = styled.main`
   max-width: 1440px;
   margin: 0 auto;
   padding: 1rem;
@@ -12,13 +9,11 @@ export const LayoutCont = styled.main`
 `;
 
 export default function ProductsLayout({ children }) {
-  useAuthValidate();
   return (
-    <React.Fragment>
-      <Navbar />
-      {/* TODO: add sidebar */}
-      <LayoutCont>{children}</LayoutCont>
-      <Footer />
-    </React.Fragment>
+    <>
+      <Page>
+        <Layout>{children}</Layout>
+      </Page>
+    </>
   );
 }
