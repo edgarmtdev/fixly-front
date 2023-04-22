@@ -2,7 +2,7 @@ import React from "react";
 import MyCart from "modules/cart";
 import { HeadComponent } from "components/utils/head";
 import { useGetGlobalState } from "hooks/useGetGlobalState";
-import { validateSession } from "services/auth";
+// import { validateSession } from "services/auth";
 
 export default function ShopCar() {
   const data = useGetGlobalState("cart");
@@ -14,15 +14,15 @@ export default function ShopCar() {
   );
 }
 
-export async function getServerSideProps(ctx) {
-  const data = await validateSession(ctx);
-  if (!data) {
-    return {
-      redirect: {
-        destination: "/",
-        permanent: false,
-      },
-    };
-  }
-  return { props: { user: data || null } };
-}
+// export async function getServerSideProps(ctx) {
+//   const data = await validateSession(ctx);
+//   if (!data) {
+//     return {
+//       redirect: {
+//         destination: "/",
+//         permanent: false,
+//       },
+//     };
+//   }
+//   return { props: { user: data || null } };
+// }
