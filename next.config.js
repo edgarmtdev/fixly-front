@@ -4,7 +4,5 @@ module.exports = {
   compiler: {
     styledComponents: true,
   },
-  experimental: {
-    forceSwcTransforms: true,
-  },
+  swcMinify: true,
 };
