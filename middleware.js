@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { validateSession } from "services/auth";
 
 export async function middleware(req) {
-  const cookie = req.cookies.get("token");
+  const cookie = req.cookies.get("token") || undefined;
   // if (!cookie) {
   //   return NextResponse.redirect(new URL("/auth/login", req.url));
   // }
