@@ -4,7 +4,6 @@ import { serialize } from "cookie";
 
 export default async function login(req, res) {
   if (req.method === "POST") {
-    console.log("Request", req.body);
     const { data } = await post(AUTH_CONSTANTS.login, req.body);
 
     console.log("Response", data);
@@ -14,7 +13,7 @@ export default async function login(req, res) {
         httpOnly: true,
         // eslint-disable-next-line no-undef
         secure: process.env.NODE_ENV === "production",
-        sameSite: "none",
+        sameSite: "strict",
         expires: new Date(new Date().setDate(new Date().getDate() + 7)),
         path: "/",
       });
