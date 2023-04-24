@@ -4,7 +4,10 @@ import { serialize } from "cookie";
 
 export default async function login(req, res) {
   if (req.method === "POST") {
+    console.log("Request", req.body);
     const { data } = await post(AUTH_CONSTANTS.login, req.body);
+
+    console.log("Response", data);
 
     if (data.success) {
       const serialized = serialize("token", data.token, {
@@ -22,5 +25,5 @@ export default async function login(req, res) {
 
     return res.status(401).json(data);
   }
-  return null;
+  return res.json({ message: "Method not allowed" });
 }
