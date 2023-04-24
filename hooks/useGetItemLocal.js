@@ -1,5 +1,12 @@
 import React from "react";
 
+/**
+ * Custom hook to fetch data from local data(data/products.json)
+ * @param {string} id
+ * @param {Array} data
+ * @param {number} delay
+ * @returns
+ */
 const useGetItemLocal = (id, data, delay = 1000) => {
   const [products] = React.useState(data);
   const [product, setProduct] = React.useState(null);

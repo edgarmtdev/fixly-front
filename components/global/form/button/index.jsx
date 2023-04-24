@@ -4,7 +4,7 @@ import { ButtonComponent } from "./styled";
 const Button = ({ user, title, size }) => {
   return (
     <ButtonComponent size={size}>
-      <button>
+      <button type="submit">
         {user.loading ? <CgSpinner size={28} /> : <span>{title}</span>}
       </button>
     </ButtonComponent>

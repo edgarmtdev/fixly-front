@@ -1,19 +1,29 @@
-import AUTH_CONSTANTS from "config/constants/auth";
-import { requestCookie } from "api";
+import { AUTH_CONSTANTS } from "config/constants/index";
+// import { requestCookie } from "api";
+// import { parseCookies } from "nookies";
 
-export async function validateSession(ctx) {
-  // Obtén las cookies del navegador
-  const cookies = ctx?.req.headers.cookie;
+export async function validateSession(cookie) {
+  const config = {
+    withCredentials: true,
+    headers: {
+      Cookie: `token=${cookie}`,
+    },
+  };
+  try {
+    // Obtén las cookies del navegador
+    // const cookies = parseCookies(ctx);
 
-  if (cookies) {
-    const config = {
-      withCredentials: true,
-      headers: {
-        Cookie: cookies,
-      },
-    };
-    const { data } = await requestCookie(AUTH_CONSTANTS.validation, config);
+    // console.log(ctx?.req.headers.cookie);
+    const res = await fetch(
+      `http://localhost:4000${AUTH_CONSTANTS.validation}`,
+      config
+    );
+    const data = await res.json();
+
+    console.log(data);
     return data;
+  } catch (error) {
+    console.log({ ...error });
+    return error;
   }
-  return null;
 }

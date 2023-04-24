@@ -4,23 +4,22 @@ import { HeadComponent } from "components/utils/head";
 import { get } from "api";
 import ProductsModule from "modules/products";
 
-export default function Products({ categorie, products }) {
-  console.log(products);
+export default function Products({ categorie, response }) {
   return (
     <React.Fragment>
       <HeadComponent title={`${categorie}`} />
-      <ProductsModule products={products} />
+      <ProductsModule products={response.data} categorie={categorie} />
     </React.Fragment>
   );
 }
 
 export async function getServerSideProps({ query }) {
   const categorie = query?.cat || "all";
-  const response = await get(`/api/products/category?cat=${categorie}`);
+  const response = await get(`/api/products/categories/type?cat=${categorie}`);
   return {
     props: {
       categorie,
-      products: response.data,
+      response: response.data,
     },
   };
 }

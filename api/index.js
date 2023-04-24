@@ -18,7 +18,7 @@ const post = async (url, data) => {
 };
 
 const requestCookie = async (url, config) => {
-  return await instance.get(url, config);
+  return await instance.get(url, config, { withCredentials: true });
 };
 
 export { get, post, requestCookie };

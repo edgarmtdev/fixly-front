@@ -1,8 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { get, post } from "../../api";
+import { CART_CONSTANTS } from "config/constants";
 
 export const getCart = createAsyncThunk("cart/getCart", async function () {
-  const response = await get("/api/cart");
+  const response = await get(CART_CONSTANTS.getCart);
   return response.data;
 });
 
@@ -10,7 +11,7 @@ export const addToCart = createAsyncThunk(
   "cart/addToCart",
   async function (data) {
     try {
-      const newItem = await post("/api/cart/add-item", data);
+      const newItem = await post(CART_CONSTANTS.addItem, data);
       return newItem.data;
     } catch (error) {
       console.log(error);
@@ -60,7 +61,7 @@ const cartSlice = createSlice({
     builder
       .addCase(getCart.fulfilled, (state, action) => {
         state.error = false;
-        state.items = action.payload.items;
+        state.items = action.payload.data.items;
         state.loading = false;
         if (action.payload.items) {
           state.total = state.items.reduce(
