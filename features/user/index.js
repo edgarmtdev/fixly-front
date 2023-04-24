@@ -12,7 +12,7 @@ export const login = createAsyncThunk(
       });
       return response.data;
     } catch (error) {
-      console.log("Error", error):
+      console.log("Error", error);
       let message;
       if (typeof error.response.data.message === "string") {
         message = error.response.data.message;
