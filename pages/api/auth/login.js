@@ -14,7 +14,7 @@ export default async function login(req, res) {
         httpOnly: true,
         // eslint-disable-next-line no-undef
         secure: process.env.NODE_ENV === "production",
-        sameSite: "none",
+        sameSite: "strict",
         expires: new Date(new Date().setDate(new Date().getDate() + 7)),
         path: "/",
       });
