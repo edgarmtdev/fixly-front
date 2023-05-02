@@ -5,11 +5,9 @@ import { useDispatch } from "react-redux";
  * @param {Function} callback
  * @returns
  */
-const useSendData = (callback) => {
+export const useSendData = (callback) => {
   const dispatch = useDispatch();
 
   dispatch(callback());
   return;
 };
-
-export default useSendData;

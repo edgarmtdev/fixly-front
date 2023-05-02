@@ -1,16 +1,13 @@
-import React from "react";
-import { HiUser } from "react-icons/hi";
-import { CardItem, DropdownContainer } from "./styled";
 import { logOut } from "features/user";
-import useNavigateDispatch from "hooks/useDispatchNavigate";
-import { CardUser } from "./styled";
-import DROPDOWN_ITEMS from "./model";
+import { useNavigateDispatch, useGetDropdownContext } from "hooks";
 import Link from "next/link";
-import { dropdownContext } from "context/dropdown";
+import { HiUser } from "react-icons/hi";
+import DROPDOWN_ITEMS from "./model";
+import { CardItem, CardUser, DropdownContainer } from "./styled";
 
 const DropdownUser = ({ userName }) => {
   const { action } = useNavigateDispatch(logOut, "/");
-  const { handleNotViewDropdown } = React.useContext(dropdownContext);
+  const { handleNotViewDropdown } = useGetDropdownContext();
   return (
     <DropdownContainer>
       <CardUser>

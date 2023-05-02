@@ -7,7 +7,7 @@ import React from "react";
  * @param {number} delay
  * @returns
  */
-const useGetItemLocal = (id, data, delay = 1000) => {
+export const useGetItemLocal = (id, data, delay = 1000) => {
   const [products] = React.useState(data);
   const [product, setProduct] = React.useState(null);
   const [loading, setLoading] = React.useState(true);
@@ -29,5 +29,3 @@ const useGetItemLocal = (id, data, delay = 1000) => {
 
   return { product, loading };
 };
-
-export default useGetItemLocal;

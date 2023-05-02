@@ -1,6 +1,6 @@
 import CardCategory from "./card";
 import { Container } from "./styled";
-import useSetState from "../../../../../hooks/useSetState";
+import { useSetState } from "hooks";
 import CATEGORIES_LINKS from "./model/categories";
 
 export default function GridCategories() {

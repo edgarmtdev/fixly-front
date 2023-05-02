@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
  * @param {string} alternateRoute
  * @returns
  */
-const useEventRouter = (feature, route, alternateRoute) => {
+export const useEventRouter = (feature, route, alternateRoute) => {
   const { logged } = useSelector((selector) => selector.user);
   const dispatch = useDispatch();
   const router = useRouter();
@@ -23,5 +23,3 @@ const useEventRouter = (feature, route, alternateRoute) => {
   };
   return event;
 };
-
-export default useEventRouter;

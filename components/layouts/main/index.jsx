@@ -1,20 +1,13 @@
-import { dropdownContext } from "context/dropdown";
-import { useContext } from "react";
-import styled from "styled-components";
+import { useGetDropdownContext } from "hooks";
 import Page from "../Page";
 
-const Principal = styled.section`
-  max-width: 1280px;
-  margin: 0 auto;
-`;
-
 function MainLayout({ children }) {
-  const { handleNotViewDropdown } = useContext(dropdownContext);
+  const { handleNotViewDropdown } = useGetDropdownContext();
 
   return (
     <Page>
       <main onClick={handleNotViewDropdown}>
-        <Principal>{children}</Principal>
+        <section className="container">{children}</section>
       </main>
     </Page>
   );

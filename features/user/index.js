@@ -58,6 +58,7 @@ const initialState = {
   loading: false,
   id: "",
   message: "",
+  role: undefined,
   auth: {
     hasError: true,
     login: {
@@ -82,6 +83,7 @@ const userSlice = createSlice({
         state.auth.login.message = "";
         state.auth.hasError = false;
         state.message = `Hello ${action.payload.name}`;
+        state.role = action.payload.role;
       })
       .addCase(login.pending, (state) => {
         state.logged = false;
@@ -101,6 +103,8 @@ const userSlice = createSlice({
         state.loading = false;
         state.name = action.payload.name;
         state.id = action.payload.id;
+        state.role = undefined;
+        state.message = "";
       })
       .addCase(signUp.pending, (state) => {
         state.logged = false;
@@ -121,6 +125,7 @@ const userSlice = createSlice({
         state.loading = false;
         state.name = action.payload.user?.name;
         state.id = action.payload.user?.id;
+        state.role = action.payload.user?.role;
       })
       .addCase(validation.pending, (state) => {
         state.loading = true;

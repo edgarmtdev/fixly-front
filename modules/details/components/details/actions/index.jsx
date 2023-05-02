@@ -1,4 +1,4 @@
-import useEventRouter from "hooks/useEventRouter";
+import { useEventRouter } from "hooks";
 import { ActionsCont, AddCartButton, GetNowButton } from "./styled";
 import { addToCart, shopProductNow } from "features";
 

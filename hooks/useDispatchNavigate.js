@@ -14,7 +14,7 @@ const loggedRoutes = [
  * @param {string} route
  * @returns
  */
-const useNavigateDispatch = (func, route) => {
+export const useNavigateDispatch = (func, route) => {
   const router = useRouter();
   const dispatch = useDispatch();
 
@@ -28,5 +28,3 @@ const useNavigateDispatch = (func, route) => {
 
   return { action };
 };
-
-export default useNavigateDispatch;

@@ -7,7 +7,7 @@ import { get } from "../api";
  * @param {number} delay
  * @returns
  */
-const useGetItem = (id, delay = 1000) => {
+export const useGetItem = (id, delay = 1000) => {
   const [item, setItem] = React.useState({});
   const [loading, setLoading] = React.useState(true);
 
@@ -29,5 +29,3 @@ const useGetItem = (id, delay = 1000) => {
 
   return [item, loading, setItem];
 };
-
-export default useGetItem;

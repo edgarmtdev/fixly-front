@@ -1,7 +1,7 @@
 import Footer from "components/global/footer";
 import Navbar from "components/global/navigation";
 import { getCart, getProducts, validation } from "features";
-import useDispatchEffect from "hooks/useDispatchEffect";
+import { useDispatchEffect } from "hooks";
 
 const features = [validation, getProducts, getCart];
 

@@ -1,7 +1,7 @@
 import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import data from "../../../../data/products.json";
-import useSetState from "../../../../hooks/useSetState";
+import { useSetState } from "hooks";
 import ProductDescription from "./description";
 import BannerImage from "./image";
 import { Container } from "./styled";

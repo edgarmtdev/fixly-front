@@ -3,6 +3,9 @@
 // import InputForm from "../../components/Form";
 // import { createProduct } from "../../features/product";
 
+import AdminLayout from "components/layouts/admin/Admin";
+import { HeadComponent } from "components/utils/head";
+
 // export default function NewProduct() {
 //   const dispatch = useDispatch();
 //   const router = useRouter();
@@ -51,8 +54,13 @@
 //     </main>
 //   );
 // }
-const NewProduct = () => {
-  return <div>new-product</div>;
-};
+export default function NewProduct() {
+  return (
+    <>
+      <HeadComponent title={"Upload Product | Fixly"} />
+      <div className=" mt-28">Hello</div>
+    </>
+  );
+}
 
-export default NewProduct;
+NewProduct.Layout = AdminLayout;

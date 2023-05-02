@@ -1,6 +1,6 @@
 import React from "react";
 
-const useSetState = (data) => {
+export const useSetState = (data) => {
   const [state, setState] = React.useState([]);
 
   React.useEffect(() => {
@@ -8,5 +8,3 @@ const useSetState = (data) => {
   }, []);
   return [state, setState];
 };
-
-export default useSetState;
