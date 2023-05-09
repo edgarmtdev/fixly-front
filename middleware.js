@@ -3,7 +3,6 @@ import { validateSession } from "services/auth";
 
 export async function middleware(req) {
   const cookie = req.cookies.get("token") || undefined;
-  console.log(cookie);
   // if (!cookie) {
   //   return NextResponse.redirect(new URL("/auth/login", req.url));
   // }

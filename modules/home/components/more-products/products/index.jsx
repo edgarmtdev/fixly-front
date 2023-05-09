@@ -1,4 +1,4 @@
-import ProductCard from "./card";
+import ProductCard from "components/global/products/card";
 import { FlexCont } from "./styled";
 
 function FlexProducts({ products }) {

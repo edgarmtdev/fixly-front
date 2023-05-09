@@ -1,7 +1,7 @@
 import { HeadComponent } from "components/utils/head";
 import { useGetItemLocal, useRouterQuery } from "hooks";
-import data from "../../data/products.json";
 import DeatilsModule from "modules/details";
+import data from "../../data/products.json";
 
 const ProductOffert = () => {
   const id = useRouterQuery();

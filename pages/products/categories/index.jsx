@@ -1,15 +1,14 @@
-import React from "react";
+import { get } from "api";
 import ProductsLayout from "components/layouts/products";
 import { HeadComponent } from "components/utils/head";
-import { get } from "api";
 import ProductsModule from "modules/products";
 
 export default function Products({ categorie, response }) {
   return (
-    <React.Fragment>
+    <>
       <HeadComponent title={`${categorie}`} />
       <ProductsModule products={response.data} categorie={categorie} />
-    </React.Fragment>
+    </>
   );
 }
 

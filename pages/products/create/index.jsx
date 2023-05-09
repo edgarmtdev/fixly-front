@@ -58,7 +58,7 @@ export default function NewProduct() {
   return (
     <>
       <HeadComponent title={"Upload Product | Fixly"} />
-      <div className=" mt-28">Hello</div>
+      <div className="container">Panel de administracion</div>
     </>
   );
 }

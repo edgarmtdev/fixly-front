@@ -1,7 +1,7 @@
-import { forwardRef } from "react";
-import Price from "../../../utilities/price";
-import { Card, Name } from "./styled";
 import Link from "next/link";
+import { forwardRef } from "react";
+import Price from "./price";
+import { Card, Name } from "./styled";
 
 // eslint-disable-next-line react/display-name, no-unused-vars
 const ProductCard = forwardRef(({ product }, ref) => {

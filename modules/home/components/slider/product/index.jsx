@@ -1,5 +1,5 @@
+import Price from "components/global/products/card/price";
 import Link from "next/link";
-import Price from "../../utilities/price";
 import { Card, Name } from "./styled";
 
 function Product({ data }) {
