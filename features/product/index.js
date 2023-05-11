@@ -5,7 +5,6 @@ import { PRODUCTS_CONSTANTS } from "config/constants";
 export const createProduct = createAsyncThunk(
   "product/create",
   async (params) => {
-    console.log(params);
     const response = await post(PRODUCTS_CONSTANTS.create, params);
     return response.data;
   }

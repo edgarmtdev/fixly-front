@@ -13,4 +13,11 @@ const DROPDOWN_ITEMS = [
   },
 ];
 
-export default DROPDOWN_ITEMS;
+const DROPDOWN_ITEMS_ADMIN = [
+  {
+    title: "Administrador",
+    route: "/admin/dashboard",
+  },
+];
+
+export { DROPDOWN_ITEMS, DROPDOWN_ITEMS_ADMIN };

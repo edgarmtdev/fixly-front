@@ -5,6 +5,7 @@
 
 import AdminLayout from "components/layouts/admin/Admin";
 import { HeadComponent } from "components/utils/head";
+import ProductsAdminModule from "modules/admin/products";
 
 // export default function NewProduct() {
 //   const dispatch = useDispatch();
@@ -58,7 +59,7 @@ export default function NewProduct() {
   return (
     <>
       <HeadComponent title={"Upload Product | Fixly"} />
-      <div className="container">Panel de administracion</div>
+      <ProductsAdminModule />
     </>
   );
 }
