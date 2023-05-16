@@ -4,8 +4,8 @@ import DeatilsModule from "modules/details";
 import { useGetItem, useRouterQuery } from "hooks";
 
 export default function ProductDetails() {
-  const idProduct = useRouterQuery();
-  const [product, loading] = useGetItem(idProduct, 500);
+  const id = useRouterQuery("idProduct");
+  const [product, loading] = useGetItem(id, 500);
   return (
     <React.Fragment>
       <HeadComponent title={`${product?.name || "Details"} | Fixly`} />

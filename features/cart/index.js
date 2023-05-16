@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { get, post } from "../../api";
+import { get, post } from "api";
 import { CART_CONSTANTS } from "config/constants";
 
 export const getCart = createAsyncThunk("cart/getCart", async function () {
@@ -61,9 +61,9 @@ const cartSlice = createSlice({
     builder
       .addCase(getCart.fulfilled, (state, action) => {
         state.error = false;
-        state.items = action.payload.data.items;
+        state.items = action.payload.data?.items;
         state.loading = false;
-        if (action.payload.items) {
+        if (action.payload.data.items) {
           state.total = state.items.reduce(
             (res, item) =>
               res + item.product.price.$numberDecimal * item.amount,

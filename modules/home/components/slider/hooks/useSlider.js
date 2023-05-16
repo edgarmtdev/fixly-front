@@ -1,5 +1,10 @@
 import { EffectCoverflow, Pagination } from "swiper";
 
+/**
+ * Hook to set reference a HTML element and return swiper options to Coverflow Effect
+ * @param {import("react").ElementRef} ref
+ * @returns
+ */
 const useSliderCoverflow = (ref) => {
   const swiperOptions = {
     effect: "coverflow",

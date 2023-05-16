@@ -6,6 +6,7 @@ export const Container = styled.nav`
   width: 100%;
   top: 0;
   padding: 1rem;
+  z-index: 10;
   @media ${BREAKPOINTS_DEVICES.laptop} {
     padding: 1.5rem;
   }
