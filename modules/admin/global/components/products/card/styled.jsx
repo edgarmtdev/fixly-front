@@ -6,23 +6,23 @@ export const Card = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 224px;
-  height: 320px;
+  width: 180px;
+  min-height: 250px;
   background-color: white;
   border-radius: 4px;
   cursor: pointer;
   transition: 100ms;
   &:hover {
-    border: 1px solid white;
+    transform: scale(0.98);
+    transition: 100ms;
   }
   img {
-    width: 80%;
+    width: 70%;
   }
 `;
 
 export const Name = styled.p`
-  text-align: center;
-  font-weight: 600;
-  color: #3e5067;
+  font-size: 14px;
   margin-top: 2rem;
+  text-align: center;
 `;

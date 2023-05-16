@@ -28,6 +28,6 @@ export const config = {
     "/profile",
     "/profile/reviews",
     "/profile/shops",
-    "/admin/:path*",
+    // "/admin/:path*",
   ],
 };
