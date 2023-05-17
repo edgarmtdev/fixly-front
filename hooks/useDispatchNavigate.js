@@ -1,12 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/router";
 
-const loggedRoutes = [
-  "/cart",
-  "/profile",
-  "/profile/reviews",
-  "/profile/shops",
-];
+const loggedRoutes = [/\/profile?\/?\w+/, /\/admin?\/?\w+/];
 
 /**
  * The custom hook run a feature and navigate to some route
@@ -19,12 +14,13 @@ export const useNavigateDispatch = (func, route) => {
   const dispatch = useDispatch();
 
   const action = () => {
-    const changeRoute = loggedRoutes.some((item) => item === router.route);
+    const changeRoute = loggedRoutes.some((item) => item.test(router.route));
+    console.log(changeRoute);
     dispatch(func());
     if (changeRoute) {
       router.replace(route);
     }
   };
 
-  return { action };
+  return action;
 };

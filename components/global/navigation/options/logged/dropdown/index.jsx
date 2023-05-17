@@ -6,7 +6,7 @@ import { CardUser, DropdownContainer } from "./styled";
 import { Route } from "./utils/Route";
 
 const DropdownUser = ({ userName }) => {
-  const { action } = useNavigateDispatch(logOut, "/");
+  const event = useNavigateDispatch(logOut, "/");
 
   return (
     <DropdownContainer>
@@ -19,7 +19,7 @@ const DropdownUser = ({ userName }) => {
       <div className="line"></div>
       <Routes />
       <div className="line"></div>
-      <Route onClick={action}>
+      <Route onClick={event}>
         <p>Logout</p>
       </Route>
     </DropdownContainer>
