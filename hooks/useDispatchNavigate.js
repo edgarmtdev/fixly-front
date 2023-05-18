@@ -15,7 +15,6 @@ export const useNavigateDispatch = (func, route) => {
 
   const action = () => {
     const changeRoute = loggedRoutes.some((item) => item.test(router.route));
-    console.log(changeRoute);
     dispatch(func());
     if (changeRoute) {
       router.replace(route);
