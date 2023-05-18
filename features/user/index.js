@@ -11,13 +11,18 @@ export const login = createAsyncThunk(
       });
       return response.data;
     } catch (error) {
-      console.log("Error", { ...error });
+      if (!error.response) {
+        return thunkAPI.rejectWithValue("An error has occurred. Try again!");
+      }
+
       let message;
+
       if (typeof error.response.data.message === "string") {
         message = error.response.data.message;
       } else {
         message = error.response.data.message[0];
       }
+
       return thunkAPI.rejectWithValue(message);
     }
   }
