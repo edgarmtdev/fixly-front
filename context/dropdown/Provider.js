@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { dropdownContext } from ".";
+import { useRouter } from "next/router";
 
 export default function DropdownContext({ children }) {
+  const router = useRouter();
   const [view, setView] = useState(false);
 
   const handleViewDropdown = () => {
@@ -12,7 +14,7 @@ export default function DropdownContext({ children }) {
     setView(false);
   };
 
-  useEffect(() => setView(false), []);
+  useEffect(() => setView(false), [router.route]);
 
   return (
     <dropdownContext.Provider

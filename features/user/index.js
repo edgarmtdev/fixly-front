@@ -2,6 +2,11 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { get, post } from "api";
 import { AUTH_CONSTANTS } from "config/constants";
 
+const errors = {
+  ERR_CONNECTION_REFUSED: "An error has occurred. Try again!",
+  SIMPLE_ERROR_LOGIN: "",
+};
+
 export const login = createAsyncThunk(
   "user/login",
   async (credentials, thunkAPI) => {
@@ -12,7 +17,7 @@ export const login = createAsyncThunk(
       return response.data;
     } catch (error) {
       if (!error.response) {
-        return thunkAPI.rejectWithValue("An error has occurred. Try again!");
+        return thunkAPI.rejectWithValue(errors.ERR_CONNECTION_REFUSED);
       }
 
       let message;

@@ -28,7 +28,7 @@ export default function ProductsAdminModule() {
           <Button onClick={handleViewModal}>New Product</Button>
         </section>
       </div>
-      <div className="mt-10 mx-10 flex gap-8">
+      <div className="mt-10 mx-10 flex gap-6">
         {products.map((product, index) => (
           <Card key={index} product={product} />
         ))}
