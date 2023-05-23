@@ -41,7 +41,10 @@ export default function ProductsAdminModule() {
           <Card key={index} product={product} />
         ))}
       </div>
-      {viewModal && <UploadProduct handleNotViewModal={handleNotViewModal} />}
+      <UploadProduct
+        viewModal={viewModal}
+        handleNotViewModal={handleNotViewModal}
+      />
     </>
   );
 }

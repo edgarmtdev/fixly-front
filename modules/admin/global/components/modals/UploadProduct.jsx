@@ -1,14 +1,27 @@
 import { Form, Formik } from "formik";
+import { motion } from "framer-motion";
 import { IoMdClose } from "react-icons/io";
 import InputField from "../form/inputs/InputField";
 
-export default function UploadProduct({ handleNotViewModal }) {
+const show = {
+  opacity: 1,
+  display: "block",
+};
+
+const hide = {
+  opacity: 0,
+  transitionEnd: {
+    display: "none",
+  },
+};
+
+export default function UploadProduct({ viewModal, handleNotViewModal }) {
   const handleSubmit = (values) => {
     console.log(values);
   };
 
   return (
-    <section>
+    <motion.section animate={viewModal ? show : hide}>
       <div
         onClick={handleNotViewModal}
         className="absolute z-20 top-0 bg-[#00000078] left-0 min-h-[100vh] w-[100%]"
@@ -43,6 +56,6 @@ export default function UploadProduct({ handleNotViewModal }) {
           </Formik>
         </section>
       </div>
-    </section>
+    </motion.section>
   );
 }
