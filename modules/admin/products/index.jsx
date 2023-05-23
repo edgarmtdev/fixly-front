@@ -6,11 +6,19 @@ import Card from "../global/components/products/card";
 import ToolbarAdmin from "../global/components/toolbar";
 import { useViewModal } from "../hooks/useViewModal";
 import { Button } from "./styled";
+// import { useState } from "react";
 
 export default function ProductsAdminModule() {
   const { products } = useGetGlobalState("product");
 
+  // const [items, setItems] = useState(products);
+
   const { viewModal, handleViewModal, handleNotViewModal } = useViewModal();
+
+  const searchProduct = (e) => {
+    e.preventDefault();
+    console.log(e.target.value);
+  };
 
   return (
     <>
@@ -21,7 +29,7 @@ export default function ProductsAdminModule() {
             name={"search"}
             placeholder={"Search a product"}
             icon={<AiOutlineSearch />}
-            event={(e) => console.log(e.target.value)}
+            event={searchProduct}
           />
         </form>
         <section className="ml-auto">
