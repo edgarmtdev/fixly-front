@@ -10,7 +10,7 @@ export default function AdminLayout({ children }) {
   useDispatchEffect(features);
   return (
     <main className="flex w-full">
-      <aside className="h-[100vh] bg-gray w-1/6 top-0 shadow">
+      <aside className="h-[100vh] w-1/6 top-0 shadow flex flex-col">
         <TitleAside />
         <LinksAside />
       </aside>

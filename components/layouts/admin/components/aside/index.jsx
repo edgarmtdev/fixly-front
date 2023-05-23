@@ -12,7 +12,7 @@ const links = [
 
 export default function LinksAside() {
   return (
-    <ul>
+    <ul className="p-2">
       {links.map((link, index) => (
         <LinkItem key={index} {...link} />
       ))}

@@ -1,7 +1,7 @@
 import { Form, Formik } from "formik";
-import { motion } from "framer-motion";
 import { IoMdClose } from "react-icons/io";
 import InputField from "../form/inputs/InputField";
+import { motion } from "framer-motion";
 
 const show = {
   opacity: 1,
@@ -21,7 +21,7 @@ export default function UploadProduct({ viewModal, handleNotViewModal }) {
   };
 
   return (
-    <motion.section animate={viewModal ? show : hide}>
+    <motion.section className="hidden" animate={viewModal ? show : hide}>
       <div
         onClick={handleNotViewModal}
         className="absolute z-20 top-0 bg-[#00000078] left-0 min-h-[100vh] w-[100%]"
