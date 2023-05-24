@@ -1,27 +1,36 @@
 import { Form, Formik } from "formik";
 import { IoMdClose } from "react-icons/io";
 import InputField from "../form/inputs/InputField";
-import { motion } from "framer-motion";
+import ContainerMotion from "./ContainerMotion";
+import { useDispatch } from "react-redux";
+import { createProduct } from "features";
+import Select from "react-select";
+import { useId } from "react";
 
-const show = {
-  opacity: 1,
-  display: "block",
-};
-
-const hide = {
-  opacity: 0,
-  transitionEnd: {
-    display: "none",
-  },
-};
+const options = [
+  { value: "Food", label: "Food" },
+  { value: "Being Fabulous", label: "Being Fabulous" },
+  { value: "Ken Wheeler", label: "Ken Wheeler" },
+  { value: "ReasonML", label: "ReasonML" },
+  { value: "Unicorns", label: "Unicorns" },
+  { value: "Kittens", label: "Kittens" },
+];
 
 export default function UploadProduct({ viewModal, handleNotViewModal }) {
+  const dispatch = useDispatch();
   const handleSubmit = (values) => {
-    console.log(values);
+    const data = {
+      name: values.name,
+      imgURL: [values.imgURL],
+      price: values.price,
+      amount: values.amount,
+      categories: ["Tools"],
+    };
+    dispatch(createProduct(data));
   };
 
   return (
-    <motion.section className="hidden" animate={viewModal ? show : hide}>
+    <ContainerMotion visible={viewModal}>
       <div
         onClick={handleNotViewModal}
         className="absolute z-20 top-0 bg-[#00000078] left-0 min-h-[100vh] w-[100%]"
@@ -31,7 +40,7 @@ export default function UploadProduct({ viewModal, handleNotViewModal }) {
           <div>
             <h3>Upload product</h3>
           </div>
-          <button className=" ml-auto" onClick={handleNotViewModal}>
+          <button className="ml-auto" onClick={handleNotViewModal}>
             <IoMdClose
               className="text-primary_variant-200 hover:text-primary-400"
               size={20}
@@ -42,20 +51,54 @@ export default function UploadProduct({ viewModal, handleNotViewModal }) {
           <Formik
             initialValues={{
               name: "",
+              imgURL: [],
+              price: 0.0,
+              amount: 0,
+              categories: [],
             }}
             onSubmit={handleSubmit}
           >
-            <Form>
+            <Form className="flex flex-col gap-7">
               <InputField
                 name="name"
                 type="text"
                 placeholder="Write product name..."
                 label="Product name"
               />
+              <InputField
+                name="imgURL"
+                type="text"
+                placeholder="Set a url image"
+                label="Image"
+              />
+              <InputField
+                name="price"
+                type="number"
+                placeholder="Write the product price..."
+                label="Price"
+              />
+              <InputField
+                name="amount"
+                type="number"
+                placeholder="Write the amount price..."
+                label="Amount"
+              />
+              <Select
+                id="categories"
+                placeholder="Categories"
+                options={options}
+                isMulti={true}
+                className="text-sm"
+                instanceId={useId()}
+                name="categories"
+              />
+              <button className="" type="submit">
+                Enviar
+              </button>
             </Form>
           </Formik>
         </section>
       </div>
-    </motion.section>
+    </ContainerMotion>
   );
 }

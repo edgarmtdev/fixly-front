@@ -2,12 +2,12 @@ import { useDispatch } from "react-redux";
 
 /**
  * The function run a callback of redux
- * @param {Function} callback
+ * @param {Function} feature
  * @returns
  */
-export const useSendData = (callback) => {
+export const useSendData = (feature) => {
   const dispatch = useDispatch();
 
-  dispatch(callback());
+  dispatch(feature());
   return;
 };
