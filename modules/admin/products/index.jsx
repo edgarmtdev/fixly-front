@@ -4,7 +4,7 @@ import InputText from "../global/components/form/inputs/InputText";
 import UploadProduct from "../global/components/modals/UploadProduct";
 import Card from "../global/components/products/card";
 import ToolbarAdmin from "../global/components/toolbar";
-import { useViewModal } from "../hooks/useViewModal";
+import { useViewModal } from "../hooks";
 import { Button } from "./styled";
 // import { useState } from "react";
 

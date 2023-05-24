@@ -1,16 +1,16 @@
-import { Formik } from "formik";
+import Button from "components/global/form/button";
 import Input from "components/global/form/input";
 import { login } from "features/user";
+import { Formik } from "formik";
+import { AiFillCheckCircle } from "react-icons/ai";
+import { IoMdAlert } from "react-icons/io";
+import { useSelector } from "react-redux";
 import useAuthDispatch from "../hooks/useAuthDispatch";
-import Button from "components/global/form/button";
 import FormCustom from "./components/form";
 import ImageLogin from "./components/image";
+import LabelComponent from "./components/label";
 import SignInSchema from "./helpers/validationSchema";
 import { Container, ErrorMessage, Message } from "./styled";
-import LabelComponent from "./components/label";
-import { useSelector } from "react-redux";
-import { IoMdAlert } from "react-icons/io";
-import { AiFillCheckCircle } from "react-icons/ai";
 
 export default function LoginModule({ user }) {
   const { event: signIn } = useAuthDispatch(login, "/");
