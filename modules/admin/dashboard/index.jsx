@@ -1,4 +1,4 @@
-import ToolbarAdmin from "../global/components/toolbar";
+import ToolbarAdmin from "../components/toolbar";
 
 export default function DashboardAdminModule() {
   return (

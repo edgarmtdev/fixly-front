@@ -74,6 +74,9 @@ const GlobalStyles = createGlobalStyle`
         width: auto;
         height: auto;
     }
+    .inherit { 
+        position: inherit;
+    }
 `;
 
 export default GlobalStyles;

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const show = {
   opacity: 1,
-  display: "block",
+  display: "flex",
 };
 
 const hide = {
@@ -14,7 +14,10 @@ const hide = {
 
 export default function ContainerMotion({ children, visible }) {
   return (
-    <motion.section className="hidden" animate={visible ? show : hide}>
+    <motion.section
+      className="absolute z-20 top-0 left-0 bg-[#00000078] min-h-[100vh] w-[100%] p-10 hidden"
+      animate={visible ? show : hide}
+    >
       {children}
     </motion.section>
   );

@@ -1,5 +1,5 @@
 import { useGetItem } from "hooks";
-import ToolbarAdmin from "../global/components/toolbar";
+import ToolbarAdmin from "../components/toolbar";
 
 export default function DetailsToAdmin({ id }) {
   const [product, loading] = useGetItem(id, 100);
