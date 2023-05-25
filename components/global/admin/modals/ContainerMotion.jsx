@@ -15,7 +15,7 @@ const hide = {
 export default function ContainerMotion({ children, visible }) {
   return (
     <motion.section
-      className="absolute z-20 top-0 left-0 bg-[#00000078] min-h-[100vh] w-[100%] p-10 hidden"
+      className="fixed z-20 top-0 left-0 bg-[#00000078] h-[100vh] w-[100%] p-10 hidden overflow-y-scroll"
       animate={visible ? show : hide}
     >
       {children}
