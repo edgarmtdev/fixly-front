@@ -1,10 +1,9 @@
 import { Form, Formik } from "formik";
 import { useUploadProduct } from "modules/admin/hooks";
-import { useId } from "react";
-import Select from "react-select";
 import { CATEGORIES_OPTIONS } from "../modals/models/categories";
 import InputField from "./inputs/InputField";
 import ButtonUpload from "./buttons/ButtonUpload";
+import InputSelect from "./inputs/InputSelect";
 
 export default function UploadForm() {
   const { onHandleChange, onhandleSubmit } = useUploadProduct();
@@ -19,7 +18,7 @@ export default function UploadForm() {
       }}
       onSubmit={onhandleSubmit}
     >
-      <Form className="flex flex-col gap-7 mt-10">
+      <Form className="flex flex-col gap-7 mt-10 w-full">
         <InputField
           name="name"
           type="text"
@@ -44,15 +43,15 @@ export default function UploadForm() {
           placeholder="Write the amount price..."
           label="Amount"
         />
-        <Select
-          id="categories"
-          placeholder="Categories"
-          options={CATEGORIES_OPTIONS}
-          isMulti={true}
-          className="text-sm"
-          instanceId={useId()}
-          name="categories"
-          onChange={onHandleChange}
+        <InputSelect
+          {...{
+            id: "categories",
+            name: "categories",
+            placeholder: "Categories",
+            isMulti: true,
+            options: CATEGORIES_OPTIONS,
+            onChange: onHandleChange,
+          }}
         />
         <ButtonUpload />
       </Form>

@@ -14,7 +14,6 @@ export function useUploadProduct() {
       categories,
     };
     dispatch(createProduct(data));
-    console.log(data);
   };
 
   const onHandleChange = (value) => {
