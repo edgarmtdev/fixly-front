@@ -4,6 +4,7 @@ import { CATEGORIES_OPTIONS } from "../modals/models/categories";
 import InputField from "./inputs/InputField";
 import ButtonUpload from "./buttons/ButtonUpload";
 import InputSelect from "./inputs/InputSelect";
+import DragAndDrop from "../dnd/DragAndDrop";
 
 export default function UploadForm() {
   const { onHandleChange, onhandleSubmit } = useUploadProduct();
@@ -53,6 +54,7 @@ export default function UploadForm() {
             onChange: onHandleChange,
           }}
         />
+        <DragAndDrop />
         <ButtonUpload />
       </Form>
     </Formik>
