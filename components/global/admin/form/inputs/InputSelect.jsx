@@ -4,7 +4,7 @@ import Select from "react-select";
 export default function InputSelect(props) {
   return (
     <div>
-      <label className="text-xs">Categories</label>
+      <label className="text-xs">{props.label}</label>
       <Select
         {...props}
         instanceId={useId()}

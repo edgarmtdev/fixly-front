@@ -1,4 +1,4 @@
-import { MdOutlineDriveFolderUpload } from "react-icons/md";
+import { IoCloudUploadOutline } from "react-icons/io5";
 import UploadForm from "../form/UploadForm";
 import ContainerMotion from "./ContainerMotion";
 import TitleBar from "./slices/TitleBar";
@@ -14,7 +14,7 @@ export default function UploadProduct({ viewModal, handleNotViewModal }) {
         <TitleBar
           title={"Upload product"}
           handleNotViewModal={handleNotViewModal}
-          icon={<MdOutlineDriveFolderUpload size={25} />}
+          icon={<IoCloudUploadOutline size={25} />}
         />
         <div className="flex gap-7">
           <UploadForm />

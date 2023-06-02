@@ -7,30 +7,37 @@ import InputSelect from "./inputs/InputSelect";
 import DragAndDrop from "../dnd/DragAndDrop";
 
 export default function UploadForm() {
-  const { onHandleChange, onhandleSubmit } = useUploadProduct();
+  const {
+    onHandleSubmit,
+    onHandleChangeCategories,
+    onHandleChangeImages,
+    image,
+  } = useUploadProduct();
+
   return (
     <Formik
       initialValues={{
         name: "",
+        description: "",
         imgURL: [],
         price: 0.0,
         amount: 0,
         categories: [],
       }}
-      onSubmit={onhandleSubmit}
+      onSubmit={onHandleSubmit}
     >
       <Form className="flex flex-col gap-7 mt-10 w-full">
         <InputField
           name="name"
           type="text"
-          placeholder="Write product name..."
-          label="Product name"
+          placeholder="Name"
+          label="Product Name"
         />
         <InputField
-          name="imgURL"
+          name="description"
           type="text"
-          placeholder="Set a url image"
-          label="Image"
+          placeholder="Description here..."
+          label="Description"
         />
         <InputField
           name="price"
@@ -51,10 +58,11 @@ export default function UploadForm() {
             placeholder: "Categories",
             isMulti: true,
             options: CATEGORIES_OPTIONS,
-            onChange: onHandleChange,
+            onChange: onHandleChangeCategories,
+            label: "Categories",
           }}
         />
-        <DragAndDrop />
+        <DragAndDrop handleChangeImages={onHandleChangeImages} image={image} />
         <ButtonUpload />
       </Form>
     </Formik>
