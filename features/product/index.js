@@ -4,8 +4,15 @@ import { PRODUCTS_CONSTANTS } from "config/constants";
 
 export const createProduct = createAsyncThunk(
   "product/create",
+  /**
+   * Feature to create a new product
+   * @param {Object} params.body
+   * @param {FormData} params.img
+   * @returns {Object}
+   */
   async (params) => {
     const response = await post(PRODUCTS_CONSTANTS.create, params);
+    console.log(params);
     return response.data;
   }
 );

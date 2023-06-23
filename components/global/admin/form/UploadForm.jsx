@@ -5,26 +5,26 @@ import InputField from "./inputs/InputField";
 import ButtonUpload from "./buttons/ButtonUpload";
 import InputSelect from "./inputs/InputSelect";
 import DragAndDrop from "../dnd/DragAndDrop";
+import { useGetGlobalState } from "hooks";
+import UploadProductSchema from "../helpers/validationUploadProduct";
 
 export default function UploadForm() {
-  const {
-    onHandleSubmit,
-    onHandleChangeCategories,
-    onHandleChangeImages,
-    image,
-  } = useUploadProduct();
+  const { onHandleSubmit, onChangeCategories, onChangeImages, images } =
+    useUploadProduct();
 
+  const { loading } = useGetGlobalState("product");
   return (
     <Formik
       initialValues={{
         name: "",
         description: "",
         imgURL: [],
-        price: 0.0,
+        price: 0,
         amount: 0,
         categories: [],
       }}
       onSubmit={onHandleSubmit}
+      validationSchema={UploadProductSchema}
     >
       <Form className="flex flex-col gap-7 mt-10 w-full">
         <InputField
@@ -44,12 +44,14 @@ export default function UploadForm() {
           type="number"
           placeholder="Write the product price..."
           label="Price"
+          min={1}
         />
         <InputField
           name="amount"
           type="number"
           placeholder="Write the amount price..."
           label="Amount"
+          min={1}
         />
         <InputSelect
           {...{
@@ -58,12 +60,12 @@ export default function UploadForm() {
             placeholder: "Categories",
             isMulti: true,
             options: CATEGORIES_OPTIONS,
-            onChange: onHandleChangeCategories,
+            onChange: onChangeCategories,
             label: "Categories",
           }}
         />
-        <DragAndDrop handleChangeImages={onHandleChangeImages} image={image} />
-        <ButtonUpload />
+        <DragAndDrop handleChangeImages={onChangeImages} image={images} />
+        <ButtonUpload loading={loading} />
       </Form>
     </Formik>
   );

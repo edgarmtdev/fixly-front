@@ -5,9 +5,9 @@ import { useDispatch } from "react-redux";
  * @param {Function} feature
  * @returns
  */
-export const useSendData = (feature) => {
+export const useSendData = (feature, data) => {
   const dispatch = useDispatch();
 
-  dispatch(feature());
+  dispatch(feature(data));
   return;
 };

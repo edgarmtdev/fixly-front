@@ -13,7 +13,7 @@ export const Card = styled.div`
   cursor: pointer;
   transition: 100ms;
   &:hover {
-    transform: scale(0.98);
+    transform: scale(0.99);
     transition: 100ms;
   }
   img {

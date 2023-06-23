@@ -1,43 +1,42 @@
 import { createProduct } from "features";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { uploadImage } from "services/uploadImage";
 
 export function useUploadProduct() {
   const dispatch = useDispatch();
   const [categories, setCategories] = useState([]);
-  const [image, setImage] = useState([]);
   const [images, setImages] = useState([]);
 
   const onHandleSubmit = async (values) => {
-    const imgURL = await uploadImage(images);
     const data = {
       name: values.name,
-      imgURL,
       description: values.description,
       price: values.price,
       amount: values.amount,
       categories,
     };
-    console.log(data);
 
-    dispatch(createProduct(data));
+    const formData = new FormData();
+    formData.append("img", images[0].file);
+    Object.entries(data).forEach((item) => formData.append(item[0], item[1]));
+
+    dispatch(createProduct(formData));
   };
 
-  const onHandleChangeCategories = (value) => {
+  const onChangeCategories = (value) => {
     const data = value.map((item) => item.value);
     setCategories(data);
   };
 
-  const onHandleChangeImages = (image) => {
-    setImages([...images, image[0].file]);
-    setImage(image);
+  const onChangeImages = (imageList) => {
+    console.log(imageList);
+    setImages(imageList);
   };
 
   return {
     onHandleSubmit,
-    onHandleChangeCategories,
-    onHandleChangeImages,
-    image,
+    onChangeCategories,
+    onChangeImages,
+    images,
   };
 }
