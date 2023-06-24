@@ -1,16 +1,16 @@
 import { Form, Formik } from "formik";
 import { useUploadProduct } from "modules/admin/hooks";
-import { CATEGORIES_OPTIONS } from "../modals/models/categories";
-import InputField from "./inputs/InputField";
-import ButtonUpload from "./buttons/ButtonUpload";
-import InputSelect from "./inputs/InputSelect";
-import DragAndDrop from "../dnd/DragAndDrop";
+import { CATEGORIES_OPTIONS } from "../models/categories";
+import InputField from "../../form/inputs/InputField";
+import ButtonUpload from "../../form/buttons/ButtonUpload";
+import InputSelect from "../../form/inputs/InputSelect";
+import DragAndDrop from "../../dnd/DragAndDrop";
 import { useGetGlobalState } from "hooks";
-import UploadProductSchema from "../helpers/validationUploadProduct";
+import UploadProductSchema from "../../helpers/validationUploadProduct";
 
-export default function UploadForm() {
+export default function UploadForm({ handleNotViewModal }) {
   const { onHandleSubmit, onChangeCategories, onChangeImages, images } =
-    useUploadProduct();
+    useUploadProduct(handleNotViewModal);
 
   const { loading } = useGetGlobalState("product");
   return (
