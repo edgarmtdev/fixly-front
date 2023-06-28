@@ -1,4 +1,4 @@
-import LinkItem from "./link";
+import LinkItem from "./Link";
 import { AiOutlineDashboard, AiOutlineShopping } from "react-icons/ai";
 
 const links = [

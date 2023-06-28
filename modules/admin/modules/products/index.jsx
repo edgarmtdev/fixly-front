@@ -1,19 +1,12 @@
 import { useGetGlobalState } from "hooks";
 import { AiOutlineSearch } from "react-icons/ai";
-import InputText from "../components/inputs/InputText";
-// import UploadProduct from "../global/components/modals/UploadProduct";
-import Card from "../components/products/card";
-import ToolbarAdmin from "../components/toolbar";
-// import { useViewModal } from "../hooks";
+import InputText from "../../components/inputs/InputText";
+import Card from "../../components/products/card";
+import ToolbarAdmin from "../../components/toolbar";
 import { Button } from "./styled";
-// import { useState } from "react";
 
 export default function ProductsAdminModule({ handleViewModal }) {
   const { products } = useGetGlobalState("product");
-
-  // const [items, setItems] = useState(products);
-
-  // const { viewModal, handleViewModal, handleNotViewModal } = useViewModal();
 
   const searchProduct = (e) => {
     e.preventDefault();

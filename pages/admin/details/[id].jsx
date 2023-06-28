@@ -1,6 +1,6 @@
 import AdminLayout from "components/layouts/admin/Admin";
 import { useRouterQuery } from "hooks";
-import DetailsToAdmin from "modules/admin/details";
+import DetailsToAdmin from "modules/admin/modules/details";
 
 export default function DetailsProductAdmin() {
   const query = useRouterQuery("id");
