@@ -11,9 +11,9 @@ export default function AdminLayout({ children }) {
 
   return (
     <AsideContext>
-      <main className="flex w-full">
+      <main className="flex">
         <AsideComponent />
-        <section className="w-full z-0">{children}</section>
+        <section className="w-full">{children}</section>
       </main>
     </AsideContext>
   );
