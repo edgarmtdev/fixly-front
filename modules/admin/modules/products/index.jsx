@@ -29,7 +29,13 @@ export default function ProductsAdminModule({ handleViewModal }) {
           <Button onClick={handleViewModal}>New Product</Button>
         </section>
       </div>
-      <div className="mt-10 mx-10 flex gap-6">
+      <div className="mt-10 mx-10 flex flex-wrap gap-6">
+        {products.map((product, index) => (
+          <Card key={index} product={product} />
+        ))}
+        {products.map((product, index) => (
+          <Card key={index} product={product} />
+        ))}
         {products.map((product, index) => (
           <Card key={index} product={product} />
         ))}
