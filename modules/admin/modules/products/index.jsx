@@ -33,12 +33,6 @@ export default function ProductsAdminModule({ handleViewModal }) {
         {products.map((product, index) => (
           <Card key={index} product={product} />
         ))}
-        {products.map((product, index) => (
-          <Card key={index} product={product} />
-        ))}
-        {products.map((product, index) => (
-          <Card key={index} product={product} />
-        ))}
       </div>
     </>
   );
