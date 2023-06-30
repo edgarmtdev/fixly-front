@@ -15,7 +15,7 @@ export default function AsideComponent() {
         ></div>
       )}
       <aside
-        className={`fixed bg-primary-100 h-[100vh] top-0 shadow w-[300px] ${
+        className={`fixed bg-primary-100 h-[100vh] top-0 shadow w-[260px] tabletL:w-[250px] ${
           view
             ? "translate-x-[0%] transition-all duration-200"
             : "translate-x-[-150%] transition-all duration-200"

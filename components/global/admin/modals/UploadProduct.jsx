@@ -9,7 +9,7 @@ export default function UploadProduct({ viewModal, handleNotViewModal }) {
       visible={viewModal}
       handleNotViewModal={handleNotViewModal}
     >
-      <div className="relative z-30 m-auto bg-white w-[50rem] p-8 rounded-md shadow-xl">
+      <div className="relative z-30 m-auto bg-white w-[50rem] p-5 tablet:p-8 rounded-md shadow-xl">
         <TitleBar
           title={"Upload product"}
           handleNotViewModal={handleNotViewModal}
