@@ -1,4 +1,5 @@
 import { useGetGlobalState } from "hooks";
+import { useEffect, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import InputText from "../../components/inputs/InputText";
 import Card from "../../components/products/card";
@@ -7,11 +8,24 @@ import { Button } from "./styled";
 
 export default function ProductsAdminModule({ handleViewModal }) {
   const { products } = useGetGlobalState("product");
+  const [state, setState] = useState([]);
 
   const searchProduct = (e) => {
     e.preventDefault();
-    console.log(e.target.value);
+    const letter = e.target.value;
+    const data = products.filter((item) => {
+      const itemName = item.name.toUpperCase();
+      const campo = itemName;
+      const textData = letter.toUpperCase();
+      return campo.indexOf(textData) > -1;
+    });
+
+    setState(data);
   };
+
+  useEffect(() => {
+    setState(products);
+  }, [products]);
 
   return (
     <>
@@ -30,7 +44,7 @@ export default function ProductsAdminModule({ handleViewModal }) {
         </section>
       </div>
       <div className="mt-10 mx-5 tabletS:mx-8 laptop:mx-10 flex flex-wrap justify-center phoneL:grid grid-cols-2 tabletS:grid-cols-3 laptop:grid-cols-4 laptop:flex gap-6 laptop:justify-start">
-        {products.map((product, index) => (
+        {state.map((product, index) => (
           <Card key={index} product={product} />
         ))}
       </div>
