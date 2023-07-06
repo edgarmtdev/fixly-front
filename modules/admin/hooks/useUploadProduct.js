@@ -38,7 +38,6 @@ export function useUploadProduct(handleNotViewModal) {
   };
 
   const onChangeImages = (imageList) => {
-    console.log(imageList);
     setImages(imageList);
   };
 

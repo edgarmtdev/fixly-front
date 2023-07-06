@@ -6,8 +6,6 @@ export default async function login(req, res) {
   if (req.method === "POST") {
     const { data } = await post(AUTH_CONSTANTS.login, req.body);
 
-    console.log("Response", data);
-
     if (data.success) {
       const serialized = serialize("token", data.token, {
         httpOnly: true,
