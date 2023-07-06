@@ -18,7 +18,13 @@
     "react/jsx-uses-react": 0,
     "semi": "warn",
     "react/jsx-key": "error",
-    "no-unused-vars": "error"
+    "no-unused-vars": "error",
+    "no-duplicate-imports": "error",
+    "no-console": "warn",
+    "comma-spacing": "error",
+    // "array-bracket-newline": ["error", "always"],
+    // "array-element-newline": ["error", "consistent"],
+    "arrow-spacing": "error"
   },
   "settings": {
     "react": {
