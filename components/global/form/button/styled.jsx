@@ -8,14 +8,13 @@ const spin = keyframes`
 `;
 
 export const ButtonComponent = styled.div`
-  margin: 0 1rem;
+  margin: auto 1rem 2rem 1rem;
   button {
     background-color: #4fbb8b;
     color: white;
     padding: 8px;
     border-radius: 4px;
     font-weight: 600;
-    margin: 3.5rem 1rem 0.5rem 1rem;
     display: grid;
     place-items: center;
     margin-left: auto;
@@ -29,7 +28,7 @@ export const ButtonComponent = styled.div`
       transition: 200ms;
     }
     @media ${BREAKPOINTS_DEVICES.tabletL} {
-      width: ${(props) => (props.size ? "100%" : "45%")};
+      width: ${(props) => (props.size ? "100%" : "100%")};
     }
   }
 `;

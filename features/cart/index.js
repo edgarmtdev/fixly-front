@@ -9,19 +9,19 @@ export const getCart = createAsyncThunk("cart/getCart", async function () {
 
 export const addToCart = createAsyncThunk(
   "cart/addToCart",
-  async function (data) {
+  async function (data, thunkAPI) {
     try {
       const newItem = await post(CART_CONSTANTS.addItem, data);
       return newItem.data;
     } catch (error) {
-      console.log(error);
+      return thunkAPI.rejectWithValue(error);
     }
   }
 );
 
 export const shopProductNow = createAsyncThunk(
   "cart/shopProduct",
-  async function () {
+  async function (data, thunkAPI) {
     const promise = new Promise((resolve) => {
       setTimeout(() => {
         resolve({
@@ -34,7 +34,7 @@ export const shopProductNow = createAsyncThunk(
       const resp = await promise;
       return resp;
     } catch (error) {
-      console.log(error);
+      return thunkAPI.rejectWithValue(error);
     }
   }
 );
@@ -89,14 +89,12 @@ const cartSlice = createSlice({
       .addCase(addToCart.pending, (state) => {
         state.loading = true;
       })
-      .addCase(addToCart.rejected, (state, action) => {
-        console.log(action);
+      .addCase(addToCart.rejected, (state) => {
         state.loading = false;
       });
-    builder.addCase(shopProductNow.fulfilled, (state, action) => {
-      console.log(action);
-      // state.items = state.items;
-    });
+    // builder.addCase(shopProductNow.fulfilled, (state) => {
+    //   // state.items = state.items;
+    // });
   },
 });
 

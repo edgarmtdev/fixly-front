@@ -1,12 +1,10 @@
-import React from "react";
+import Link from "next/link";
+import { BiMenu } from "react-icons/bi";
 import { RiFlashlightLine } from "react-icons/ri";
 import LINKS_CATEGORIES from "./model/links";
 import { IconMenu, NavbarList, NavbarMenu, NavbarTitle } from "./styled";
-import { BiMenu } from "react-icons/bi";
-import Link from "next/link";
 
 const Menu = () => {
-  const [links] = React.useState(LINKS_CATEGORIES);
   return (
     <NavbarMenu>
       <Link href={"/"}>
@@ -19,7 +17,7 @@ const Menu = () => {
         <BiMenu color={"#3E5067"} />
       </IconMenu>
       <NavbarList>
-        {links.map((item) => (
+        {LINKS_CATEGORIES.map((item) => (
           <Link href={item.link} key={item.id}>
             <li>{item.title}</li>
           </Link>
