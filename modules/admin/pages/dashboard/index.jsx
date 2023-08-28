@@ -1,4 +1,5 @@
 import ToolbarAdmin from "../../components/toolbar";
+import Sales from "./slices/charts/Sales";
 import Header from "./slices/hero/Header";
 
 export default function DashboardAdminModule() {
@@ -7,7 +8,7 @@ export default function DashboardAdminModule() {
       <ToolbarAdmin title={"Dashboard"} />
       <section className="mt-10 mx-10 flex flex-col gap-10">
         <Header />
-        <div className="bg-white h-48 rounded"></div>
+        <Sales />
       </section>
     </>
   );
