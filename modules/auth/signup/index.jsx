@@ -32,7 +32,7 @@ const SignUpModule = ({ user }) => {
         onSubmit={register}
       >
         <FormCustom>
-          <p>Register</p>
+          <h3>Register</h3>
           <section>
             <Input
               name="name"
@@ -65,8 +65,8 @@ const SignUpModule = ({ user }) => {
               placeholder="Repeat the password..."
               label={"Password repeat"}
             />
+            <ErrorMessage>{message && message}</ErrorMessage>
           </section>
-          <ErrorMessage>{message && message}</ErrorMessage>
           <Button user={user} title={"Signup"} />
         </FormCustom>
       </Formik>

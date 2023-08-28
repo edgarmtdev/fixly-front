@@ -7,7 +7,8 @@ export const ContainerForm = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  p {
+  justify-content: space-between;
+  h3 {
     font-size: 28px;
     font-weight: 600;
     margin: 2rem 1rem;

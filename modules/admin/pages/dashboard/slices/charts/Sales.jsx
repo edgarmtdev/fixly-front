@@ -24,7 +24,7 @@ ChartJS.register(
   Filler
 );
 
-var beneficios = [136545.477, 36545.477, 1365.454, 166545.477, 116545.477];
+var beneficios = [1365454.77, 965454.77, 1365454.77, 1665454.77, 1165454.77];
 var meses = [
   "Enero",
   "Febrero",
@@ -42,9 +42,6 @@ var meses = [
 
 var misoptions = {
   scales: {
-    y: {
-      min: 0,
-    },
     x: {
       ticks: { color: "rgb(0, 0, 0)" },
     },
@@ -60,8 +57,7 @@ const miData = {
       tension: 0.5,
       fill: true,
       borderColor: "rgb(99, 211, 255)",
-      backgroundColor: "rgba(99, 143, 255, 0.5)",
-      pointRadius: 5,
+      pointRadius: 3,
       pointBorderColor: "rgb(48, 44, 45))",
       pointBackgroundColor: "rgb(99, 164, 255)",
     },
