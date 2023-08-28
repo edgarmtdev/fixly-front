@@ -15,7 +15,7 @@ const DROPDOWN_ITEMS = [
 
 const DROPDOWN_ITEMS_ADMIN = [
   {
-    title: "Administrador",
+    title: "Administrator",
     route: "/admin/dashboard",
   },
 ];

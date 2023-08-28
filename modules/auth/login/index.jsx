@@ -60,7 +60,9 @@ export default function LoginModule({ user }) {
               label={"Password"}
             />
           </section>
-          <Button user={user} title={"Sing In"} size={"xl"} />
+          <div className="mt-10">
+            <Button user={user} title={"Sing In"} size={"xl"} />
+          </div>
           <LabelComponent />
         </FormCustom>
       </Formik>
