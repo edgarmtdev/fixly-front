@@ -5,7 +5,7 @@ export const CategoriesCont = styled.section`
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
-  margin: 5rem auto 1rem;
+  margin: 5rem 1rem 1rem;
 `;
 
 export const Tilte = styled.h2`

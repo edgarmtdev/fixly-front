@@ -20,7 +20,9 @@ export const CardContainer = styled.div`
   @media ${BREAKPOINTS_DEVICES.mobileL} {
     div {
       img {
-        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
       }
     }
   }
