@@ -6,9 +6,11 @@ export const FlexCont = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
-  @media ${BREAKPOINTS_DEVICES.tabletL} {
-    justify-content: left;
+
+  @media ${BREAKPOINTS_DEVICES.laptop} {
+    gap: 2rem;
+    justify-content: flex-start;
   }
 `;

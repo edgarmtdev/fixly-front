@@ -1,12 +1,4 @@
-// import { fill } from "@cloudinary/url-gen/actions/resize";
-// import { CloudinaryImage } from "@cloudinary/url-gen";
-// // import { AdvancedImage } from "@cloudinary/react";
-
 import ProductCard from "components/global/products/card";
-
-// // const myImage = new CloudinaryImage("projects/fixly", {
-// //   cloudName: "dsgd1tu0d",
-// // }).resize(fill().width(150).height(150));
 
 export default function ProductsModule({ products, categorie }) {
   return (

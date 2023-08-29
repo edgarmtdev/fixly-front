@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import BREAKPOINTS_DEVICES from "theme/global/breakpoints";
 
 export const Card = styled.div`
   display: flex;
@@ -6,8 +7,8 @@ export const Card = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 224px;
-  height: 320px;
+  width: 324px;
+  height: 420px;
   background-color: white;
   border-radius: 4px;
   cursor: pointer;
@@ -19,6 +20,11 @@ export const Card = styled.div`
   }
   img {
     width: 80%;
+  }
+
+  @media ${BREAKPOINTS_DEVICES.mobileXL} {
+    width: 224px;
+    height: 320px;
   }
 `;
 
