@@ -2,7 +2,7 @@ import CardReview from "./card";
 import FormReview from "./form";
 import { ReviewsContainer, ReviewsParent, Title } from "./styled";
 import moment from "moment";
-import ReviewSkeleton from "../../../../components/utils/loaders/skeleton";
+import ReviewSkeleton from "../../../../components/utils/loaders/skeleton/Review";
 
 const Reviews = ({ reviews, loading }) => {
   return (

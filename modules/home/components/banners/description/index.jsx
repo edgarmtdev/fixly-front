@@ -10,7 +10,7 @@ const ProductDescription = ({ name, description, route }) => {
         <p className="description">{description}</p>
       </TextContent>
       <Link href={`${route}`}>
-        <Button>Buy now</Button>
+        <Button>BUY NOW</Button>
       </Link>
     </ContainerDescription>
   );
