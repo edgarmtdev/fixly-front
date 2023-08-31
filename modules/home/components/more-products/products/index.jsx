@@ -1,12 +1,23 @@
 import ProductCard from "components/global/products/card";
 import { FlexCont } from "./styled";
+import ProductSkeleton from "components/utils/loaders/skeleton/Product";
 
-function FlexProducts({ products }) {
+function FlexProducts({ products, loading }) {
   return (
     <FlexCont>
-      {products.map((product, index) => (
-        <ProductCard key={index} product={product} />
-      ))}
+      {loading ? (
+        <>
+          <ProductSkeleton />
+          <ProductSkeleton />
+          <ProductSkeleton />
+          <ProductSkeleton />
+          <ProductSkeleton />
+        </>
+      ) : (
+        products.map((product, index) => (
+          <ProductCard key={index} product={product} />
+        ))
+      )}
     </FlexCont>
   );
 }

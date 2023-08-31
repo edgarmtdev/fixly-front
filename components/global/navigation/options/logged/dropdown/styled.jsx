@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import BREAKPOINTS_DEVICES from "theme/global/breakpoints";
 
 export const DropdownContainer = styled.div`
+  display: none;
   top: 4.5rem;
   right: 5%;
   position: fixed;
@@ -15,6 +17,10 @@ export const DropdownContainer = styled.div`
     border-bottom-width: 1px;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+  }
+
+  @media ${BREAKPOINTS_DEVICES.laptop} {
+    display: block;
   }
 `;
 

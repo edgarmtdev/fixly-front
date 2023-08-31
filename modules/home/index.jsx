@@ -6,13 +6,13 @@ import MoreProducts from "./components/more-products";
 import Slider from "./components/slider";
 
 const HomeModule = () => {
-  const { products } = useSelector((state) => state.product);
+  const { products, loading } = useSelector((state) => state.product);
   return (
     <React.Fragment>
       <Banner />
       <Slider />
       <Categories />
-      <MoreProducts products={products} />
+      <MoreProducts products={products} loading={loading} />
     </React.Fragment>
   );
 };

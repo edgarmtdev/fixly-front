@@ -59,8 +59,8 @@ export const Button = styled.button`
   text-align: center;
   padding: 8px;
   border-radius: 2px;
-  font-weight: 600;
   font-size: 13px;
+  letter-spacing: 3px;
   &:hover {
     opacity: 0.9;
     transform: scale(1.01);
