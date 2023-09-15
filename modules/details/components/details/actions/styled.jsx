@@ -4,11 +4,10 @@ import BREAKPOINTS_DEVICES from "theme/global/breakpoints";
 
 export const ActionsCont = styled.section`
   display: flex;
-  flex-direction: column;
+  flex-direction: grid;
   gap: 1rem;
-  margin: 1rem;
   @media ${BREAKPOINTS_DEVICES.tablet} {
-    margin: 20% 1rem 2.5rem 1rem;
+    margin-top: auto;
   }
 `;
 
@@ -16,9 +15,18 @@ const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 4px;
+  border-radius: 2px;
+  background-color: #4fbb8b;
+  color: white;
+  font-size: 12px;
+  &:hover {
+    background-color: #4fbb8ad6;
+    scale: 1.01;
+    transition: 200ms;
+  }
   cursor: pointer;
   padding: 10px;
+  font-weight: 600;
   @media ${BREAKPOINTS_DEVICES.tablet} {
     padding: 12px;
     span {
@@ -28,32 +36,14 @@ const Button = styled.button`
 `;
 
 export const GetNowButton = styled(Button)`
-  background-color: #4fbb8b;
-  span {
-    color: white;
-    font-weight: 600;
-    font-size: 12px;
-  }
-  &:hover {
-    background-color: #4fbb8ae1;
-    scale: 1.01;
-    transition: 200ms;
-  }
+  width: 100%;
   @media ${BREAKPOINTS_DEVICES.tablet} {
-    span {
-      font-size: 16px;
-    }
+    font-size: 16px;
   }
 `;
 
 export const AddCartButton = styled(Button)`
-  border: 1px solid #4fbb8b;
-  color: #4fbb8b;
-  &:hover {
-    background-color: #f3fcf8df;
-    scale: 1.01;
-    transition: 200ms;
-  }
+  width: 30%;
   span {
     font-weight: 600;
     font-size: 12px;

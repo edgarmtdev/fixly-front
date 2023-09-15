@@ -2,9 +2,11 @@ import styled from "styled-components";
 import BREAKPOINTS_DEVICES from "theme/global/breakpoints";
 
 export const Title = styled.div`
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   p.label {
-    font-size: 12px;
+    font-size: 14px;
     display: flex;
     gap: 0.5rem;
     color: #738aaa;
@@ -18,15 +20,14 @@ export const Title = styled.div`
   p.name {
     color: #3e5067;
     font-weight: 600;
-    font-size: 16px;
-    margin-top: 0.5rem;
+    font-size: 24px;
   }
   @media ${BREAKPOINTS_DEVICES.laptop} {
     p.label {
-      font-size: 16px;
+      font-size: 18px;
     }
     p.name {
-      font-size: 22px;
+      font-size: 32px;
     }
   }
 `;

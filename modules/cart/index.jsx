@@ -6,17 +6,13 @@ import { CartContainer } from "./styles";
 export default function MyCart({ products }) {
   const { total, loading } = useSelector((state) => state.cart);
 
-  if (loading) {
-    return (
-      <CartContainer>
-        <SpinnerLoader />
-      </CartContainer>
-    );
-  }
-
   return (
     <CartContainer>
-      <ProductsComponent total={total} products={products} />
+      {loading ? (
+        <SpinnerLoader />
+      ) : (
+        <ProductsComponent total={total} products={products} />
+      )}
     </CartContainer>
   );
 }
