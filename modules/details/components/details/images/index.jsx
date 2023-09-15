@@ -1,22 +1,10 @@
+import { useGallery } from "modules/details/hooks/useGallery";
 import Image from "next/image";
-import { useState } from "react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
 const ImageSlider = ({ images }) => {
-  const [img, setImage] = useState(0);
+  const { img, prevImage, nextImage } = useGallery(images);
 
-  const prevImage = () => {
-    if (img === 0) {
-      return;
-    }
-    setImage(img - 1);
-  };
-  const nextImage = () => {
-    if (img === images.length - 1) {
-      return;
-    }
-    setImage(img + 1);
-  };
   return (
     <section className="flex gap-4 select-none p-8">
       <div className="hidden laptop:flex flex-col gap-8">
