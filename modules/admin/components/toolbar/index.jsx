@@ -4,7 +4,7 @@ import { FiArrowLeft } from "react-icons/fi";
 import { asideContext } from "context/admin/aside";
 import { BiMenu } from "react-icons/bi";
 
-export default function ToolbarAdmin({ title }) {
+export default function ToolbarAdmin({ title, user }) {
   const { setView } = useContext(asideContext);
 
   return (
@@ -24,7 +24,7 @@ export default function ToolbarAdmin({ title }) {
         </span>
         <h3>{title}</h3>
       </section>
-      <ToolbarOptions />
+      <ToolbarOptions user={user} />
     </div>
   );
 }
