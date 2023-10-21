@@ -16,6 +16,7 @@ export default function Dashboard({ user }) {
 
 export async function getServerSideProps(context) {
   const token = context.req.cookies.token;
+  console.log(context.req);
 
   if (!token) {
     return {
