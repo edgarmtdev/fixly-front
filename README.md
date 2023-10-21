@@ -1,4 +1,4 @@
-<h1 align="center">Felcy App</h1>
+<h1 align="center">Fixly App</h1>
 
 <h3 align="center">
   This repository is the frontend of the ecommerce project with Next.JS
