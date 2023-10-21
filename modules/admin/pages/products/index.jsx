@@ -6,7 +6,7 @@ import Card from "../../components/products/card";
 import ToolbarAdmin from "../../components/toolbar";
 import { Button } from "./styled";
 
-export default function ProductsAdminModule({ handleViewModal }) {
+export default function ProductsAdminModule({ handleViewModal, user }) {
   const { products } = useGetGlobalState("product");
   const [state, setState] = useState([]);
 
@@ -29,7 +29,7 @@ export default function ProductsAdminModule({ handleViewModal }) {
 
   return (
     <>
-      <ToolbarAdmin title={"Products"} />
+      <ToolbarAdmin title={"Products"} user={user} />
       <div className="px-4 laptop:px-10 py-4 border-b-[1px] border-[#B3B3B3] min-h-[80px] flex items-center">
         <form className="w-[70%] laptop:w-[40%]">
           <InputText

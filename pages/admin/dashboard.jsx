@@ -12,6 +12,8 @@ export default function Dashboard({ user }) {
   );
 }
 
+// TODO: Valitade role in admin pages
+
 export async function getServerSideProps(context) {
   const token = context.req.cookies.token;
 
