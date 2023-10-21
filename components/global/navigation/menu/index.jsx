@@ -4,7 +4,7 @@ import { RiFlashlightLine } from "react-icons/ri";
 import LINKS_CATEGORIES from "./model/links";
 import { IconMenu, NavbarList, NavbarMenu, NavbarTitle } from "./styled";
 
-const Menu = () => {
+const Menu = ({ handleOpenAside }) => {
   return (
     <NavbarMenu>
       <Link href={"/"}>
@@ -13,7 +13,7 @@ const Menu = () => {
           <h1>Fixly</h1>
         </NavbarTitle>
       </Link>
-      <IconMenu>
+      <IconMenu onClick={handleOpenAside}>
         <BiMenu color={"#3E5067"} />
       </IconMenu>
       <NavbarList>

@@ -3,7 +3,6 @@ import Page from "../Page";
 
 function MainLayout({ children }) {
   const { handleNotViewDropdown } = useGetDropdownContext();
-
   return (
     <Page>
       <main onClick={handleNotViewDropdown}>

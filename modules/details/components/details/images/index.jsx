@@ -1,5 +1,5 @@
-import { useGallery } from "modules/details/hooks/useGallery";
 import Image from "next/image";
+import { useGallery } from "modules/details/hooks/";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
 const ImageSlider = ({ images }) => {

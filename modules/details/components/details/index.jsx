@@ -1,4 +1,3 @@
-// import { useEffect, useState } from "react";
 import ActionsButtons from "./actions";
 import ImageSlider from "./images";
 import { Card, CardContainer, Details, Price } from "./styled";
