@@ -15,14 +15,14 @@ export default function Dashboard({ user }) {
 // TODO: Valitade role in admin pages
 
 export async function getServerSideProps({ req }) {
-  const token = req.headers.cookie;
+  const cookies = req.headers.cookie;
 
   console.log(
     "🚀 ~ file: dashboard.jsx:19 ~ getServerSideProps ~ token:",
-    req.headers.cookie
+    req.headers
   );
 
-  if (!token) {
+  if (!cookies) {
     return {
       redirect: {
         destination: "/",
@@ -34,10 +34,11 @@ export async function getServerSideProps({ req }) {
   const res = await fetch(`http://localhost:4000${AUTH_CONSTANTS.validation}`, {
     credentials: "include",
     headers: {
-      Cookie: `token=${token}`,
+      Cookie: cookies,
     },
   });
   const data = await res.json();
+  console.log("Esto se ejecuta");
 
   if (!data.success) {
     return {
