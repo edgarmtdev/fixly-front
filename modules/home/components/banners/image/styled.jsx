@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import BREAKPOINTS_DEVICES from "/theme/global/breakpoints";
 
-export const ImageContainer = styled.section`
+export const ImageContainer = styled.figure`
   display: grid;
   place-items: center;
-  position: relative;
   @media ${BREAKPOINTS_DEVICES.laptop} {
     place-items: end;
   }

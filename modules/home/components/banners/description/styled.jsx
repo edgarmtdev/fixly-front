@@ -4,11 +4,11 @@ import BREAKPOINTS_DEVICES from "../../../../../theme/global/breakpoints";
 export const ContainerDescription = styled.section`
   display: flex;
   flex-direction: column;
+  margin-top: 0;
   align-items: center;
-  justify-content: center;
-
   @media ${BREAKPOINTS_DEVICES.laptop} {
     align-items: flex-start;
+    margin-top: 3rem;
   }
 `;
 

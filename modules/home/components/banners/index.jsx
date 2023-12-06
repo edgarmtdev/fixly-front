@@ -1,25 +1,21 @@
 import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import data from "../../../../data/products.json";
-import { useSetState } from "hooks";
 import ProductDescription from "./description";
 import BannerImage from "./image";
 import { Container } from "./styled";
 
 export default function Banner() {
-  const [newProducts] = useSetState(data[0].products);
   return (
     <header className="mt-28">
       <Swiper
         pagination={false}
         spaceBetween={100}
+        autoplay={{ delay: 4500 }}
         modules={[Pagination, Autoplay]}
-        autoplay={{
-          delay: 4500,
-        }}
         className="mySwiper"
       >
-        {newProducts.map((product) => {
+        {data[0]?.products.map((product) => {
           return (
             <SwiperSlide key={product.id}>
               <Container>
