@@ -78,19 +78,21 @@ const Navbar = () => {
                 HELLO {name.toUpperCase()}
               </li>
               {LINKS.map((item, index) => (
-                <Link key={index} href={item.route}>
-                  <li className="p-3 hover:bg-primary-300 rounded text-sm">
-                    {item.title.toUpperCase()}
-                  </li>
-                </Link>
+                <li
+                  key={`${item.title}${index}`}
+                  className="p-3 hover:bg-primary-300 rounded text-sm"
+                >
+                  <Link href={item.route}>{item.title.toUpperCase()}</Link>
+                </li>
               ))}
               {role >= 10 &&
                 LINKS_ADMIN.map((item, index) => (
-                  <Link key={index} href={item.route}>
-                    <li className="p-3 hover:bg-primary-300 rounded">
-                      {item.title.toUpperCase()}
-                    </li>
-                  </Link>
+                  <li
+                    key={`${item.title}${index}`}
+                    className="p-3 hover:bg-primary-300 rounded"
+                  >
+                    <Link href={item.route}>{item.title.toUpperCase()}</Link>
+                  </li>
                 ))}
               <li
                 className="p-3 hover:bg-primary-300 rounded mt-auto mb-10"

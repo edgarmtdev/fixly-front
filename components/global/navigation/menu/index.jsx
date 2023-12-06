@@ -18,13 +18,13 @@ const Menu = ({ handleOpenAside }) => {
       </IconMenu>
       <NavbarList>
         {LINKS_CATEGORIES.map((item) => (
-          <Link href={item.link} key={item.id}>
-            <li>{item.title}</li>
-          </Link>
+          <li key={item.id}>
+            <Link href={item.link}>{item.title}</Link>
+          </li>
         ))}
-        <Link href={"/products/categories?cat=all"}>
-          <li>More...</li>
-        </Link>
+        <li>
+          <Link href={"/products/categories?cat=all"}>More...</Link>
+        </li>
       </NavbarList>
     </NavbarMenu>
   );

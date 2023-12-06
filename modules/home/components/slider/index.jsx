@@ -15,8 +15,12 @@ function Slider() {
     <SlideContainer>
       <Title>Offerts</Title>
       <div className="absolute top-[45px] z-10 right-1 flex gap-3">
-        <Button event={prev} icon={<FiChevronLeft />} />
-        <Button event={next} icon={<FiChevronRight />} />
+        <Button aria-label="arrow-left" event={prev} icon={<FiChevronLeft />} />
+        <Button
+          aria-label="arrow-left"
+          event={next}
+          icon={<FiChevronRight />}
+        />
       </div>
       <Swiper {...swiperOptions} ref={swiperRef}>
         {data[1].products.map((item, index) => (

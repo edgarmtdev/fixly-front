@@ -5,9 +5,9 @@ const ProductDescription = ({ name, description, route }) => {
   return (
     <ContainerDescription>
       <TextContent>
-        <p className="label">New products</p>
-        <p className="name">{name}</p>
-        <p className="description">{description}</p>
+        <h2 className="label">New products</h2>
+        <h2 className="name">{name}</h2>
+        <h2 className="description">{description}</h2>
       </TextContent>
       <Link href={`${route}`}>
         <Button>BUY NOW</Button>

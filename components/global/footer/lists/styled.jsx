@@ -9,7 +9,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Title = styled.h6`
+export const Title = styled.h3`
   color: #fff;
   font-weight: 600;
   font-size: 14px;
