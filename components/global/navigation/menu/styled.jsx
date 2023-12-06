@@ -27,14 +27,13 @@ export const NavbarTitle = styled.div`
     height: 34px;
   }
   h1 {
-    font-weight: 800;
+    font-weight: 600;
     font-size: 22px;
     color: #3e5067;
   }
   @media ${BREAKPOINTS_DEVICES.laptop} {
     gap: 0.5rem;
     h1 {
-      font-weight: 800;
       font-size: 24px;
       color: #3e5067;
     }

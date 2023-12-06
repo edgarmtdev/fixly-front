@@ -3,6 +3,9 @@ import { useDispatchEffect, useValidateRole } from "hooks";
 import AsideComponent from "./components/aside/AsideComponent";
 import AsideContext from "context/admin/aside/Provider";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 const queryClient = new QueryClient();
 
@@ -15,7 +18,7 @@ export default function AdminLayout({ children }) {
   return (
     <QueryClientProvider client={queryClient}>
       <AsideContext>
-        <main className="flex">
+        <main className={`${montserrat.className} flex`}>
           <AsideComponent />
           <section className="w-full">{children}</section>
         </main>

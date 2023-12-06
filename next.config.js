@@ -4,7 +4,6 @@ module.exports = {
   compiler: {
     styledComponents: true,
   },
-  swcMinify: true,
   images: {
     domains: ["res.cloudinary.com", "www.steren.com.mx"],
   },

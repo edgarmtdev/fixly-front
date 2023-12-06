@@ -1,3 +1,4 @@
+import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import styled from "styled-components";
 import NavbarAuth from "../../auth/navigation";
@@ -10,9 +11,11 @@ export const AuthCont = styled.section`
   position: relative;
 `;
 
+const montserrat = Montserrat({ subsets: ["latin"] });
+
 export default function AuthLayout({ children }) {
   return (
-    <main className="relative">
+    <main className={`${montserrat.className} relative`}>
       <NavbarAuth />
       <Image
         src={"/bg/background.png"}

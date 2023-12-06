@@ -31,7 +31,7 @@ export const NavbarTitle = styled.div`
   gap: 1rem;
   cursor: pointer;
   h1 {
-    font-weight: 800;
+    font-weight: 600;
     font-size: 22px;
     color: #3e5067;
   }

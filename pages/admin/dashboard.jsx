@@ -17,11 +17,6 @@ export default function Dashboard({ user }) {
 export async function getServerSideProps({ req }) {
   const cookies = req.headers.cookie;
 
-  console.log(
-    "🚀 ~ file: dashboard.jsx:19 ~ getServerSideProps ~ token:",
-    req.headers
-  );
-
   if (!cookies) {
     return {
       redirect: {
@@ -38,7 +33,6 @@ export async function getServerSideProps({ req }) {
     },
   });
   const data = await res.json();
-  console.log("Esto se ejecuta");
 
   if (!data.success) {
     return {
