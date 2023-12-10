@@ -29,13 +29,16 @@ export async function getServerSideProps({ req }) {
     };
   }
 
-  const res = await fetch(`http://localhost:4000${AUTH_CONSTANTS.validation}`, {
-    credentials: "include",
-    method: "POST",
-    headers: {
-      Cookie: cookies,
-    },
-  });
+  const res = await fetch(
+    `https://fixly.onrender.com${AUTH_CONSTANTS.validation}`,
+    {
+      credentials: "include",
+      method: "POST",
+      headers: {
+        Cookie: cookies,
+      },
+    }
+  );
   const data = await res.json();
 
   if (!data.success) {
