@@ -1,5 +1,6 @@
 import AdminLayout from "components/layouts/admin/Admin";
 import { HeadComponent } from "components/utils/head";
+import { URL } from "config";
 import { AUTH_CONSTANTS } from "config/constants";
 import DashboardAdminModule from "modules/admin/pages/dashboard";
 
@@ -29,16 +30,12 @@ export async function getServerSideProps({ req }) {
     };
   }
 
-  const res = await fetch(
-    `https://fixly.onrender.com${AUTH_CONSTANTS.validation}`,
-    {
-      credentials: "include",
-      method: "POST",
-      headers: {
-        Cookie: cookies,
-      },
-    }
-  );
+  const res = await fetch(`${URL}${AUTH_CONSTANTS.validation}`, {
+    credentials: "include",
+    headers: {
+      Cookie: cookies,
+    },
+  });
   const data = await res.json();
 
   if (!data.success) {
